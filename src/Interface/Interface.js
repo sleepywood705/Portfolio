@@ -19,7 +19,7 @@ export function Desktop() {
     showPortfolio: false,
     showContact: false,
     showReference: false,
-    showAddict: true,
+    showAddict: false,
     showPlayer: false,
     showRotate: false,
     showGradation: false,
