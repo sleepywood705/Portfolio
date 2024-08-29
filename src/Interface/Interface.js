@@ -11,6 +11,7 @@ import { Player } from '../Browser/Player';
 import { Rotate } from '../Browser/Rotate';
 import { Gradation } from '../Browser/Gradation';
 import { useState, useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 
 /* 바탕화면 */
@@ -25,6 +26,8 @@ export function Desktop() {
     showRotate: false,
     showGradation: false,
   });
+
+  const navigate = useNavigate(); // useNavigate 훅 사용
 
   const toggleState = (key, value = !state[key]) => {
     setState((prevState) => ({
@@ -59,6 +62,13 @@ export function Desktop() {
     handleTransform(referenceRef, state.showReference);
     handleTransform(addictRef, state.showAddict);
   }, [state.showPortfolio, state.showReference, state.showAddict]);
+
+  // Addict 창이 열릴 때 자동으로 라우팅되도록 설정
+  useEffect(() => {
+    if (state.showAddict) {
+      navigate('/Portfolio/addict'); // 자동 라우팅
+    }
+  }, [state.showAddict, navigate]);
 
   return (
     <div id="Desktop">
