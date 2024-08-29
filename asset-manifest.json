@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.2d1405ba.css",
-    "main.js": "/Portfolio/static/js/main.c86f17b6.js",
+    "main.css": "/Portfolio/static/css/main.5e89b9b5.css",
+    "main.js": "/Portfolio/static/js/main.d5b172f3.js",
     "static/js/453.1407b060.chunk.js": "/Portfolio/static/js/453.1407b060.chunk.js",
     "static/media/solid.jpg": "/Portfolio/static/media/solid.d70f686dfdf2c913dd01.jpg",
     "static/media/Saint-Andrews-Queen.ttf": "/Portfolio/static/media/Saint-Andrews-Queen.53fe428684ec1a1dd7af.ttf",
@@ -11,12 +11,12 @@
     "static/media/Memories.ttf": "/Portfolio/static/media/Memories.8e89d719f8f5fdf01e5e.ttf",
     "static/media/DS-DIGI.ttf": "/Portfolio/static/media/DS-DIGI.0ef0e2249326c34137c8.ttf",
     "index.html": "/Portfolio/index.html",
-    "main.2d1405ba.css.map": "/Portfolio/static/css/main.2d1405ba.css.map",
-    "main.c86f17b6.js.map": "/Portfolio/static/js/main.c86f17b6.js.map",
+    "main.5e89b9b5.css.map": "/Portfolio/static/css/main.5e89b9b5.css.map",
+    "main.d5b172f3.js.map": "/Portfolio/static/js/main.d5b172f3.js.map",
     "453.1407b060.chunk.js.map": "/Portfolio/static/js/453.1407b060.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2d1405ba.css",
-    "static/js/main.c86f17b6.js"
+    "static/css/main.5e89b9b5.css",
+    "static/js/main.d5b172f3.js"
   ]
 }
