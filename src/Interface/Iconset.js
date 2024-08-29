@@ -96,9 +96,9 @@ const Icon = styled.button`
   cursor: pointer;
   
   &:hover {
-    border: 1px solid #000;
+    border: 1px solid #fff;
   }
-`;
+`
 const Upper = styled.div`
   position: relative;
   height: 100%;
@@ -107,7 +107,7 @@ const Upper = styled.div`
   ${props => props.ifit && `
     background: url(../public/img/icon/ifit.png) center 12px/48% no-repeat;
   `}
-`;
+`
 const Lower = styled.div`
   padding: 4px;
   color: #fff;
@@ -118,7 +118,7 @@ const Lower = styled.div`
   ${props => props.fontColor && `
     color: #000;
   `}
-`;
+`
 const IconPerson = styled.div`
   position: absolute;
   transform: translate(-50%);
@@ -191,7 +191,7 @@ const IconContact = styled.div`
     z-index: ${props.hover ? '0' : '1'};
     background-color: ${props.hover ? '#eee' : ''};
   `}
-`;
+`
 const Content = styled.div`
   position: absolute;
   left: 50%; bottom: 17px;

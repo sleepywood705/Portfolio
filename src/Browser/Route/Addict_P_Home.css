@@ -31,20 +31,20 @@
   display: grid;
   place-items: center;
 }
-#AddictHomePage > div:last-child > p {
-  position: absolute;
-  left: 50%; top: 150px;
-  transform: translate(-50%);
-  color: #fff;
-  font-size: 40px;
-}
 #AddictHomePage > div:last-child > img {
   width: 100%; height: 100%;
   /* display: none; */
 }
+#AddictHomePage > div:last-child > p {
+  position: absolute;
+  left: 50%; top: 550px;
+  transform: translate(-50%);
+  color: #fff;
+  font-size: 40px;
+}
 #AddictHomePage > div:last-child > a {
   position: absolute;
-  left: 50%; top: 240px;
+  left: 50%; top: 640px;
   transform: translate(-50%);
   padding: 8px 20px;
   color: #fff;

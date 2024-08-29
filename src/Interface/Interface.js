@@ -2,19 +2,20 @@ import './Interface.css';
 import styled from 'styled-components';
 import { Iconset } from './Iconset';
 import { Folder } from './Folder';
-import { Portfolio } from "../Browser/Portfolio";
-import { Contact } from "../Browser/Contact";
-import { Reference } from "../Browser/Reference";
+import { SettingBox } from './SettingBox';
+import { Portfolio } from '../Browser/Portfolio';
+import { Contact } from '../Browser/Contact';
+import { Reference } from '../Browser/Reference';
 import { Addict } from '../Browser/Addict';
-import { Player } from "../Browser/Player";
+import { Player } from '../Browser/Player';
 import { Rotate } from '../Browser/Rotate';
 import { Gradation } from '../Browser/Gradation';
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 
 /* 바탕화면 */
 export function Desktop() {
-  
   const [state, setState] = useState({
     showFolder: false,
     showPortfolio: false,
@@ -26,6 +27,8 @@ export function Desktop() {
     showGradation: false,
   });
 
+  const navigate = useNavigate(); // useNavigate 훅 사용
+
   const toggleState = (key, value = !state[key]) => {
     setState((prevState) => ({
       ...prevState,
@@ -36,39 +39,36 @@ export function Desktop() {
   const folderRef = useRef(null);
   const portfolioRef = useRef(null);
   const referenceRef = useRef(null);
+  const addictRef = useRef(null);
+
+  const handleTransform = (ref, condition) => {
+    if (ref.current) {
+      ref.current.style.transform = condition ? 'scale(1)' : 'scale(0)';
+      if (condition) {
+        ref.current.style.width = '100vw';
+        ref.current.style.height = '100%';
+      }
+    }
+  };
 
   useEffect(() => {
     if (folderRef.current) {
-      if (state.showFolder) {
-        folderRef.current.style.transform = 'translate(-50%, -50%) scale(1)';
-      } else {
-        folderRef.current.style.transform = 'translate(-50%, -50%) scale(0)';
-      }
+      folderRef.current.style.transform = state.showFolder ? 'translate(-50%, -50%) scale(1)' : 'translate(-50%, -50%) scale(0)';
     }
   }, [state.showFolder]);
 
   useEffect(() => {
-    if (portfolioRef.current) {
-      if (state.showPortfolio) {
-        portfolioRef.current.style.transform = 'scale(1)';
-        portfolioRef.current.style.width = '100vw';
-        portfolioRef.current.style.height = '100%';
-      } else {
-        portfolioRef.current.style.transform = 'scale(0)';
-      }
-    }
+    handleTransform(portfolioRef, state.showPortfolio);
+    handleTransform(referenceRef, state.showReference);
+    handleTransform(addictRef, state.showAddict);
+  }, [state.showPortfolio, state.showReference, state.showAddict]);
 
-    if (referenceRef.current) {
-      if (state.showReference) {
-        referenceRef.current.style.transform = 'scale(1)';
-        referenceRef.current.style.width = '100vw';
-        referenceRef.current.style.height = '100%';
-      } else {
-        referenceRef.current.style.transform = 'scale(0)';
-      }
+  // Addict 창이 열릴 때 자동으로 라우팅되도록 설정
+  useEffect(() => {
+    if (state.showAddict) {
+      navigate('/Portfolio/addict'); // 자동 라우팅
     }
-
-  }, [state.showPortfolio, state.showReference]);
+  }, [state.showAddict, navigate]);
 
   return (
     <div id="Desktop">
@@ -78,8 +78,10 @@ export function Desktop() {
         컨택트열기={() => toggleState('showContact', true)}>
       </Iconset>
 
+      <SettingBox/>
+
       <div ref={folderRef}
-        style={{ 
+        style={{
           position: 'absolute',
           left: '50%', top: '50%',
           transform: 'translate(-50%, -50%) scale(0)',
@@ -118,10 +120,16 @@ export function Desktop() {
           <Reference 창닫기={() => toggleState('showReference', false)} />
         )}
       </div>
-      
-      {state.showAddict && (
-        <Addict 창닫기={() => toggleState('showAddict', false)} />
-      )}
+
+      <div ref={addictRef}
+        style={{
+          transform: 'scale(0)'
+        }}
+      >
+        {state.showAddict && (
+          <Addict 창닫기={() => toggleState('showAddict', false)} />
+        )}
+      </div>
 
       {state.showPlayer && (
         <Player 창닫기={() => toggleState('showPlayer', false)} />

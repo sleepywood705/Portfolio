@@ -98,7 +98,7 @@ const Icon = styled.button`
   border-radius: 4px;
   border: 1px solid rgba(255, 255, 255, 0.09);
   background-color: rgba(255, 255, 255, 0.09);
-  backdrop-filter: blur(10px);
+  // backdrop-filter: blur(10px);
   display: grid;
   grid-template-rows: 7fr 3fr;
   cursor: pointer;
