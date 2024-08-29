@@ -11,6 +11,7 @@ import { Rotate } from '../Browser/Rotate';
 import { Gradation } from '../Browser/Gradation';
 import { useState, useEffect, useRef } from "react";
 
+
 /* 바탕화면 */
 export function Desktop() {
   

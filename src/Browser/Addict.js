@@ -12,22 +12,22 @@ export function Addict({ 창닫기 }) {
     <Window id="Addict" tabText="Addict" 닫기={창닫기}>
       <main>
         <header>
-          <Link to="/addict">a ddct</Link>
+          <Link to="/portfolio/addict">a ddct</Link>
           <nav>
-            <Link to="/addict/all">제품 보기</Link>
-            <Link to="/addict/all?tab=best">베스트셀러</Link>
-            <Link to="/addict/note">조향 노트</Link>
-            <Link to="/addict/mall">매장 보기</Link>
+            <Link to="/portfolio/addict/all">제품 보기</Link>
+            <Link to="/portfolio/addict/all?tab=best">베스트셀러</Link>
+            <Link to="/portfolio/addict/note">조향 노트</Link>
+            <Link to="/portfolio/addict/mall">매장 보기</Link>
           </nav>
           <div>로그인</div>
           <div>회원가입</div>
           <div>장바구니</div>
         </header>
         <Routes>
-          <Route path="/addict" element={<AddictHomePage />} />
-          <Route path="/addict/all" element={<AddictAllPage />} />
-          <Route path="/addict/note" element={<AddictNotePage />} />
-          <Route path="/addict/mall" element={<AddictOfflinePage />} />
+          <Route path="/portfolio/addict" element={<AddictHomePage />} />
+          <Route path="/portfolio/addict/all" element={<AddictAllPage />} />
+          <Route path="/portfolio/addict/note" element={<AddictNotePage />} />
+          <Route path="/portfolio/addict/mall" element={<AddictOfflinePage />} />
         </Routes>
         <footer>
           <div>
