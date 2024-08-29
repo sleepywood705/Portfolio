@@ -2,7 +2,6 @@ import './Interface.css';
 import styled from 'styled-components';
 import { Iconset } from './Iconset';
 import { Folder } from './Folder';
-import { SettingBox } from './SettingBox';
 import { Portfolio } from '../Browser/Portfolio';
 import { Contact } from '../Browser/Contact';
 import { Reference } from '../Browser/Reference';
@@ -77,8 +76,6 @@ export function Desktop() {
         폴더열기={() => toggleState('showFolder', true)}
         컨택트열기={() => toggleState('showContact', true)}>
       </Iconset>
-
-      <SettingBox/>
 
       <div ref={folderRef}
         style={{
