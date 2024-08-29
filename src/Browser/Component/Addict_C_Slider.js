@@ -44,7 +44,7 @@ export function AddictSlider() {
       <div className="slider" ref={sliderRef}>
         <div className="slide">
           <video autoPlay loop muted>
-            <source src="/video/addict.mp4" type="video/mp4"/>
+            <source src={`${process.env.PUBLIC_URL}/video/addict.mp4`} type="video/mp4"/>
           </video>  
         </div>
         <div className="slide">

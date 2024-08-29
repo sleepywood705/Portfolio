@@ -28,7 +28,7 @@ body {
   width: 100vw; height: 50px;
   background-color: var(--Taskbar-background-color);
   display: flex;
-  display: none;
+  /* display: none; */
 }
 .Window {
   position: relative;

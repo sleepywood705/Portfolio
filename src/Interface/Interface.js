@@ -168,7 +168,7 @@ const Restore = styled.button`
   height: 100%; aspect-ratio: 1.2 / 1;
   display: grid;
   place-items: center;
-  background: url(../img/icon/restore.png) center/34% no-repeat;
+  background: url(${process.env.PUBLIC_URL}/img/icon/restore.png) center/34% no-repeat;
 
   &:hover {
     background-color: #ccc;
@@ -178,10 +178,10 @@ const Minimize = styled.button`
   height: 100%; aspect-ratio: 1.2 / 1;
   display: grid;
   place-items: center;
-  background: url(../img/icon/minimize.png) center/34% no-repeat;
+  background: url(${process.env.PUBLIC_URL}/img/icon/minimize.png) center/34% no-repeat;
 
   &:hover {
-    background: url(../img/icon/maximize.png) center/34% no-repeat;
+    background: url(${process.env.PUBLIC_URL}/img/icon/maximize.png) center/34% no-repeat;
     background-color: #ccc;
   }
 `
@@ -189,18 +189,18 @@ const Close = styled.button`
   height: 100%; aspect-ratio: 1.2 / 1;
   display: grid;
   place-items: center;
-  background: url(../img/icon/close_blk.png) center/34% no-repeat;
+  background: url(${process.env.PUBLIC_URL}/img/icon/close_blk.png) center/34% no-repeat;
 
   &:hover {
-    background: url(../img/icon/close.png) center/34% no-repeat;
+    background: url(${process.env.PUBLIC_URL}/img/icon/close.png) center/34% no-repeat;
     background-color: #F05A5A;
   }
 `
 const Left = styled.button`
-  background: url(../img/icon/chevron_l_blk_b.png) center/40% no-repeat;
+  background: url(${process.env.PUBLIC_URL}/img/icon/chevron_l_blk_b.png) center/40% no-repeat;
 `
 const Right = styled.button`
-  background: url(../img/icon/chevron_r_blk_b.png) center/40% no-repeat;
+  background: url(${process.env.PUBLIC_URL}/img/icon/chevron_r_blk_b.png) center/40% no-repeat;
 `
 /* 작업표시줄 */
 export function Taskbar() {
