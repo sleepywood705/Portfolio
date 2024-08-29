@@ -1,13 +1,24 @@
-import './Addict.css'
+import './Addict.css';
 import { Window } from '../Interface/Interface';
 import { AddictHomePage } from './Route/Addict_P_Home';
 import { AddictAllPage } from './Route/Addict_P_All';
 import { AddictNotePage } from './Route/Addict_P_Note';
 import { AddictOfflinePage } from './Route/Addict_P_Offline';
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route, Link, useNavigate } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+
 
 export function Addict({ 창닫기 }) {
-  
+  const navigate = useNavigate();
+  const [whenFirstLoaded, setWhenFirstLoaded] = useState(true);
+
+  useEffect(() => {
+    if (whenFirstLoaded) {
+      navigate('/Portfolio/addict');
+      setWhenFirstLoaded(false);
+    }
+  }, [navigate, whenFirstLoaded]);
+
   return (
     <Window id="Addict" tabText="Addict" 닫기={창닫기}>
       <main>
