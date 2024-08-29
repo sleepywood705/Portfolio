@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.7c26e16a.css",
-    "main.js": "/portfolio/static/js/main.29956873.js",
+    "main.js": "/portfolio/static/js/main.31f42ba0.js",
     "static/js/453.1407b060.chunk.js": "/portfolio/static/js/453.1407b060.chunk.js",
     "static/media/solid.jpg": "/portfolio/static/media/solid.d70f686dfdf2c913dd01.jpg",
     "static/media/Saint-Andrews-Queen.ttf": "/portfolio/static/media/Saint-Andrews-Queen.53fe428684ec1a1dd7af.ttf",
@@ -12,11 +12,11 @@
     "static/media/DS-DIGI.ttf": "/portfolio/static/media/DS-DIGI.0ef0e2249326c34137c8.ttf",
     "index.html": "/portfolio/index.html",
     "main.7c26e16a.css.map": "/portfolio/static/css/main.7c26e16a.css.map",
-    "main.29956873.js.map": "/portfolio/static/js/main.29956873.js.map",
+    "main.31f42ba0.js.map": "/portfolio/static/js/main.31f42ba0.js.map",
     "453.1407b060.chunk.js.map": "/portfolio/static/js/453.1407b060.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7c26e16a.css",
-    "static/js/main.29956873.js"
+    "static/js/main.31f42ba0.js"
   ]
 }
