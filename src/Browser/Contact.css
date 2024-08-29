@@ -1,0 +1,11 @@
+#Contact section {
+    width: 100%; height: 100%;
+    /* border: 1px solid red; */
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: auto 480px;
+}
+#Contact section > div {
+    width: 100%; height: 100%;
+    border: 1px solid red;
+}

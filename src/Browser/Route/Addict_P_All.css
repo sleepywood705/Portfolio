@@ -1,0 +1,23 @@
+#AddictAllPage {
+  width: 100%; height: fit-content;
+}
+#Depth {
+  z-index: 2;
+  position: sticky;
+  top: calc(30px + 40px);
+  height: 80px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#Depth button  {
+  padding: 0 20px;
+  height: 100%;
+  font-size: 18px;
+  display: grid;
+  place-items: center;
+}
+#Depth button.active {
+  font-weight: 600;
+}

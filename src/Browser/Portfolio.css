@@ -1,0 +1,60 @@
+#Portfolio article {
+  height: 100%;
+  background-color: #000;
+  overflow-y: scroll;
+}
+#Portfolio section {
+  position: relative;
+  height: 100%;
+  /* border: 1px solid #fff; */
+  /* overflow: hidden; */
+}
+#Portfolio p {
+  color: #fff;
+}
+#Portfolio header {
+  z-index: 1;
+  position: fixed;
+  left: 50%; top: 70px;
+  transform: translate(-50%);
+  padding: 0 320px;
+  width: calc(100% - 2px); height: 60px;
+  /* border-left: 1px solid #ddd; */
+  /* border-right: 1px solid #ddd; */
+  border-bottom: 1px solid #222;
+  background-color: #33333350;
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#Portfolio header > a {
+  padding: 0 30px;
+  height: 100%;
+  color: #999;
+  font-size: 14px;
+  text-decoration: none;
+  /* border: 1px solid #fff; */
+  display: grid;
+  place-items: center;
+  /* text-decoration: none; */
+}
+#Portfolio header > a:hover {
+  color: #fff;
+}
+#Portfolio header > span,
+#Portfolio .logo {
+  height: 100%; aspect-ratio: 1;
+  /* border: 1px solid #fff; */
+}
+#Portfolio header > span {
+  margin-left: auto;
+  /* border: 1px solid #fff; */
+}
+#Portfolio .logo {
+  margin-right: auto;
+  background: url(../../public/img/icon/logo.png) center/70% no-repeat;
+}
+#Portfolio .logo:hover {
+  background: url(../../public/img/icon/logo_invert.png) center/70% no-repeat;
+}
