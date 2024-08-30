@@ -19,7 +19,7 @@ export function Reference({ 창닫기 }) {
   }
 
   return (
-    <Window id="Reference" tabText="Reference" 닫기={창닫기}>
+    <Window id="Reference" tabText="레퍼런스 사이트 모음" 닫기={창닫기}>
       <main>
         <div className="bookmarks" style={{ top: bookmarks ? '30px' : '-100px' }}>
           <a href="https://chatgpt.com/" target="_blank"></a>

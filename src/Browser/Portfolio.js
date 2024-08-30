@@ -3,7 +3,7 @@ import { Window } from '../Interface/Interface';
 
 export function Portfolio({ 창닫기 }) {
   return (
-    <Window id="Portfolio" tabText="Portfolio" 닫기={창닫기}>
+    <Window id="Portfolio" tabText="포트폴리오" 닫기={창닫기}>
       <header>
         <a href="#intro" className="logo"></a>
         <a href="#intro">Home</a>

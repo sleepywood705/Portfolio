@@ -20,7 +20,7 @@ export function Addict({ 창닫기 }) {
   }, [navigate, whenFirstLoaded]);
 
   return (
-    <Window id="Addict" tabText="Addict" 닫기={창닫기}>
+    <Window id="Addict" tabText="에이딕트 리디자인" 닫기={창닫기}>
       <main>
         <header>
           <Link to="/Portfolio/addict">a ddct</Link>

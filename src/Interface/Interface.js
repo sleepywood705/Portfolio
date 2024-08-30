@@ -6,9 +6,12 @@ import { Portfolio } from '../Browser/Portfolio';
 import { Contact } from '../Browser/Contact';
 import { Reference } from '../Browser/Reference';
 import { Addict } from '../Browser/Addict';
-import { Player } from '../Browser/Player';
-import { Rotate } from '../Browser/Rotate';
+import { TodoList } from '../Browser/TodoList';
+import { Game2048 } from '../Browser/Game2048'; 
+import { PlayList } from '../Browser/PlayList';
+import { Rotation } from '../Browser/Rotation';
 import { Gradation } from '../Browser/Gradation';
+import { DesktopInfo } from '../Browser/Component/Desktop_C_Info';
 import { useState, useEffect, useRef } from 'react';
 
 
@@ -20,8 +23,10 @@ export function Desktop() {
     showContact: false,
     showReference: false,
     showAddict: false,
-    showPlayer: false,
-    showRotate: false,
+    showTodolist: false,
+    showGame2048: true,
+    showPlayList: false,
+    showRotation: false,
     showGradation: false,
   });
 
@@ -36,13 +41,27 @@ export function Desktop() {
   const portfolioRef = useRef(null);
   const referenceRef = useRef(null);
   const addictRef = useRef(null);
+  const todolistRef = useRef(null);
+  const game2048Ref = useRef(null);
 
-  const handleTransform = (ref, condition) => {
+  const showUpWindow = (ref, condition) => {
     if (ref.current) {
       ref.current.style.transform = condition ? 'scale(1)' : 'scale(0)';
       if (condition) {
         ref.current.style.width = '100vw';
         ref.current.style.height = '100%';
+      }
+    }
+  };
+
+  const showUpWindow2 = (ref, condition) => {
+    if (ref.current) {
+      ref.current.style.transform = condition ? 'translateX(0) scale(1)' : 'translateX(-100%) scale(0)';
+      if (condition) {
+        ref.current.style.width = '480px';
+        ref.current.style.height = '100%';
+        ref.current.style.right = '0'; // right 속성을 직접 설정
+        ref.current.style.position = 'absolute'; // 요소의 위치를 고정하기 위해 position 설정
       }
     }
   };
@@ -54,13 +73,30 @@ export function Desktop() {
   }, [state.showFolder]);
 
   useEffect(() => {
-    handleTransform(portfolioRef, state.showPortfolio);
-    handleTransform(referenceRef, state.showReference);
-    handleTransform(addictRef, state.showAddict);
-  }, [state.showPortfolio, state.showReference, state.showAddict]);
+    showUpWindow(portfolioRef, state.showPortfolio);
+    showUpWindow(referenceRef, state.showReference);
+    showUpWindow(addictRef, state.showAddict);
+  }, 
+  [
+    state.showPortfolio, 
+    state.showReference, 
+    state.showAddict, 
+  ]);
+
+  useEffect(() => {
+    showUpWindow2(todolistRef, state.showTodolist);
+    showUpWindow2(game2048Ref, state.showGame2048);
+  }, 
+  [
+    state.showTodolist,
+    state.showGame2048,
+  ]);
 
   return (
     <div id="Desktop">
+
+      <DesktopInfo/>
+
       <Iconset
         포트폴리오열기={() => toggleState('showPortfolio', true)}
         폴더열기={() => toggleState('showFolder', true)}
@@ -78,15 +114,13 @@ export function Desktop() {
           창닫기={() => toggleState('showFolder', false)}
           레퍼런스열기={() => toggleState('showReference', true)}
           에이딕트열기={() => toggleState('showAddict', true)}
-          플레이어열기={() => toggleState('showPlayer', true)}
-          로테이트열기={() => toggleState('showRotate', true)}
+          할일앱열기={() => toggleState('showTodolist', true)}
+          게임2048열기={() => toggleState('showGame2048', true)}
+          플레이어열기={() => toggleState('showPlayList', true)}
+          로테이션열기={() => toggleState('showRotation', true)}
           그라데이션열기={() => toggleState('showGradation', true)}
         />
       </div>
-
-      {state.showContact && (
-        <Contact 창닫기={() => toggleState('showContact', false)} />
-      )}
 
       <div ref={portfolioRef}
         style={{
@@ -98,15 +132,9 @@ export function Desktop() {
         )}
       </div>
 
-      <div ref={referenceRef}
-        style={{
-          transform: 'scale(0)'
-        }}
-      >
-        {state.showReference && (
-          <Reference 창닫기={() => toggleState('showReference', false)} />
-        )}
-      </div>
+      {state.showContact && (
+        <Contact 창닫기={() => toggleState('showContact', false)} />
+      )}
 
       <div ref={addictRef}
         style={{
@@ -118,17 +146,40 @@ export function Desktop() {
         )}
       </div>
 
-      {state.showPlayer && (
-        <Player 창닫기={() => toggleState('showPlayer', false)} />
+      <div ref={todolistRef}>
+        {state.showTodolist && (
+          <TodoList 창닫기={() => toggleState('showTodolist', false)} />
+        )}
+      </div>
+
+      <div ref={game2048Ref}>
+        {state.showGame2048 && (
+          <Game2048 창닫기={() => toggleState('showGame2048', false)} />
+        )}
+      </div>
+
+      {state.showPlayList && (
+        <PlayList 창닫기={() => toggleState('showPlayList', false)} />
       )}
 
-      {state.showRotate && (
-        <Rotate 창닫기={() => toggleState('showRotate', false)} />
+      {state.showRotation && (
+        <Rotation 창닫기={() => toggleState('showRotation', false)} />
       )}
 
       {state.showGradation && (
         <Gradation 창닫기={() => toggleState('showGradation', false)} />
       )}
+
+      <div ref={referenceRef}
+        style={{
+          transform: 'scale(0)'
+        }}
+      >
+        {state.showReference && (
+          <Reference 창닫기={() => toggleState('showReference', false)} />
+        )}
+      </div>
+
     </div>
   );
 }
@@ -233,9 +284,8 @@ function Time() {
   const minutes = currentTime.getMinutes();
   const ampm = hours >= 12 ? "오후" : "오전";
   const formattedHours = hours % 12 === 0 ? 12 : hours % 12;
-  const formattedTime = `${ampm} ${formattedHours}:${
-    minutes < 10 ? "0" : ""
-  }${minutes}`;
+  const formattedTime = `${ampm} ${formattedHours}:${minutes < 10 ? "0" : ""
+    }${minutes}`;
 
   return <div>{formattedTime}</div>;
 }
@@ -253,10 +303,10 @@ const StartButton = styled.button`
   left: 50%; top: 50%;
   transform: translate(-50%, -50%);
   padding: 6px;
-  gap: 2px;
   height: calc(100% - 8px); aspect-ratio: 1;
   // border: 1px solid #000;
   border-radius: 4px;
+  gap: 2px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);

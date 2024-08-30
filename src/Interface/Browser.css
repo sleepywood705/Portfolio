@@ -2,10 +2,14 @@
 #Contact,
 #Reference,
 #Addict,
-#Player,
-#Rotate,
+#PlayList,
+#Rotation,
 #Gradtaion {
   position: absolute;
   left: 0; top: 0;
   width: 100vw; height: 100%;
+}
+#TodoList,
+#Game2048 {
+  width: 480px; height: 100%;
 }

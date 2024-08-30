@@ -1,8 +1,8 @@
-import './Rotate.css'
+import './Rotation.css'
 import { Window } from '../Interface/Interface';
 import { useEffect, useRef } from 'react';
 
-export function Rotate({ 창닫기 }) {
+export function Rotation({ 창닫기 }) {
   const canvasRef = useRef(null);
 
   useEffect(() => {
@@ -78,7 +78,7 @@ export function Rotate({ 창닫기 }) {
   }, []);
 
   return (
-    <Window id="Rotate" tabText="Rotating Item" 닫기={창닫기}>
+    <Window id="Rotation" tabText="마우스 이벤트" 닫기={창닫기}>
       <p>마우스를 좌우로 움직여 보세요.</p>
       <canvas ref={canvasRef}></canvas>
     </Window>

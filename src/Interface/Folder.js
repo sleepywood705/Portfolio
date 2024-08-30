@@ -2,11 +2,14 @@ import styled from 'styled-components';
 import { Window } from './Interface';
 import { useState } from 'react';
 
-export function Folder({ style, 창닫기, 
+export function Folder({ 
+  style, 창닫기, 
   레퍼런스열기, 
   에이딕트열기, 
+  할일앱열기,
+  게임2048열기,
   플레이어열기, 
-  로테이트열기, 
+  로테이션열기, 
   그라데이션열기 }) {
 
   const [state, setState] = useState({
@@ -45,30 +48,30 @@ export function Folder({ style, 창닫기,
             </Icon>
           )}
 
-          {state.showDesign && (
+          {state.showDevelopment && (
             <Icon onClick={에이딕트열기}>
               <Upper>
-                <Inner>A'ddict</Inner>
+                <Inner>Dev</Inner>
               </Upper>
-              <Lower>A'ddict</Lower>
+              <Lower>에이딕트</Lower>
             </Icon>
           )}
 
           {state.showDevelopment && (
-            <Icon onClick={로테이트열기}>
+            <Icon onClick={할일앱열기}>
               <Upper>
                 <Inner>Dev</Inner>
               </Upper>
-              <Lower>Mouse Event</Lower>
+              <Lower>투두리스트</Lower>
             </Icon>
           )}
 
           {state.showDevelopment && (
-            <Icon onClick={그라데이션열기}>
+            <Icon onClick={게임2048열기}>
               <Upper>
                 <Inner>Dev</Inner>
               </Upper>
-              <Lower>Gradation</Lower>
+              <Lower>Game2048</Lower>
             </Icon>
           )}
 
@@ -77,9 +80,28 @@ export function Folder({ style, 창닫기,
               <Upper>
                 <Inner>Dev</Inner>
               </Upper>
-              <Lower>Play List</Lower>
+              <Lower>플레이리스트</Lower>
             </Icon>
           )}
+
+          {state.showDevelopment && (
+            <Icon onClick={로테이션열기}>
+              <Upper>
+                <Inner>Dev</Inner>
+              </Upper>
+              <Lower>마우스 이벤트</Lower>
+            </Icon>
+          )}
+
+          {state.showDevelopment && (
+            <Icon onClick={그라데이션열기}>
+              <Upper>
+                <Inner>Dev</Inner>
+              </Upper>
+              <Lower>캔버스 활용</Lower>
+            </Icon>
+          )}
+
         </div>
       </main>
     </Window>
