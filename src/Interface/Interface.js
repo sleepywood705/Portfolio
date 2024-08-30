@@ -24,7 +24,7 @@ export function Desktop() {
     showReference: false,
     showAddict: false,
     showTodolist: false,
-    showGame2048: true,
+    showGame2048: false,
     showPlayList: false,
     showRotation: false,
     showGradation: false,
