@@ -4,11 +4,12 @@ import { AddictHomePage } from './Route/Addict_P_Home';
 import { AddictAllPage } from './Route/Addict_P_All';
 import { AddictNotePage } from './Route/Addict_P_Note';
 import { AddictOfflinePage } from './Route/Addict_P_Offline';
-import { Routes, Route, Link, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import { Routes, Route, Link, useNavigate } from 'react-router-dom';
 
 
 export function Addict({ 창닫기 }) {
+
   const navigate = useNavigate();
   const [whenFirstLoaded, setWhenFirstLoaded] = useState(true);
 

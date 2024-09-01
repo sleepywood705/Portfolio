@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { Window } from './Interface';
 import { useState } from 'react';
 
+
 export function Folder({ 
   style, 창닫기, 
   레퍼런스열기, 
