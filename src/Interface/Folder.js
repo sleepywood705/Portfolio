@@ -7,6 +7,7 @@ export function Folder({
   style, 창닫기, 
   레퍼런스열기, 
   에이딕트열기, 
+  이핏열기,
   할일앱열기,
   게임2048열기,
   플레이어열기, 
@@ -55,6 +56,15 @@ export function Folder({
                 <Inner>Dev</Inner>
               </Upper>
               <Lower>에이딕트</Lower>
+            </Icon>
+          )}
+
+          {state.showDevelopment && (
+            <Icon onClick={이핏열기}>
+              <Upper>
+                <Inner>Dev</Inner>
+              </Upper>
+              <Lower>옷사이즈측정기</Lower>
             </Icon>
           )}
 

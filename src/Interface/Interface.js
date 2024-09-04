@@ -6,12 +6,12 @@ import { Portfolio } from '../Browser/Portfolio';
 import { Contact } from '../Browser/Contact';
 import { Reference } from '../Browser/Reference';
 import { Addict } from '../Browser/Addict';
+import { Ifit } from '../Browser/Ifit';
 import { TodoList } from '../Browser/TodoList';
 import { Game2048 } from '../Browser/Game2048'; 
 import { PlayList } from '../Browser/PlayList';
 import { Rotation } from '../Browser/Rotation';
 import { Gradation } from '../Browser/Gradation';
-import { DesktopInfo } from '../Browser/Component/Desktop_C_Info';
 import { useState, useEffect, useRef } from 'react';
 
 
@@ -23,6 +23,7 @@ export function Desktop() {
     showContact: false,
     showReference: false,
     showAddict: false,
+    showIfit: true,
     showTodolist: false,
     showGame2048: false,
     showPlayList: false,
@@ -95,8 +96,6 @@ export function Desktop() {
   return (
     <div id="Desktop">
 
-      <DesktopInfo/>
-
       <Iconset
         포트폴리오열기={() => toggleState('showPortfolio', true)}
         폴더열기={() => toggleState('showFolder', true)}
@@ -145,6 +144,10 @@ export function Desktop() {
           <Addict 창닫기={() => toggleState('showAddict', false)} />
         )}
       </div>
+
+      {state.showIfit && (
+        <Ifit 창닫기={() => toggleState('showIfit', false)} />
+      )}
 
       <div ref={todolistRef}>
         {state.showTodolist && (
