@@ -22,7 +22,7 @@ export function Addict({ 창닫기 }) {
 
   return (
     <Window id="Addict" tabText="에이딕트 리디자인" 닫기={창닫기}>
-      <main>
+      <div className="Container">
         <header>
           <Link to="/Portfolio/addict">a ddct</Link>
           <nav>
@@ -76,7 +76,7 @@ export function Addict({ 창닫기 }) {
             </div>
           </div>
         </footer>
-      </main>
+      </div>
     </Window>
   );
 }

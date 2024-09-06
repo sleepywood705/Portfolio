@@ -10,7 +10,7 @@ export function Folder({
   이핏열기,
   할일앱열기,
   게임2048열기,
-  플레이어열기, 
+  플레이리스트열기, 
   로테이션열기, 
   그라데이션열기 }) {
 
@@ -64,55 +64,19 @@ export function Folder({
               <Upper>
                 <Inner>Dev</Inner>
               </Upper>
-              <Lower>옷사이즈측정기</Lower>
+              <Lower>이핏</Lower>
             </Icon>
           )}
 
+
           {state.showDevelopment && (
-            <Icon onClick={할일앱열기}>
+            <Icon onClick={플레이리스트열기}>
               <Upper>
                 <Inner>Dev</Inner>
               </Upper>
-              <Lower>투두리스트</Lower>
+              <Lower>플레이 리스트</Lower>
             </Icon>
           )}
-
-          {state.showDevelopment && (
-            <Icon onClick={게임2048열기}>
-              <Upper>
-                <Inner>Dev</Inner>
-              </Upper>
-              <Lower>Game2048</Lower>
-            </Icon>
-          )}
-
-          {state.showDevelopment && (
-            <Icon onClick={플레이어열기}>
-              <Upper>
-                <Inner>Dev</Inner>
-              </Upper>
-              <Lower>플레이리스트</Lower>
-            </Icon>
-          )}
-
-          {state.showDevelopment && (
-            <Icon onClick={로테이션열기}>
-              <Upper>
-                <Inner>Dev</Inner>
-              </Upper>
-              <Lower>마우스 이벤트</Lower>
-            </Icon>
-          )}
-
-          {state.showDevelopment && (
-            <Icon onClick={그라데이션열기}>
-              <Upper>
-                <Inner>Dev</Inner>
-              </Upper>
-              <Lower>캔버스 활용</Lower>
-            </Icon>
-          )}
-
         </div>
       </main>
     </Window>

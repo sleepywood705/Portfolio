@@ -1,4 +1,4 @@
-#Game2048 main {
+#Game2048 .Container {
   padding: 20px;
   font-size: 28px;
   background-color: #00224D;
@@ -7,7 +7,7 @@
   flex-direction: column;
   overflow: hidden;
 }
-#Game2048 main > p {
+#Game2048 .Container > p {
   color: #fff;
   font-size: 28px;
 }

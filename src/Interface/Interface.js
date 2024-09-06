@@ -23,10 +23,10 @@ export function Desktop() {
     showContact: false,
     showReference: false,
     showAddict: false,
-    showIfit: true,
+    showIfit: false,
     showTodolist: false,
     showGame2048: false,
-    showPlayList: false,
+    showPlayList: true,
     showRotation: false,
     showGradation: false,
   });
@@ -115,7 +115,7 @@ export function Desktop() {
           에이딕트열기={() => toggleState('showAddict', true)}
           할일앱열기={() => toggleState('showTodolist', true)}
           게임2048열기={() => toggleState('showGame2048', true)}
-          플레이어열기={() => toggleState('showPlayList', true)}
+          플레이리스트열기={() => toggleState('showPlayList', true)}
           로테이션열기={() => toggleState('showRotation', true)}
           그라데이션열기={() => toggleState('showGradation', true)}
         />

@@ -63,7 +63,7 @@ export function TodoList({ 창닫기 }) {
 
   return (
     <Window id="TodoList" tabText="투두리스트" 닫기={창닫기}>
-      <main>
+      <div className="Container">
         <input
           type="date"
           value={selectedDate.toISOString().split('T')[0]}
@@ -82,7 +82,7 @@ export function TodoList({ 창닫기 }) {
           <div className="day">{day}</div>
         </div>
         <NewTodoForm addTodo={addTodo} />
-      </main>
+      </div>
     </Window>
   );
 }

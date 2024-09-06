@@ -1,7 +1,7 @@
 #Reference {
   background-color: #000;
 }
-#Reference main {
+#Reference .Container {
   color: #fff;
   display: grid;
   grid-template: "article aside";
@@ -26,13 +26,12 @@
 }
 #Reference aside > a {
   padding: 10px;
-  /* border: 1px solid #fff; */
+ 
   display: flex;
   flex-direction: column;
 }
 #Reference aside nav {
   font-size: 14px;
-  /* border: 1px solid #fff; */
   display: flex;
   flex-direction: column;
 }
@@ -41,20 +40,6 @@
 }
 #Reference aside nav a {
   padding: 10px 0 10px 40px;
-}
-#Reference aside #copyright {
-  margin-top: auto;
-  padding: 20px;
-  display: grid;
-  place-items: center;
-}
-#Reference aside #copyright span img {
-  width: 20px; aspect-ratio: 1;
-  filter: grayscale(100%) invert(1);
-}
-#Reference aside #copyright h6 {
-  color: #555;
-  font-size: 14px;
 }
 #Reference article {
   position: relative;
@@ -99,8 +84,8 @@
 #Reference section > div {
   position: relative;
   padding: 20px;
-  /* border: 1px solid #fff; */
   background-color: #000;
+  gap: 10px;
   display: flex;
   flex-direction: column;
   justify-content: end;
@@ -114,7 +99,6 @@
 #Reference section > div > h1 {
   color: #666;
   font-size: 24px;
-  font-weight: 900;
 }
 #Reference section > div p {
   margin: 0 !important;
@@ -135,48 +119,4 @@
   font-weight: 100;
   border-radius: 4px;
   background-color: #246BEB;
-}
-#Reference .bar {
-  position: absolute;
-  left: 50%; bottom: 30px;
-  transform: translate(-50%);
-  width: 120px; height: 10px;
-  border-radius: 50px;
-  background-color: #fff;
-}
-#Reference .bar:hover {
-  transform: translate(-50%) scale(1.2);
-}
-#Reference .bookmarks {
-  z-index: 1;
-  position: absolute;
-  left: 50%; top: -100px;
-  transform: translate(-50%);
-  padding: 6px;
-  gap: 6px;
-  width: fit-content; height: fit-content;
-  border: 2px solid #555;
-  background-color: #000;
-  display: flex;
-}
-#Reference .bookmarks a,
-#Reference .bookmarks button {
-  width: 50px; aspect-ratio: 1;
-  border-radius: 2px;
-}
-#Reference .bookmarks a {
-  background: url(https://cdn.digitalasset.works/news/photo/202307/3427_5163_5556.jpg) center/100% no-repeat;
-  background-color: #fff;  
-}
-#Reference .bookmarks button {
-  position: relative;
-  border: 2px dashed #666;
-}
-#Reference .bookmarks button::before {
-  position: absolute;
-  left: 50%; top: 50%;
-  transform: translate(-50%, calc(-50% - 1px));
-  content: '+';
-  color: #666;
-  font-size: 24px;
 }

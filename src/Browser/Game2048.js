@@ -208,7 +208,7 @@ export function Game2048({ 창닫기 }) {
 
   return (
     <Window id="Game2048" tabText="게임2048" 닫기={창닫기}>
-      <main>
+      <div className="Container">
         <p>방향키를 눌러 게임을 시작하세요. </p>
         <table id="table"></table>
         <div className="wrap">
@@ -216,7 +216,7 @@ export function Game2048({ 창닫기 }) {
           <span id="score">0</span>
         </div>
         <button id="newGame">새 게임</button>
-      </main>
+      </div>
     </Window>
   );
 }

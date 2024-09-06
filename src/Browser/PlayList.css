@@ -1,3 +1,86 @@
 #PlayList {
   background-color: #fff;
+  overflow-y: scroll;
+}
+#PlayList .Container {
+  width: 100%; height: 100%;
+  border: 1px solid #000;
+  display: grid;
+  grid-template-rows: 80px auto;
+}
+#PlayList header,
+#PlayList main {
+  /* border: 1px solid #000; */
+}
+#PlayList header {
+  background-color: #000;
+}
+#PlayList main {
+  padding: 40px;
+  background-color: #000;
+  gap: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+#PlayList main > div {
+  width: calc(100% / 3 - 10px); height: fit-content;
+}
+
+
+
+.Track {
+  padding: 1px;
+  gap: 1px;
+  display: grid;
+  grid-template-rows: 8fr 1.5fr;
+  background-color: #000;
+}
+.Track > div {
+  width: 100%; height: 100%;
+  background-color: #fff;
+}
+.Track > div:nth-child(1) {
+  position: relative;
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+}
+.Track > div:nth-child(1) img {
+  width: 80%; aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.Track > div:nth-child(1)::after {
+  z-index: 1;
+  position: absolute;
+  content: '';
+  left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(80% * 0.125);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: #fff;
+}
+@keyframes rotating {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.Track > div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Track > div:nth-child(2) > h2 {
+  font-weight: 600;
+}
+.Track > div:nth-child(2) > h3 {
+  font-weight: 500;
+}
+.Track > div:nth-child(2) > h4 {
+  font-weight: 400;
 }
