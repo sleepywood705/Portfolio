@@ -3,30 +3,56 @@ import { Window } from '../Interface/Interface';
 import { useState, useEffect } from 'react';
 
 export function PlayList({ 창닫기 }) {
-
-  const [trackData, setTrackData] = useState(null);  // 트랙 데이터를 저장할 상태
+  const [tracks, setTracks] = useState([]);
   const [errorMessage, setErrorMessage] = useState("");
 
-  useEffect(() => {
-    const albumName = 'Schadenfreude'; // 앨범 이름
-    const artistName = 'Aleph'; // 아티스트 이름
+  const trackInfo = [
+    { albumName: 'Schadenfreude', artistName: '알레프 (ALEPH)', index: 4 },
+    { albumName: 'Memory', artistName: 'Anonymous Artists', index: 0 },
+    { albumName: 'Inside Out', artistName: 'GEMINI', index: 1 },
+    { albumName: '1', artistName: '알레프 (ALEPH)', index: 2 },
+    { albumName: 'Dramatic & Cinematic', artistName: '러브홀릭', index: 9 },
+    { albumName: 'Inside Out', artistName: 'GEMINI', index: 4 },
+    { albumName: 'Syndrome', artistName: 'CIKI', index: 0 },
+    { albumName: '어쩌면 또 마지막이 될까봐', artistName: '뎁트', index: 0 },
+    { albumName: 'dot ', artistName: 'Tuifu', index: 0 },
+    { albumName: 'overdose', artistName: 'CIKI', index: 0 },
+    { albumName: '이별 못한 이별', artistName: '러브홀릭', index: 0 },
+    { albumName: '7집', artistName: '이소라', index: 0 },
+    { albumName: '하백의 신부', artistName: '사비나앤드론즈', index: 1 },
+    { albumName: '나의 아저씨', artistName: 'Sondia', index: 0 },
+    { albumName: 'Bittersweet', artistName: '랄라스윗 (lalasweet)', index: 8 },
+    { albumName: 'Bittersweet', artistName: '랄라스윗 (lalasweet)', index: 3 },
+    { albumName: '4 ONLY', artistName: '이하이', index: 9 },
+    { albumName: '1995', artistName: '체리픽 (Cherry pick)', index: 4 },
+    { albumName: '2024 SINGLE ALBUM ［SEO IN GUK］', artistName: '서인국', index: 0 },
+    { albumName: 'Antifreeze', artistName: '백예린', index: 0 },
+    { albumName: '하우아유?', artistName: '미키드', index: 0 },
+    { albumName: '울랄라 순정 농부 상담소 OST', artistName: '이아람', index: 0 },
+    { albumName: 'Girls On Top', artistName: '보아', index: 6 },
+  ];
 
-    // 아이튠즈 API 호출
-    fetch(`https://itunes.apple.com/search?term=${artistName}+${albumName}&entity=song`)
-      .then(response => response.json())  // JSON 형식으로 응답을 받음
-      .then(data => {
-        if (data.results.length > 4) {
-          // 첫 번째 트랙의 데이터를 가져옴
-          const track = data.results[4];
-          setTrackData(track);  // 트랙 데이터를 상태에 저장
-        } else {
-          setErrorMessage("앨범을 찾을 수 없습니다.");
-        }
-      })
-      .catch(error => {
+  useEffect(() => {
+    const fetchTracks = async () => {
+      try {
+        const results = await Promise.all(trackInfo.map(async ({ albumName, artistName, index }) => {
+          try {
+            const response = await fetch(`https://itunes.apple.com/search?term=${encodeURIComponent(artistName)}+${encodeURIComponent(albumName)}&entity=song`);
+            const data = await response.json();
+            return data.results.length > index ? data.results[index] : null;
+          } catch (error) {
+            console.error(`Error fetching track ${artistName} - ${albumName}:`, error);
+            return null; // 각 요청에 대해 에러가 발생할 경우 null을 반환
+          }
+        }));
+        setTracks(results.filter(Boolean)); // 유효한 결과만 필터링
+      } catch (error) {
         console.error("API 요청 중 오류 발생:", error);
         setErrorMessage("API 요청 중 오류가 발생했습니다.");
-      });
+      }
+    };
+
+    fetchTracks();
   }, []);
 
   return (
@@ -37,17 +63,7 @@ export function PlayList({ 창닫기 }) {
           {errorMessage ? (
             <div className="Error">{errorMessage}</div>
           ) : (
-            trackData && <Track track={trackData} />
-          )}
-          {errorMessage ? (
-            <div className="Error">{errorMessage}</div>
-          ) : (
-            trackData && <Track track={trackData} />
-          )}
-          {errorMessage ? (
-            <div className="Error">{errorMessage}</div>
-          ) : (
-            trackData && <Track track={trackData} />
+            tracks.map((track, index) => <Track key={index} track={track} />)
           )}
         </main>
       </div>
@@ -60,6 +76,10 @@ function Track({ track }) {
     <div className="Track">
       <div>
         <img src={track.artworkUrl100.replace('100x100bb', '512x512bb')} alt="앨범 이미지" className="AlbumImage" />
+        <audio controls>
+          <source src={track.previewUrl} type="audio/mpeg" />
+          Your browser does not support the audio element.
+        </audio>
       </div>
       <div className="info_Track">
         <h2>{track.collectionName}</h2>
