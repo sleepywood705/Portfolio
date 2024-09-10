@@ -25,33 +25,33 @@ export function AddictAllProduct() {
     <section id="AddictAllProduct">
       <div>
         <button
-          style={{ border: "1px solid #eee" }}
+          // style={{ border: "1px solid #eee" }}
           onClick={() => handleFiltering("")}
         >
           All
         </button>
         <button
-          style={{ backgroundColor: "#F4F4F4" }}
+          // style={{ backgroundColor: "#F4F4F4" }}
           onClick={() => handleFiltering("animal")}
         >
           Animal Note
         </button>
         <button
-          style={{ backgroundColor: "#543310", color: "#fff" }}
+          // style={{ backgroundColor: "#543310", color: "#fff" }}
           onClick={() => handleFiltering("woody")}
         >
           Woody Note
         </button>
         <button
-          style={{ backgroundColor: "#0A6847", color: "#fff" }}
+          // style={{ backgroundColor: "#0A6847", color: "#fff" }}
           onClick={() => handleFiltering("herbal")}
         >
           Herbal & Green Note
         </button>
         <button
           style={{
-            backgroundColor: "#FFBDF7",
-            color: "#FE0000",
+            // backgroundColor: "#FFBDF7",
+            // color: "#FE0000",
             marginBottom: "8px",
           }}
           onClick={() => handleFiltering("floral")}
@@ -60,31 +60,31 @@ export function AddictAllProduct() {
         </button>
         <br />
         <button
-          style={{ backgroundColor: "#40534C", color: "#fff" }}
+          // style={{ backgroundColor: "#40534C", color: "#fff" }}
           onClick={() => handleFiltering("mossy")}
         >
           Mossy Note
         </button>
         <button
-          style={{ backgroundColor: "#E0F4FF", color: "#008DDA" }}
+          // style={{ backgroundColor: "#E0F4FF", color: "#008DDA" }}
           onClick={() => handleFiltering("powdery")}
         >
           Watery & Powdery Note
         </button>
         <button
-          style={{ backgroundColor: "#F0FF42", color: "#06D001" }}
+          // style={{ backgroundColor: "#F0FF42", color: "#06D001" }}
           onClick={() => handleFiltering("citrus")}
         >
           Citrus Note
         </button>
         <button
-          style={{ backgroundColor: "#C40C0C", color: "#FFFFFF" }}
+          // style={{ backgroundColor: "#C40C0C", color: "#FFFFFF" }}
           onClick={() => handleFiltering("fruity")}
         >
           Fruity Note
         </button>
         <button
-          style={{ backgroundColor: "#F4F4F4", color: "#8158FC" }}
+          // style={{ backgroundColor: "#F4F4F4", color: "#8158FC" }}
           onClick={() => handleFiltering("special")}
         >
           Special Note

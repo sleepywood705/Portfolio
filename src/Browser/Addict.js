@@ -1,45 +1,63 @@
-import './Addict.css';
-import { Window } from '../Interface/Interface';
-import { AddictHomePage } from './Route/Addict_P_Home';
-import { AddictAllPage } from './Route/Addict_P_All';
-import { AddictNotePage } from './Route/Addict_P_Note';
-import { AddictOfflinePage } from './Route/Addict_P_Offline';
-import { useEffect, useState } from 'react';
-import { Routes, Route, Link, useNavigate } from 'react-router-dom';
-
+import "./Addict.css";
+import { Window } from "../Interface/Interface";
+import { AddictHomePage } from "./Route/Addict_P_Home";
+import { AddictAllPage } from "./Route/Addict_P_All";
+import { AddictNotePage } from "./Route/Addict_P_Note";
+import { AddictOfflinePage } from "./Route/Addict_P_Offline";
+import { AddictLoginDialog } from "./Component/Addict_C_Login";
+import { useEffect, useState } from "react";
+import { Routes, Route, Link, useNavigate } from "react-router-dom";
 
 export function Addict({ 창닫기 }) {
-
   const navigate = useNavigate();
-  const [whenFirstLoaded, setWhenFirstLoaded] = useState(true);
+  const [firstLoaded, setFirstLoaded] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   useEffect(() => {
-    if (whenFirstLoaded) {
-      navigate('/Portfolio/addict');
-      setWhenFirstLoaded(false);
+    if (firstLoaded) {
+      navigate("/Portfolio/addict");
+      setFirstLoaded(false);
     }
-  }, [navigate, whenFirstLoaded]);
+  }, [navigate, firstLoaded]);
+
+  const handleLoginClick = (e) => {
+    if (isLoggedIn) {
+      setIsLoggedIn(false);
+      console.log("로그아웃");
+    } else {
+      document.getElementById("AddictLoginDialog").showModal();
+    }
+  };
+
+  const handleLoginSuccess = () => {
+    setIsLoggedIn(true);
+  };
 
   return (
     <Window id="Addict" tabText="에이딕트 리디자인" 닫기={창닫기}>
+      <AddictExplain />
       <div className="Container">
         <header>
           <Link to="/Portfolio/addict">a ddct</Link>
-          <nav>
-            <Link to="/Portfolio/addict/all">제품 보기</Link>
-            <Link to="/Portfolio/addict/all?tab=best">베스트셀러</Link>
-            <Link to="/Portfolio/addict/note">조향 노트</Link>
-            <Link to="/Portfolio/addict/mall">매장 보기</Link>
-          </nav>
-          <div>로그인</div>
-          <div>회원가입</div>
-          <div>장바구니</div>
+          <Link to="/Portfolio/addict/all">제품 보기</Link>
+          <Link to="/Portfolio/addict/all?tab=best">베스트셀러</Link>
+          <Link to="/Portfolio/addict/note">조향 노트</Link>
+          <Link to="/Portfolio/addict/mall">매장 보기</Link>
+          <Link onClick={handleLoginClick} className="login">
+            {isLoggedIn ? "로그아웃" : "로그인"}
+          </Link>
+          {/* {!isLoggedIn && <Link>회원가입</Link>} */}
+          {/* <Link to="/Portfolio/addict/cart">장바구니</Link> */}
         </header>
+        <AddictLoginDialog onLoginSuccess={handleLoginSuccess} />
         <Routes>
           <Route path="/Portfolio/addict" element={<AddictHomePage />} />
           <Route path="/Portfolio/addict/all" element={<AddictAllPage />} />
           <Route path="/Portfolio/addict/note" element={<AddictNotePage />} />
-          <Route path="/Portfolio/addict/mall" element={<AddictOfflinePage />} />
+          <Route
+            path="/Portfolio/addict/mall"
+            element={<AddictOfflinePage />}
+          />
         </Routes>
         <footer>
           <div>
@@ -79,4 +97,13 @@ export function Addict({ 창닫기 }) {
       </div>
     </Window>
   );
+}
+
+
+function AddictExplain() {
+  return (
+    <div className="AddictExplain">
+      <h2>기획의도</h2>
+    </div>
+  )
 }

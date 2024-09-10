@@ -38,7 +38,7 @@ export function AddictSlider() {
       slider.style.transition = 'none';
     }, 1000);
   };
-
+  
   return (
     <section id="AddictSlider">
       <div className="slider" ref={sliderRef}>

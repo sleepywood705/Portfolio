@@ -22,11 +22,11 @@ export function Desktop() {
     showPortfolio: false,
     showContact: false,
     showReference: false,
-    showAddict: false,
+    showAddict: true,
     showIfit: false,
     showTodolist: false,
     showGame2048: false,
-    showPlayList: true,
+    showPlayList: false,
     showRotation: false,
     showGradation: false,
   });

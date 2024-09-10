@@ -12,10 +12,6 @@
   background-color: #fff;
   display: flex;
 }
-#Addict header nav {
-  margin-right: auto;
-  display: flex;
-}
 #Addict header a,
 #Addict header div {
   width: 90px; height: 100%;
@@ -31,12 +27,11 @@
   font-size: 30px;
   font-weight: 400;
 }
+#Addict header a.login {
+  margin-left: auto;
+}
 #Addict header>div {
   position: relative;
-}
-#Addict header>div:hover nav {
-  padding: 0 256px 20px;
-  height: 182px;
 }
 #Addict footer {
   padding: 0 100px;
@@ -61,8 +56,18 @@
 #Addict footer h3 {
   margin-bottom: 15px;
   text-align: left;
-  font-weight: 500;
 }
 #Addict footer p {
   text-align: left;
+}
+
+.AddictExplain {
+  z-index: 999;
+  position: fixed;
+  left: 0; top: 70px;
+  width: 100%; height: 100%;
+  /* border: 1px solid #000; */
+  backdrop-filter: blur(15px);
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow-y: scroll;
 }
