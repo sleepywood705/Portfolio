@@ -1,8 +1,10 @@
 import './Rotation.css'
-import { Window } from '../Interface/Interface';
+import { Window } from '../Interface/Window';
 import { useEffect, useRef } from 'react';
 
+
 export function Rotation({ 창닫기 }) {
+  
   const canvasRef = useRef(null);
 
   useEffect(() => {

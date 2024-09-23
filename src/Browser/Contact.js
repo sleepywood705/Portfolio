@@ -1,5 +1,5 @@
 import './Contact.css'
-import { Window } from '../Interface/Interface';
+import { Window } from '../Interface/Window'
 
 
 export function Contact({ 창닫기 }) {

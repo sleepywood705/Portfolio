@@ -1,5 +1,5 @@
 import './Ifit.css'
-import { Window } from '../Interface/Interface';
+import { Window } from '../Interface/Window';
 
 
 export function Ifit({ 창닫기 }) {

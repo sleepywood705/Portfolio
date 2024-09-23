@@ -2,7 +2,8 @@ import React from 'react';
 import './global.css';
 import './font.css';
 import './Interface/Browser.css'
-import { Taskbar, Desktop } from './Interface/Interface';
+import { Desktop } from './Interface/Interface';
+import { Taskbar } from './Interface/Taskbar'
 
 
 function App() {

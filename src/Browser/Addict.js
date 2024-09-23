@@ -1,17 +1,20 @@
 import "./Addict.css";
-import { Window } from "../Interface/Interface";
-import { AddictHomePage } from "./Route/Addict_P_Home";
-import { AddictAllPage } from "./Route/Addict_P_All";
-import { AddictNotePage } from "./Route/Addict_P_Note";
-import { AddictOfflinePage } from "./Route/Addict_P_Offline";
-import { AddictLoginDialog } from "./Component/Addict_C_Login";
+import { Window } from '../Interface/Window'
+import { AddictHeader } from "./Component/Addict_Header";
+import { AddictFooter } from "./Component/Addict_Footer";
+import { AddictHomePage } from "./Route/Addict_Home";
+import { AddictAllPage } from "./Route/Addict_All";
+import { AddictNotePage } from "./Route/Addict_Note";
+import { AddictOfflinePage } from "./Route/Addict_Offline";
 import { useEffect, useState } from "react";
-import { Routes, Route, Link, useNavigate } from "react-router-dom";
+import { Routes, Route, useNavigate } from "react-router-dom";
+
 
 export function Addict({ 창닫기 }) {
+
   const navigate = useNavigate();
   const [firstLoaded, setFirstLoaded] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [showExplain, setShowExplain] = useState(true);
 
   useEffect(() => {
     if (firstLoaded) {
@@ -20,36 +23,15 @@ export function Addict({ 창닫기 }) {
     }
   }, [navigate, firstLoaded]);
 
-  const handleLoginClick = (e) => {
-    if (isLoggedIn) {
-      setIsLoggedIn(false);
-      console.log("로그아웃");
-    } else {
-      document.getElementById("AddictLoginDialog").showModal();
-    }
-  };
-
-  const handleLoginSuccess = () => {
-    setIsLoggedIn(true);
+  const handleExplainClose = () => {
+    setShowExplain(false);
   };
 
   return (
     <Window id="Addict" tabText="에이딕트 리디자인" 닫기={창닫기}>
-      <AddictExplain />
+      {showExplain && <AddictExplain onClose={handleExplainClose} />}
       <div className="Container">
-        <header>
-          <Link to="/Portfolio/addict">a ddct</Link>
-          <Link to="/Portfolio/addict/all">제품 보기</Link>
-          <Link to="/Portfolio/addict/all?tab=best">베스트셀러</Link>
-          <Link to="/Portfolio/addict/note">조향 노트</Link>
-          <Link to="/Portfolio/addict/mall">매장 보기</Link>
-          <Link onClick={handleLoginClick} className="login">
-            {isLoggedIn ? "로그아웃" : "로그인"}
-          </Link>
-          {/* {!isLoggedIn && <Link>회원가입</Link>} */}
-          {/* <Link to="/Portfolio/addict/cart">장바구니</Link> */}
-        </header>
-        <AddictLoginDialog onLoginSuccess={handleLoginSuccess} />
+        <AddictHeader />
         <Routes>
           <Route path="/Portfolio/addict" element={<AddictHomePage />} />
           <Route path="/Portfolio/addict/all" element={<AddictAllPage />} />
@@ -59,51 +41,91 @@ export function Addict({ 창닫기 }) {
             element={<AddictOfflinePage />}
           />
         </Routes>
-        <footer>
-          <div>
-            <div>
-              <h3>COMPANY INFO</h3>
-              <p>주식회사 일레븐코퍼레이션 | 백창준</p>
-              <p>주소 | 서울특별시 중구 남대문로 78, 5층(명동1가)</p>
-              <p>사업자등록번호 | 875-88-00859</p>
-              <p>통신판매신고번호 | 2022-서울중고-1672</p>
-            </div>
-          </div>
-          <div>
-            <div>
-              <h3>CONTACT US</h3>
-              <p>마케팅제휴문의</p>
-              <p>a-ddict@a-ddic.co.kr</p>
-              <p>입점 및 해외 수출 문의</p>
-              <p>global@11copr.co.kr</p>
-            </div>
-          </div>
-          <div>
-            <div>
-              <h3>COSTOMER CENTER</h3>
-              <p>1661-8148</p>
-              <p>10:00 ~ 17:00</p>
-              <p>토, 일욜일 및 공휴일 휴무</p>
-            </div>
-          </div>
-          <div>
-            <div>
-              <h3>SOCIAL</h3>
-              <p>instagram</p>
-              <p>kakao</p>
-            </div>
-          </div>
-        </footer>
+        <AddictFooter />
       </div>
     </Window>
   );
 }
 
 
-function AddictExplain() {
+function AddictExplain({ onClose }) {
   return (
     <div className="AddictExplain">
-      <h2>기획의도</h2>
+      <button onClick={onClose}></button>
+      <section className="sect1">
+        <h2>기획 의도</h2>
+        <p>
+          국내 향수 브랜드 쇼핑몰 에이딕트를 리디자인한 프로젝트로,
+          기존 사이트의 불편함을 해소하고 사용자 경험을 향상시키기 위해 진행되었습니다.
+          <br/>
+          <br/>
+          지금은 에이딕트가 밝고 모던한 느낌을 주는 사이트로 새롭게 단장되어 있지만,
+          이전에는 전체적으로 어두운 계열의 컨셉 컬러를 사용하고 있어 브라우징을 할 때에 눈에 피로감을 주고
+          페이지 양쪽에 여백이 없어 심리적으로 답답한 느낌을 준다는 평이 많았던 사이트였습니다.
+          이를 개선하고자 웹퍼블리셔를 준비하던 시절 작업했던 리디자인 프로젝트가 있었지만
+          프론트엔드 개발자로 진로를 변경하는 과정에서 홈페이지가 새롭게 단장되었음을 알게 되어 더 이상의 리디자인은 진행하지 않았습니다.
+          <br/>
+          <br/>
+          대신, 리액트 프레임워크를 배우면서 알게 된 지식으로 클론코딩을 진행하게 되었고
+          새롭게 단장된 홈페이지의 컨셉을 헤치지 않으면서도 어떻게 하면 사용자 경험을 향상시킬 수 있을지에 대해 고민하며 작업하였습니다.
+          <br/>
+          <br/>
+          에이딕트 클론코딩은 리액트를 배우면서 작성한 첫 번째 프로젝트입니다. 부족하고 개선할 부분이 많지만 예쁘게 봐주셨으면 좋겠습니다.
+        </p>
+      </section>
+      <section className="sect2">
+        <h2>개발 기간</h2>
+        2024년 8월 5일 ~ 2024년 8월 14일, 총 10일
+      </section>
+      <section className="sect3">
+        <h2>개발 목표</h2>
+        <ul>
+          <li>useState 훅을 활용하여 상태를 관리할 수 있다.</li>
+          <li>Redux를 활용하여 분산된 state를 단일 스토어에서 중앙집중 관리할 수 있다.</li>
+          <li>Router를 활용하여 페이지를 새로고침하지 않고 페이지를 이동시킬 수 있다.</li>
+          <li>useNavigate 훅을 활용하여 특정 페이지로 이동시킬 수 있다.</li>
+          <li>기존 사이트와 최대한 유사하게 페이지를 구성할 수 있다.</li>
+          <li>기존 사이트에는 존재하지 않는 상품 필터링 기능을 구현할 수 있다.</li>
+          <li>useRef와 useEffect 훅을 활용하여 슬라이더를 구현할 수 있다.</li>
+        </ul>
+      </section>
+      <section className="sect4">
+        <h2>사용 라이브러리</h2>
+        <ul>
+          <li>react hooks</li>
+          <li>react-redux</li>
+          <li>react-router-dom</li>
+        </ul>
+      </section>
+      <section className="sect5">
+        <h2>기능 구현</h2>
+        <ul>
+          <li>메인페이지 레이아웃</li>
+          <li>히어로 배너 슬라이더</li>
+          <li>상품 갤러리</li>
+          <li>상품 유형 필터링</li>
+          <li>특정 노트에 해당하는 상품 필터링</li>
+        </ul>
+      </section>
+      <section className="sect6">
+        <h2>어려웠던 부분</h2>
+        <ul>
+          <li>Redux 라이브러리를 사용해 store를 작성한 후 컴포넌트 내에서 key와 value를 가려내는 데에 어려움이 있었다.</li>
+          <li>onClick 이벤트 핸들러를 사용해 특정 함수가 호출될 때 필터링 인자를 전달하는 방식하는 데에 어려움이 있었다.</li>
+          <li>백엔드 지식이 없어 로그인과 회원가입 로직을 구현할 수 없었다.</li>
+        </ul>
+      </section>
+      <section className="sect7">
+        <h2>개선할 부분</h2>
+        <ul>
+          <li>상품마다 달라지는 상세페이지 구현</li>
+          <li>로그인과 회원가입 로직 구현</li>
+        </ul>
+      </section>
+      <section className="sect8">
+        <h2>참고사이트</h2>
+        <a href="https://addct.kr/" target="_blank">https://addct.kr/</a>
+      </section>
     </div>
   )
 }

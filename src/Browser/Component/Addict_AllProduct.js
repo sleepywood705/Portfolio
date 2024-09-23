@@ -1,25 +1,24 @@
-import "./Addict_C_AllProduct.css";
-import { AddictProduct } from "./Addict_C_Product";
+import "./Addict_AllProduct.css";
+import { AddictProduct } from "./Addict_Product";
 import { useState } from "react";
 import { useSelector } from "react-redux";
 
 
 export function AddictAllProduct() {
-
-  const productData = useSelector((state) => state.productData);
+  
   const [selectedFilter, setSelectedFilter] = useState("");
-
-  const handleFiltering = (filterCode) => {
-    setSelectedFilter(filterCode);
-  };
+  
+  const productData = useSelector((state) => state.productData);
 
   const filteredProducts = Object.values(productData)
-    .flat()
-    .filter((item) => {
-      if (item.name === "" && item.url.includes("noStock")) return false; // "제품없음" 객체 제외
-      if (selectedFilter === "") return true; // 필터가 선택되지 않은 경우 모든 제품을 표시
-      return item.filterCode === selectedFilter;
+  .flat()
+  .filter((item) => {
+    if (item.name === "" && item.url.includes("noStock")) return false; // "제품없음" 객체 제외
+    if (selectedFilter === "") return true; // 필터가 선택되지 않은 경우 모든 제품을 표시
+    return item.filterCode === selectedFilter;
     });
+    
+  const handleFiltering = (filterCode) => {setSelectedFilter(filterCode);};
 
   return (
     <section id="AddictAllProduct">

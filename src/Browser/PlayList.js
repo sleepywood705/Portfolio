@@ -1,8 +1,10 @@
 import "./PlayList.css";
-import { Window } from "../Interface/Interface";
+import { Window } from '../Interface/Window'
 import { useState, useEffect } from "react";
 
+
 export function PlayList({ 창닫기 }) {
+  
   const [tracks, setTracks] = useState([]);
   const [errorMessage, setErrorMessage] = useState("");
 

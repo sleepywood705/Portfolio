@@ -1,21 +1,17 @@
 import './Reference.css'
-import { Window } from '../Interface/Interface';
+import { Window } from '../Interface/Window';
 import { useState } from 'react';
 
+
 export function Reference({ 창닫기 }) {
-
+  
   const [submenu, setSubmenu] = useState(false);
-  const showSubmenu = () => {
-    setSubmenu(prevShow => !prevShow);
-  }
-
-  const hideSubmenu = () => {
-    setSubmenu(false);
-  }
+  const showSubmenu = () => {setSubmenu(prevShow => !prevShow);}
+  const hideSubmenu = () => {setSubmenu(false);}
 
   return (
     <Window id="Reference" tabText="레퍼런스 사이트 모음" 닫기={창닫기}>
-      <div className="container">
+      <div className="Container">
         <aside>
           <a onClick={hideSubmenu} href="#document">문서</a>
           <a onClick={hideSubmenu} href="#design">디자인</a>

@@ -1,4 +1,4 @@
-import './Addict_C_Slider.css';
+import './Addict_Slider.css';
 import { useRef } from 'react';
 
 

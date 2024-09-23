@@ -1,32 +1,31 @@
 import styled from 'styled-components';
-import { Window } from './Interface';
+import { Window } from '../Interface/Window'
 import { useState } from 'react';
 
 
 export function Folder({ 
-  style, 창닫기, 
-  레퍼런스열기, 
-  에이딕트열기, 
-  이핏열기,
-  할일앱열기,
-  게임2048열기,
-  플레이리스트열기, 
-  로테이션열기, 
-  그라데이션열기 }) {
+  style, 창닫기, 레퍼런스열기, 
+  에이딕트열기, 이핏열기,
+  할일앱열기, 게임2048열기,
+  플레이리스트열기, 로테이션열기, 
+  그라데이션열기, 카운터열기 }) {
 
   const [state, setState] = useState({
     showDevelopment: true,
     showDocument: false,
     showDesign: false,
+    showPractice: false,
   });
 
   const onClick = (type) => {
     if (type === 'Development') {
-      setState({ showDocument: false, showDesign: false, showDevelopment: true });
+      setState({ showDevelopment: true, showDocument: false, showDesign: false,  showPractice: false });
     } else if (type === 'Document') {
-      setState({ showDocument: true, showDesign: false, showDevelopment: false });
+      setState({ showDevelopment: false, showDocument: true, showDesign: false,  showPractice: false });
     } else if (type === 'Design') {
-      setState({ showDocument: false, showDesign: true, showDevelopment: false });
+      setState({ showDevelopment: false, showDocument: false, showDesign: true,  showPractice: false });
+    } else if (type === 'Practice') {
+      setState({ showDevelopment: false, showDocument: false, showDesign: false,  showPractice: true });
     }
   };
 
@@ -38,22 +37,23 @@ export function Folder({
             <Favorites onClick={() => onClick('Development')}>📁 Development</Favorites>
             <Favorites onClick={() => onClick('Document')}>📁 Document</Favorites>
             <Favorites onClick={() => onClick('Design')}>📁 Design</Favorites>
+            <Favorites onClick={() => onClick('Practice')}>📁 Practice</Favorites>
           </ul>
         </aside>
         <div>
           {state.showDocument && (
             <Icon onClick={레퍼런스열기}>
               <Upper>
-                <Inner>Ref</Inner>
+                <Inner>Doc</Inner>
               </Upper>
-              <Lower>Reference Site</Lower>
+              <Lower>레퍼런스 사이트</Lower>
             </Icon>
           )}
 
-          {state.showDevelopment && (
+          {state.showDesign && (
             <Icon onClick={에이딕트열기}>
               <Upper>
-                <Inner>Dev</Inner>
+                <Inner>Design</Inner>
               </Upper>
               <Lower>에이딕트</Lower>
             </Icon>
@@ -68,13 +68,21 @@ export function Folder({
             </Icon>
           )}
 
-
           {state.showDevelopment && (
             <Icon onClick={플레이리스트열기}>
               <Upper>
                 <Inner>Dev</Inner>
               </Upper>
               <Lower>플레이 리스트</Lower>
+            </Icon>
+          )}
+
+          {state.showPractice && (
+            <Icon onClick={카운터열기}>
+              <Upper>
+                <Inner>Pratice</Inner>
+              </Upper>
+              <Lower>카운터 연습</Lower>
             </Icon>
           )}
         </div>

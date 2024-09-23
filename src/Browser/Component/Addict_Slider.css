@@ -36,15 +36,17 @@
     justify-content: space-between;
 }
 #AddictSlider .cont_button button {
-    width: 50px; aspect-ratio: 1;
+    width: 40px; aspect-ratio: 1;
     border-radius: 50%;
 }
 #AddictSlider button#left {
     background: url(/public//img/icon/chevron_l_blk.png) calc(50% - 1px)/35% no-repeat;
+    background-color: #fff;
 }
 #AddictSlider button#right {
     background: url(/public//img/icon/chevron_r_blk.png) calc(50% + 2px)/35% no-repeat;
+    background-color: #fff;
 }
 #AddictSlider .cont_button button:hover {
-    transform: scale(1.5);
+    transform: scale(1.3);
 }

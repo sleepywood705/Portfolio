@@ -1,9 +1,10 @@
 import './TodoList.css';
-import { Window } from '../Interface/Interface';
+import { Window } from '../Interface/Window';
 import { useState, useEffect, useRef } from 'react';
 
 
 export function TodoList({ 창닫기 }) {
+  
   const [todos, setTodos] = useState({});
   const [datePickerTop, setDatePickerTop] = useState('-80px');
   const [selectedDate, setSelectedDate] = useState(new Date());

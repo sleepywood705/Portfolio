@@ -2,72 +2,58 @@
   background-color: #fff;
   overflow-y: scroll;
 }
-#Addict header {
-  z-index: 1;
-  position: sticky;
-  top: 70px;
-  padding: 0 100px;
-  width: calc(100% - 2px); height: 80px;
-  border: 1px solid #fff;
-  background-color: #fff;
-  display: flex;
-}
-#Addict header a,
-#Addict header div {
-  width: 90px; height: 100%;
-  font-size: 15px;
-  font-weight: 600;
-  display: grid;
-  place-items: center;
-}
-#Addict header>a:nth-child(1) {
-  padding-bottom: 4px;
-  width: fit-content; height: 100%;
-  aspect-ratio: 2 / 1;
-  font-size: 30px;
-  font-weight: 400;
-}
-#Addict header a.login {
-  margin-left: auto;
-}
-#Addict header>div {
-  position: relative;
-}
-#Addict footer {
-  padding: 0 100px;
-  width: 100%; height: 400px;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-}
-#Addict footer>div {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  display: grid;
-  place-items: center;
-}
-#Addict footer div>div {
-  font-size: 16px;
-  gap: 4px;
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-}
-#Addict footer h3 {
-  margin-bottom: 15px;
-  text-align: left;
-}
-#Addict footer p {
-  text-align: left;
-}
+
 
 .AddictExplain {
   z-index: 999;
   position: fixed;
   left: 0; top: 70px;
+  padding: 100px 480px 170px;
   width: 100%; height: 100%;
-  /* border: 1px solid #000; */
   backdrop-filter: blur(15px);
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.9);
+  gap: 60px;
+  display: flex;
+  flex-direction: column;
   overflow-y: scroll;
+}
+.AddictExplain button {
+  position: absolute;
+  right: 40px; top: 40px;
+  width: 30px; height: 30px;
+  background: url(../../public/img/icon/close.png) center/cover no-repeat;
+}
+.AddictExplain section {
+  color: #fff;
+  gap: 30px;
+  display: flex;
+  flex-direction: column;
+}
+.AddictExplain section h2 {
+  position: relative;
+}
+.AddictExplain section h2::before {
+  position: absolute;
+  left: -12px; top: 50%;
+  transform: translate(0, -50%);
+  content: '';
+  width: 3px; height: 80%;
+  background-color: #fff;
+}
+.AddictExplain section p {
+  line-height: 30px;
+}
+.AddictExplain section ul {
+  padding-left: 20px;
+  list-style: disc;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.AddictExplain section li {
+cursor: default;
+}
+.AddictExplain .sect1 span {
+  position: relative;
+  border: 1px solid #fff;
 }

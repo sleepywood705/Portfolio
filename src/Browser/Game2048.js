@@ -1,5 +1,5 @@
 import './Game2048.css'
-import { Window } from '../Interface/Interface';
+import { Window } from '../Interface/Window';
 import { useEffect } from 'react';
 
 

@@ -6,7 +6,10 @@
     transition: all 0.5s;
 }
 ::-webkit-scrollbar {
-    width: 1px; height: 1px;
+    width: 4px;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
 }
 html{
     font-size: 17px;

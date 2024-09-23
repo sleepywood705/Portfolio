@@ -1,4 +1,5 @@
-import "./Addict_P_Offline.css";
+import "./Addict_Offline.css";
+
 
 const storeData = [
   {

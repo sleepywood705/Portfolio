@@ -1,9 +1,10 @@
 import './Gradation.css'
-import { Window } from '../Interface/Interface';
+import { Window } from '../Interface/Window';
 import { useEffect, useRef } from 'react';
 
 
 export function Gradation({ 창닫기 }) {
+  
   const canvasRef = useRef(null);
 
   useEffect(() => {

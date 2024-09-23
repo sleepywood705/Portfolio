@@ -1,7 +1,7 @@
-import './Addict_P_Home.css'
-import { AddictSlider } from '../Component/Addict_C_Slider';
-import { AddictShortCut } from '../Component/Addict_C_ShortCut';
-import { AddictBestProduct } from '../Component/Addict_C_AllProduct';
+import './Addict_Home.css'
+import { AddictSlider } from '../Component/Addict_Slider';
+import { AddictShortCut } from '../Component/Addict_ShortCut';
+import { AddictBestProduct } from '../Component/Addict_AllProduct';
 
 
 export function AddictHomePage() {

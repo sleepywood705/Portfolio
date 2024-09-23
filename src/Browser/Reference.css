@@ -6,7 +6,6 @@
   display: grid;
   grid-template: "article aside";
   grid-template-columns: 1fr 320px;
-  overflow: hidden;
 }
 #Reference aside {
   position: relative;

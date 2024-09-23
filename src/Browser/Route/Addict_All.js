@@ -1,11 +1,5 @@
-import "./Addict_P_All.css";
-import {
-  AddictAllProduct,
-  AddictBestProduct,
-  AddictLiquidProduct,
-  AddictSolidProduct,
-  AddictGiftProduct,
-} from "../Component/Addict_C_AllProduct";
+import "./Addict_All.css";
+import { AddictAllProduct, AddictBestProduct, AddictLiquidProduct, AddictSolidProduct, AddictGiftProduct } from "../Component/Addict_AllProduct";
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 

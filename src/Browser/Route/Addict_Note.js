@@ -1,9 +1,11 @@
-import "./Addict_P_Note.css";
+import "./Addict_Note.css";
 import { useState } from "react";
 import { useSelector } from "react-redux";
-import { AddictProduct } from "../Component/Addict_C_Product";
+import { AddictProduct } from "../Component/Addict_Product";
+
 
 export function AddictNotePage() {
+
   const cardData = useSelector((state) => state.cardData);
   const productData = useSelector((state) => state.productData); // productData 추가
 
@@ -39,9 +41,7 @@ export function AddictNotePage() {
     setOpenModal(true);
   };
 
-  const closeModal = () => {
-    setOpenModal(false);
-  };
+  const closeModal = () => {setOpenModal(false);};
 
   return (
     <div id="AddictNotePage">
