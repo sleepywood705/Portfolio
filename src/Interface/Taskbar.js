@@ -1,4 +1,4 @@
-import './Interface.css';
+import './Taskbar.css'
 import styled from 'styled-components';
 import { useState, useEffect } from 'react';
 
@@ -22,27 +22,20 @@ export function Taskbar() {
 }
 function Time() {
   const [currentTime, setCurrentTime] = useState(new Date());
-
-  useEffect(() => {
-    const timerID = setInterval(() => tick(), 1000);
-
-    return () => {
-      clearInterval(timerID);
-    };
-  }, []);
-
-  function tick() {
-    setCurrentTime(new Date());
-  }
-
   const hours = currentTime.getHours();
   const minutes = currentTime.getMinutes();
   const ampm = hours >= 12 ? "오후" : "오전";
-  const formattedHours = hours % 12 === 0 ? 12 : hours % 12;
-  const formattedTime = `${ampm} ${formattedHours}:${minutes < 10 ? "0" : ""
-    }${minutes}`;
+  const formatHours = hours % 12 === 0 ? 12 : hours % 12;
+  const formatTime = `${ampm} ${formatHours}:${minutes < 10 ? "0" : ""}${minutes}`;
 
-  return <div>{formattedTime}</div>;
+  useEffect(() => {
+    const timerID = setInterval(() => tick(), 1000);
+    return () => {clearInterval(timerID);};
+  }, []);
+
+  function tick() {setCurrentTime(new Date());}
+
+  return <div>{formatTime}</div>;
 }
 function Yeartoday() {
   const today = new Date();

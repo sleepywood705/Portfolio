@@ -81,7 +81,7 @@ export function Rotation({ 창닫기 }) {
 
   return (
     <Window id="Rotation" tabText="마우스 이벤트" 닫기={창닫기}>
-      <p>마우스를 좌우로 움직여 보세요.</p>
+      <p>Click and Drag !</p>
       <canvas ref={canvasRef}></canvas>
     </Window>
   );

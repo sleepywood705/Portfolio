@@ -54,9 +54,9 @@ export function AddictSlider() {
           <img src="https://shopby-images.cdn-nhncommerce.com/20240731/135245.538411000/%EC%97%90%EC%9D%B4%EB%94%95%ED%8A%B8_%EC%9E%90%EC%82%AC%EB%AA%B0_%EB%A9%94%EC%9D%B8%ED%8E%98%EC%9D%B4%EC%A7%80_%EB%A1%A4%EB%A7%81%EB%B0%B0%EB%84%88_PC%2002.jpg" alt="img" />
         </div>
       </div>
-      <div className="cont_button">
-        <button id="left" onClick={handleButtonLeft}></button>
-        <button id="right" onClick={handleButtonRight}></button>
+      <div className="wrap_button">
+        <button className="btn-left" onClick={handleButtonLeft}></button>
+        <button className="btn-right" onClick={handleButtonRight}></button>
       </div>
     </section>
   );

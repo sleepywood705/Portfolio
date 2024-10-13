@@ -1,11 +1,18 @@
 import './Counter.css';
 import { Window } from '../Interface/Window';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export function Counter({ 창닫기 }) {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(() => {
+    const savedCount = localStorage.getItem('count');
+    return savedCount ? parseInt(savedCount, 10) : 0;
+  });
 
-  const incrementCount = () => setCount(count + 1);
+  useEffect(() => {
+    localStorage.setItem('count', count.toString());
+  }, [count]);
+
+  const incrementCount = () => setCount(prevCount => prevCount + 1);
 
   return (
     <Window id="Counter" tabText="카운터 연습" 닫기={창닫기}>

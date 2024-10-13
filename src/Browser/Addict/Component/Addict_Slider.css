@@ -26,7 +26,7 @@
 #AddictSlider .slide video {
     width: calc(100% + 4px);
 }
-#AddictSlider .cont_button {
+#AddictSlider .wrap_button {
     position: absolute;
     top: 50%;
     padding: 0 40px;
@@ -35,18 +35,18 @@
     display: flex;
     justify-content: space-between;
 }
-#AddictSlider .cont_button button {
+#AddictSlider .wrap_button button {
     width: 40px; aspect-ratio: 1;
     border-radius: 50%;
 }
-#AddictSlider button#left {
+#AddictSlider .btn-left {
     background: url(/public//img/icon/chevron_l_blk.png) calc(50% - 1px)/35% no-repeat;
     background-color: #fff;
 }
-#AddictSlider button#right {
+#AddictSlider .btn-right {
     background: url(/public//img/icon/chevron_r_blk.png) calc(50% + 2px)/35% no-repeat;
     background-color: #fff;
 }
-#AddictSlider .cont_button button:hover {
+#AddictSlider .wrap_button button:hover {
     transform: scale(1.3);
 }

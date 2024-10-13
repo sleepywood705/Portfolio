@@ -1,17 +1,16 @@
-import React from 'react';
 import './global.css';
 import './font.css';
-import './Interface/Browser.css'
-import { Desktop } from './Interface/Interface';
+import './App.css'
+import { Desktop } from './Interface/Desktop';
 import { Taskbar } from './Interface/Taskbar'
 
 
 function App() {
   return (
-    <body>
+    <div id="App">
       <Desktop />
       <Taskbar />
-    </body>
+    </div>
   );
 }
 

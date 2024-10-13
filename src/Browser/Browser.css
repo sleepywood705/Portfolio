@@ -11,7 +11,8 @@
   left: 0; top: 0;
   width: 100vw; height: 100%;
 }
-#TodoList,
-#Game2048 {
+#TodoList {
+  position: absolute;
+  right: 0; top: 0;
   width: 480px; height: 100%;
 }

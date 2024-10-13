@@ -1,11 +1,14 @@
 import './TodoList.css';
 import { Window } from '../Interface/Window';
-import { useState, useEffect, useRef } from 'react';
-
+import { useState, useEffect, useRef, useCallback } from 'react';
 
 export function TodoList({ 창닫기 }) {
   
-  const [todos, setTodos] = useState({});
+  const [todos, setTodos] = useState(() => {
+    // localStorage에서 todos 데이터를 불러옵니다.
+    const savedTodos = localStorage.getItem('todos');
+    return savedTodos ? JSON.parse(savedTodos) : {};
+  });
   const [datePickerTop, setDatePickerTop] = useState('-80px');
   const [selectedDate, setSelectedDate] = useState(new Date());
   const [todoCount, setTodoCount] = useState(0);
@@ -15,33 +18,42 @@ export function TodoList({ 창닫기 }) {
     setTodoCount((todos[dateKey] || []).length);
   }, [todos, selectedDate]);
 
-  const addTodo = (todo) => {
-    const dateKey = selectedDate.toISOString().split('T')[0];
-    setTodos({
-      ...todos,
-      [dateKey]: [...(todos[dateKey] || []), { text: todo, completed: false }],
-    });
-  };
+  // localStorage에 todos 데이터를 저장합니다.
+  useEffect(() => {
+    localStorage.setItem('todos', JSON.stringify(todos));
+  }, [todos]);
 
-  const toggleComplete = (index) => {
+  const addTodo = useCallback((todo) => {
     const dateKey = selectedDate.toISOString().split('T')[0];
-    const newTodos = [...(todos[dateKey] || [])];
-    newTodos[index].completed = !newTodos[index].completed;
-    setTodos({
-      ...todos,
-      [dateKey]: newTodos,
-    });
-  };
+    setTodos(prevTodos => ({
+      ...prevTodos,
+      [dateKey]: [...(prevTodos[dateKey] || []), { text: todo, completed: false }],
+    }));
+  }, [selectedDate]);
 
-  const deleteTodo = (index) => {
+  const toggleComplete = useCallback((index) => {
     const dateKey = selectedDate.toISOString().split('T')[0];
-    const newTodos = [...(todos[dateKey] || [])];
-    newTodos.splice(index, 1);
-    setTodos({
-      ...todos,
-      [dateKey]: newTodos,
+    setTodos(prevTodos => {
+      const newTodos = [...(prevTodos[dateKey] || [])];
+      newTodos[index].completed = !newTodos[index].completed;
+      return {
+        ...prevTodos,
+        [dateKey]: newTodos,
+      };
     });
-  };
+  }, [selectedDate]);
+
+  const deleteTodo = useCallback((index) => {
+    const dateKey = selectedDate.toISOString().split('T')[0];
+    setTodos(prevTodos => {
+      const newTodos = [...(prevTodos[dateKey] || [])];
+      newTodos.splice(index, 1);
+      return {
+        ...prevTodos,
+        [dateKey]: newTodos,
+      };
+    });
+  }, [selectedDate]);
 
   const handleDateChange = (e) => {
     setSelectedDate(new Date(e.target.value));
@@ -124,14 +136,14 @@ function Todos({ todos, toggleComplete, deleteTodo }) {
 
 function NewTodoForm({ addTodo }) {
   const [newTodo, setNewTodo] = useState('');
-  const inputRef = useRef(null);  // useRef 훅을 사용해 인풋의 참조를 만듭니다.
+  const inputRef = useRef(null);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (newTodo.trim()) {
       addTodo(newTodo);
       setNewTodo('');
-      inputRef.current.focus();  // 서밋 후 인풋에 포커스를 설정합니다.
+      inputRef.current.focus();
     }
   };
 
@@ -142,7 +154,7 @@ function NewTodoForm({ addTodo }) {
         value={newTodo}
         onChange={(e) => setNewTodo(e.target.value)}
         placeholder="Create a new Todo"
-        ref={inputRef}  // 인풋 요소에 ref를 연결합니다.
+        ref={inputRef}
       />
       <button type="submit">추가하기</button>
     </form>

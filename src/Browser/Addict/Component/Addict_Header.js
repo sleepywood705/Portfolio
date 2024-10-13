@@ -10,6 +10,7 @@ export function AddictHeader() {
       <Link to="/Portfolio/addict/all?tab=best">베스트셀러</Link>
       <Link to="/Portfolio/addict/note">조향 노트</Link>
       <Link to="/Portfolio/addict/mall">매장 보기</Link>
+      <Link to="/Portfolio/addict/mall">기획 의도</Link>
     </header>
   )
 }

@@ -1,0 +1,20 @@
+#AddictShortCut {
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+#AddictShortCut > a {
+  width: 100%; aspect-ratio: 1;
+}
+#AddictShortCut > a:nth-child(1) {
+  background: url(../../../../public/img/browser/Addict/liquid.jpg) center/cover no-repeat;
+}
+#AddictShortCut > a:nth-child(1):hover {
+  background: url(../../../../public/img/browser/Addict/liquid2.jpg) center/cover no-repeat;
+}
+#AddictShortCut > a:nth-child(2) {
+  background: url(../../../../public/img/browser/Addict/solid.jpg) center/cover no-repeat;
+}
+#AddictShortCut > a:nth-child(2):hover {
+  background: url(../../../../public/img/browser/Addict/solid2.jpg) center/cover no-repeat;
+}

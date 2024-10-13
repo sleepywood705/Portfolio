@@ -1,75 +1,25 @@
-import "./Addict.css";
-import { Window } from '../Interface/Window'
-import { AddictHeader } from "./Component/Addict_Header";
-import { AddictFooter } from "./Component/Addict_Footer";
-import { AddictHomePage } from "./Route/Addict_Home";
-import { AddictAllPage } from "./Route/Addict_All";
-import { AddictNotePage } from "./Route/Addict_Note";
-import { AddictOfflinePage } from "./Route/Addict_Offline";
-import { useEffect, useState } from "react";
-import { Routes, Route, useNavigate } from "react-router-dom";
-
-
-export function Addict({ 창닫기 }) {
-
-  const navigate = useNavigate();
-  const [firstLoaded, setFirstLoaded] = useState(false);
-  const [showExplain, setShowExplain] = useState(true);
-
-  useEffect(() => {
-    if (firstLoaded) {
-      navigate("/Portfolio/addict");
-      setFirstLoaded(false);
-    }
-  }, [navigate, firstLoaded]);
-
-  const handleExplainClose = () => {
-    setShowExplain(false);
-  };
-
-  return (
-    <Window id="Addict" tabText="에이딕트 리디자인" 닫기={창닫기}>
-      {showExplain && <AddictExplain onClose={handleExplainClose} />}
-      <div className="Container">
-        <AddictHeader />
-        <Routes>
-          <Route path="/Portfolio/addict" element={<AddictHomePage />} />
-          <Route path="/Portfolio/addict/all" element={<AddictAllPage />} />
-          <Route path="/Portfolio/addict/note" element={<AddictNotePage />} />
-          <Route
-            path="/Portfolio/addict/mall"
-            element={<AddictOfflinePage />}
-          />
-        </Routes>
-        <AddictFooter />
-      </div>
-    </Window>
-  );
-}
-
-
-function AddictExplain({ onClose }) {
+export function AddictExplain({ onClose }) {
   return (
     <div className="AddictExplain">
-      <button onClick={onClose}></button>
+      <button onClick={onClose} />
       <section className="sect1">
         <h2>기획 의도</h2>
         <p>
           국내 향수 브랜드 쇼핑몰 에이딕트를 리디자인한 프로젝트로,
           기존 사이트의 불편함을 해소하고 사용자 경험을 향상시키기 위해 진행되었습니다.
-          <br/>
-          <br/>
+          <br />
+          <br />
           지금은 에이딕트가 밝고 모던한 느낌을 주는 사이트로 새롭게 단장되어 있지만,
           이전에는 전체적으로 어두운 계열의 컨셉 컬러를 사용하고 있어 브라우징을 할 때에 눈에 피로감을 주고
           페이지 양쪽에 여백이 없어 심리적으로 답답한 느낌을 준다는 평이 많았던 사이트였습니다.
           이를 개선하고자 웹퍼블리셔를 준비하던 시절 작업했던 리디자인 프로젝트가 있었지만
           프론트엔드 개발자로 진로를 변경하는 과정에서 홈페이지가 새롭게 단장되었음을 알게 되어 더 이상의 리디자인은 진행하지 않았습니다.
-          <br/>
-          <br/>
+          <br />
+          <br />
           대신, 리액트 프레임워크를 배우면서 알게 된 지식으로 클론코딩을 진행하게 되었고
           새롭게 단장된 홈페이지의 컨셉을 헤치지 않으면서도 어떻게 하면 사용자 경험을 향상시킬 수 있을지에 대해 고민하며 작업하였습니다.
-          <br/>
-          <br/>
+          <br />
+          <br />
           에이딕트 클론코딩은 리액트를 배우면서 작성한 첫 번째 프로젝트입니다. 부족하고 개선할 부분이 많지만 예쁘게 봐주셨으면 좋겠습니다.
         </p>
       </section>

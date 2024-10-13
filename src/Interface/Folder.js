@@ -1,10 +1,10 @@
-import styled from 'styled-components';
+import './Folder.scss'
 import { Window } from '../Interface/Window'
 import { useState } from 'react';
 
 
 export function Folder({ 
-  style, 창닫기, 레퍼런스열기, 
+  창닫기, 레퍼런스열기, 
   에이딕트열기, 이핏열기,
   할일앱열기, 게임2048열기,
   플레이리스트열기, 로테이션열기, 
@@ -13,7 +13,7 @@ export function Folder({
   const [state, setState] = useState({
     showDevelopment: true,
     showDocument: false,
-    showDesign: false,
+    // showDesign: false,
     showPractice: false,
   });
 
@@ -22,119 +22,101 @@ export function Folder({
       setState({ showDevelopment: true, showDocument: false, showDesign: false,  showPractice: false });
     } else if (type === 'Document') {
       setState({ showDevelopment: false, showDocument: true, showDesign: false,  showPractice: false });
-    } else if (type === 'Design') {
-      setState({ showDevelopment: false, showDocument: false, showDesign: true,  showPractice: false });
-    } else if (type === 'Practice') {
+    } 
+    // else if (type === 'Design') {
+    //   setState({ showDevelopment: false, showDocument: false, showDesign: true,  showPractice: false });
+    // } 
+    else if (type === 'Practice') {
       setState({ showDevelopment: false, showDocument: false, showDesign: false,  showPractice: true });
     }
   };
 
   return (
-    <Window id="Folder" style={style} tabText="Folder" 닫기={창닫기}>
-      <main>
+    <Window id="Folder" tabText="Folder" 닫기={창닫기}>
+      <div className="Container">
         <aside>
           <ul>
-            <Favorites onClick={() => onClick('Development')}>📁 Development</Favorites>
-            <Favorites onClick={() => onClick('Document')}>📁 Document</Favorites>
-            <Favorites onClick={() => onClick('Design')}>📁 Design</Favorites>
-            <Favorites onClick={() => onClick('Practice')}>📁 Practice</Favorites>
+            <li className="Favorites" onClick={() => onClick('Development')}>📁 Development</li>
+            <li className="Favorites" onClick={() => onClick('Document')}>📁 Document</li>
+            {/* <li className="Favorites" onClick={() => onClick('Design')}>📁 Design</li> */}
+            <li className="Favorites" onClick={() => onClick('Practice')}>📁 Practice</li>
           </ul>
         </aside>
-        <div>
+        <section>
+          {state.showDevelopment && (
+            <div className="Icon" onClick={에이딕트열기}>
+              <div className="Upper">
+                <div className="Inner">Dev</div>
+              </div>
+              <div className="Lower">에이딕트</div>
+            </div>
+          )}
+
+          {state.showDevelopment && (
+            <div className="Icon" onClick={플레이리스트열기}>
+              <div className="Upper">
+                <div className="Inner">Dev</div>
+              </div>
+              <div className="Lower">플레이리스트</div>
+            </div>
+          )}
+
+          {state.showDevelopment && (
+            <div className="Icon" onClick={이핏열기}>
+              <div className="Upper">
+                <div className="Inner">Dev</div>
+              </div>
+              <div className="Lower">이핏</div>
+            </div>
+          )}
+
+          {state.showDevelopment && (
+            <div className="Icon" onClick={할일앱열기}>
+              <div className="Upper">
+                <div className="Inner">Pratice</div>
+              </div>
+              <div className="Lower">투두리스트</div>
+            </div>
+          )}
+
           {state.showDocument && (
-            <Icon onClick={레퍼런스열기}>
-              <Upper>
-                <Inner>Doc</Inner>
-              </Upper>
-              <Lower>레퍼런스 사이트</Lower>
-            </Icon>
-          )}
-
-          {state.showDesign && (
-            <Icon onClick={에이딕트열기}>
-              <Upper>
-                <Inner>Design</Inner>
-              </Upper>
-              <Lower>에이딕트</Lower>
-            </Icon>
-          )}
-
-          {state.showDevelopment && (
-            <Icon onClick={이핏열기}>
-              <Upper>
-                <Inner>Dev</Inner>
-              </Upper>
-              <Lower>이핏</Lower>
-            </Icon>
-          )}
-
-          {state.showDevelopment && (
-            <Icon onClick={플레이리스트열기}>
-              <Upper>
-                <Inner>Dev</Inner>
-              </Upper>
-              <Lower>플레이 리스트</Lower>
-            </Icon>
+            <div className="Icon" onClick={레퍼런스열기}>
+              <div className="Upper">
+                <div className="Inner">Doc</div>
+              </div>
+              <div className="Lower">레퍼런스 사이트</div>
+            </div>
           )}
 
           {state.showPractice && (
-            <Icon onClick={카운터열기}>
-              <Upper>
-                <Inner>Pratice</Inner>
-              </Upper>
-              <Lower>카운터 연습</Lower>
-            </Icon>
+            <div className="Icon" onClick={카운터열기}>
+              <div className="Upper">
+                <div className="Inner">Pratice</div>
+              </div>
+              <div className="Lower">카운터 연습</div>
+            </div>
           )}
-        </div>
-      </main>
+
+          {state.showPractice && (
+            <div className="Icon" onClick={그라데이션열기}>
+              <div className="Upper">
+                <div className="Inner">Pratice</div>
+              </div>
+              <div className="Lower">그래픽 연습</div>
+            </div>
+          )}
+
+          {state.showPractice && (
+            <div className="Icon" onClick={로테이션열기}>
+              <div className="Upper">
+                <div className="Inner">Pratice</div>
+              </div>
+              <div className="Lower">슬라이더 연습</div>
+            </div>
+          )}
+
+        </section>
+      </div>
     </Window>
   );
 }
-
-/* 스타일 컴포넌트 */
-const Favorites = styled.li`
-  padding: 10px 20px;
-  font-size: 13px;
-  border-bottom: 1px solid #f2f2f2;
-`
-const Icon = styled.button`
-  position: relative;
-  width: 100px; aspect-ratio: 1;
-  border-radius: 4px;
-  border: 1px solid rgba(255, 255, 255, 0.09);
-  background-color: rgba(255, 255, 255, 0.09);
-  // backdrop-filter: blur(10px);
-  display: grid;
-  grid-template-rows: 7fr 3fr;
-  cursor: pointer;
-  
-  &:hover {
-    border: 1px solid #000;
-  }
-`;
-const Upper = styled.div`
-  position: relative;
-  height: 100%;
-  text-align: center;
-`;
-const Lower = styled.div`
-  padding: 4px;
-  font-size: 13px;
-  display: grid;
-  place-items: center;
-`;
-const Inner = styled.div`
-  position: absolute;
-  left: 50%; bottom: 8px;
-  transform: translate(-50%);
-  width: 46px; aspect-ratio: 1;
-  color: #fff;
-  font-size: 12px;
-  line-height: 10px;
-  border-radius: 6px;
-  background: ${({ src, size }) => `url(${src}) center/${size} no-repeat`};
-  background-color: #000;
-  display: grid;
-  place-items: center;
-`;
-

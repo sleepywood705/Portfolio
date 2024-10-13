@@ -1,7 +1,7 @@
 #Addict header {
   z-index: 1;
   position: sticky;
-  top: 70px;
+  top: 0;
   padding: 0 100px;
   width: 100%; height: 80px;
   border: 1px solid #fff;

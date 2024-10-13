@@ -1,8 +1,10 @@
 #Addict {
   background-color: #fff;
+  /* border: 1px solid red; */
+}
+#Addict .Container {
   overflow-y: scroll;
 }
-
 
 .AddictExplain {
   z-index: 999;
@@ -21,7 +23,7 @@
   position: absolute;
   right: 40px; top: 40px;
   width: 30px; height: 30px;
-  background: url(../../public/img/icon/close.png) center/cover no-repeat;
+  background: url(../../../public/img/icon/close.png) center/cover no-repeat;
 }
 .AddictExplain section {
   color: #fff;

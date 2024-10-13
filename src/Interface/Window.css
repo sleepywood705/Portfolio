@@ -1,0 +1,9 @@
+.Window {
+  position: relative;
+  /* border: 1px solid red; */
+  border-radius: 4px 4px 0 0;
+  display: grid;
+  grid-template-rows: 30px 40px 1fr;
+  justify-self: center;
+  overflow: hidden;
+}

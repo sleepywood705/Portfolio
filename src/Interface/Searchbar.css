@@ -1,0 +1,31 @@
+#Searchbar {
+  z-index: 999;
+  position: sticky;
+  top: 30px;
+  padding: 4px;
+  width: 100%; height: 40px;
+  background-color: #fff;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+#Searchbar > div {
+  flex-grow: 1;
+  height: 30px;
+  border-radius: 4px;
+  background-color: var(--Searchbar-background-color);
+  cursor: text;
+}
+#Searchbar > button {
+  height: 100%; aspect-ratio: 1;
+  border-radius: 4px;
+}
+#Searchbar > button.Left {
+  background: url(../../public/img/icon/chevron_l_blk_b.png) center/40% no-repeat;
+}
+#Searchbar > button.Right {
+  background: url(../../public/img/icon/chevron_r_blk_b.png) center/40% no-repeat;
+}
+#Searchbar > button:hover {
+  background-color: #ddd;
+}

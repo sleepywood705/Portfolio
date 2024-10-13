@@ -1,18 +1,19 @@
-import './Interface.css';
+import './Desktop.css';
+import '../Browser/Browser.css';
 import { Iconset } from './Iconset';
 import { Folder } from './Folder';
 import { Portfolio } from '../Browser/Portfolio';
 import { Contact } from '../Browser/Contact';
-import { Reference } from '../Browser/Reference';
-import { Addict } from '../Browser/Addict';
+import { Addict } from '../Browser/Addict/Addict';
+import { PlayList } from '../Browser/PlayList/PlayList';
 import { Ifit } from '../Browser/Ifit';
+import { Counter } from '../Browser/Counter';
 import { TodoList } from '../Browser/TodoList';
 import { Game2048 } from '../Browser/Game2048';
-import { PlayList } from '../Browser/PlayList';
 import { Rotation } from '../Browser/Rotation';
 import { Gradation } from '../Browser/Gradation';
-import { Counter } from '../Browser/Counter';
-import { useState, useEffect, useRef } from 'react';
+import { Reference } from '../Browser/Reference';
+import { useState } from 'react';
 
 
 /* 바탕화면 */
@@ -21,15 +22,15 @@ export function Desktop() {
     showFolder: false,
     showPortfolio: false,
     showContact: false,
-    showReference: false,
     showAddict: false,
+    showArtiBook: true,
     showIfit: false,
     showTodolist: false,
     showGame2048: false,
-    showPlayList: false,
+    showCounter: false,
     showRotation: false,
     showGradation: false,
-    showCounter: true,
+    showReference: false,
   });
 
   const toggleState = (key, value = !state[key]) => {
@@ -38,18 +39,6 @@ export function Desktop() {
       [key]: value,
     }));
   };
-
-  const folderRef = useRef(null);
-
-
-  useEffect(() => {
-    if (folderRef.current) {
-      folderRef.current.style.transform 
-      = state.showFolder 
-      ? 'translate(-50%, -50%) scale(1)' 
-      : 'translate(-50%, -50%) scale(0)';
-    }
-  }, [state.showFolder]);
 
   return (
     <div id="Desktop">
@@ -60,26 +49,19 @@ export function Desktop() {
         컨택트열기={() => toggleState('showContact', true)}>
       </Iconset>
 
-      <div ref={folderRef}
-        style={{
-          position: 'absolute',
-          left: '50%', top: '50%',
-          transform: 'translate(-50%, -50%) scale(0)',
-        }}
-      >
+      {state.showFolder && (
         <Folder
           창닫기={() => toggleState('showFolder', false)}
-          레퍼런스열기={() => toggleState('showReference', true)}
           에이딕트열기={() => toggleState('showAddict', true)}
+          플레이리스트열기={() => toggleState('showArtiBook', true)}
           할일앱열기={() => toggleState('showTodolist', true)}
           게임2048열기={() => toggleState('showGame2048', true)}
-          플레이리스트열기={() => toggleState('showPlayList', true)}
           로테이션열기={() => toggleState('showRotation', true)}
           그라데이션열기={() => toggleState('showGradation', true)}
+          레퍼런스열기={() => toggleState('showReference', true)}
           카운터열기={() => toggleState('showCounter', true)}
         />
-      </div>
-
+      )}
 
       {state.showPortfolio && (
         <Portfolio 창닫기={() => toggleState('showPortfolio', false)} />
@@ -105,8 +87,8 @@ export function Desktop() {
         <Game2048 창닫기={() => toggleState('showGame2048', false)} />
       )}
 
-      {state.showPlayList && (
-        <PlayList 창닫기={() => toggleState('showPlayList', false)} />
+      {state.showArtiBook && (
+        <PlayList 창닫기={() => toggleState('showArtiBook', false)} />
       )}
 
       {state.showRotation && (

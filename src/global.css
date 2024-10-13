@@ -5,6 +5,11 @@
     scroll-behavior: smooth;
     transition: all 0.5s;
 }
+:root {
+ --Titlebar-background-color : #F0F1F3;
+ --Searchbar-background-color : #EFF1F3;
+ --Taskbar-background-color : #e9e9e9;
+}
 ::-webkit-scrollbar {
     width: 4px;
 }
@@ -36,9 +41,6 @@ a {
 ul{
     /* margin: 0; padding: 0; */
     list-style: none;
-}
-li{
-    cursor: pointer;
 }
 input,
 button{
