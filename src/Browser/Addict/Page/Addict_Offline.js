@@ -66,7 +66,7 @@ const storeData = [
 
 export function AddictOfflinePage() {
   return (
-    <div id="AddictOfflinePage">
+    <section id="AddictOfflinePage">
       <img
         src="https://media.11corporation.com/cdn/addict/shopby/store/20240717/store-pc.jpg"
         alt="img"
@@ -83,6 +83,6 @@ export function AddictOfflinePage() {
           ))}
         </div>
       ))}
-    </div>
+    </section>
   );
 }

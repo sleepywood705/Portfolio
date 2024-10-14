@@ -5,7 +5,7 @@ import { Folder } from './Folder';
 import { Portfolio } from '../Browser/Portfolio';
 import { Contact } from '../Browser/Contact';
 import { Addict } from '../Browser/Addict/Addict';
-import { PlayList } from '../Browser/PlayList/PlayList';
+import { Mureka } from '../Browser/Mureka/Mureka';
 import { Ifit } from '../Browser/Ifit';
 import { Counter } from '../Browser/Counter';
 import { TodoList } from '../Browser/TodoList';
@@ -23,7 +23,7 @@ export function Desktop() {
     showPortfolio: false,
     showContact: false,
     showAddict: false,
-    showArtiBook: true,
+    showMureka: true,
     showIfit: false,
     showTodolist: false,
     showGame2048: false,
@@ -53,7 +53,7 @@ export function Desktop() {
         <Folder
           창닫기={() => toggleState('showFolder', false)}
           에이딕트열기={() => toggleState('showAddict', true)}
-          플레이리스트열기={() => toggleState('showArtiBook', true)}
+          뮤레카열기={() => toggleState('showMureka', true)}
           할일앱열기={() => toggleState('showTodolist', true)}
           게임2048열기={() => toggleState('showGame2048', true)}
           로테이션열기={() => toggleState('showRotation', true)}
@@ -75,6 +75,10 @@ export function Desktop() {
         <Addict 창닫기={() => toggleState('showAddict', false)} />
       )}
 
+      {state.showMureka && (
+        <Mureka 창닫기={() => toggleState('showMureka', false)} />
+      )}
+
       {state.showIfit && (
         <Ifit 창닫기={() => toggleState('showIfit', false)} />
       )}
@@ -85,10 +89,6 @@ export function Desktop() {
 
       {state.showGame2048 && (
         <Game2048 창닫기={() => toggleState('showGame2048', false)} />
-      )}
-
-      {state.showArtiBook && (
-        <PlayList 창닫기={() => toggleState('showArtiBook', false)} />
       )}
 
       {state.showRotation && (

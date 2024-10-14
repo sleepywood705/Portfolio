@@ -43,7 +43,7 @@ export function AddictAllPage() {
   ];
 
   return (
-    <div id="AddictAllPage">
+    <section id="AddictAllPage">
       <div id="Depth">
         {buttons.map((label, index) => (
           <button
@@ -60,6 +60,6 @@ export function AddictAllPage() {
       {activeButton === 2 && <AddictLiquidProduct/>}
       {activeButton === 3 && <AddictSolidProduct/>}
       {activeButton === 4 && <AddictGiftProduct/>}
-    </div>
+    </section>
   );
 }

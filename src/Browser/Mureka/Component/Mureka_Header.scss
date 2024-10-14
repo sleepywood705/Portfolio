@@ -1,0 +1,45 @@
+#MurekaHeader {
+  position: fixed;
+  top: 70px;
+  padding: 0 40px;
+  width: calc(100% - 25%); height: 60px;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border-bottom: 1px solid #eee;
+
+  .btn-home {
+    margin-right: auto;
+    font-weight: 600;
+  }
+
+  .nav-personal {
+    cursor: pointer;
+  }
+
+  > .utility {
+    width: fit-content;
+    border-radius: 6px; 
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    display: flex;
+    overflow: hidden;
+
+    > a, button {
+      flex: 1;
+      padding: 6px;
+      width: 70px;
+      color: #808080;
+      font-size: 14px;
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+
+      &.active,
+      &:hover {
+        color: #fff;
+        background-color: #333;
+      }
+    }
+  }
+}

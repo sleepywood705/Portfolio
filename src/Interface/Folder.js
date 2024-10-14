@@ -7,7 +7,7 @@ export function Folder({
   창닫기, 레퍼런스열기, 
   에이딕트열기, 이핏열기,
   할일앱열기, 게임2048열기,
-  플레이리스트열기, 로테이션열기, 
+  뮤레카열기, 로테이션열기, 
   그라데이션열기, 카운터열기 }) {
 
   const [state, setState] = useState({
@@ -53,11 +53,11 @@ export function Folder({
           )}
 
           {state.showDevelopment && (
-            <div className="Icon" onClick={플레이리스트열기}>
+            <div className="Icon" onClick={뮤레카열기}>
               <div className="Upper">
                 <div className="Inner">Dev</div>
               </div>
-              <div className="Lower">플레이리스트</div>
+              <div className="Lower">뮤레카</div>
             </div>
           )}
 
