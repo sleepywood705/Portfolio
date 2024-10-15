@@ -26,7 +26,12 @@ export function MurekaLoginPage({ setLoginState, setUserName }) {
           success: function(res) {
             setLoginState(1);
             setUserName(res.kakao_account.profile.nickname);
+
             navigate("/Portfolio/mureka");
+
+            // 로그인 상태를 로컬 스토리지에 저장
+            localStorage.setItem("loginState", 1);
+            localStorage.setItem("userName", res.kakao_account.profile.nickname);
           },
           fail: function(err) {
             alert("사용자 정보를 가져오는 데 실패했습니다.");

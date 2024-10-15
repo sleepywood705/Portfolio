@@ -9,12 +9,13 @@
   display: flex;
 }
 #Addict header a,
-#Addict header div {
+#Addict header button {
   width: 90px; height: 100%;
   font-size: 15px;
   font-weight: 600;
   display: grid;
   place-items: center;
+  cursor: pointer;
 }
 #Addict header > a:nth-child(1) {
   padding-bottom: 4px;

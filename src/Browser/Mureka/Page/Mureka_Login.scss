@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100%;
+  height: calc(100vh - 30px - 40px - 50px - 60px - 10px);
 
   > form {
     margin-top: 20px;
@@ -39,7 +39,6 @@
       gap: 10px;
       display: flex;
     }
-
   }
 
   > div {
@@ -58,7 +57,7 @@
       left: 50%; top: -10px;
       transform: translate(-50%, 0);
       padding: 0 10px;
-      // background-color: #f8f9fa;
+      background-color: #f8f9fa;
     }
 
     .easy-login {

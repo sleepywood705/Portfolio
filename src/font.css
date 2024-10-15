@@ -4,10 +4,6 @@
   src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
 }
 @font-face {
-  font-family: 'S-CoreDream-3Light';
-  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
-}
-@font-face {
   font-family: 'ChosunGs';
   src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunGs.woff') format('woff');
 }
@@ -21,8 +17,8 @@
   src: url(../public/font/Saint-Andrews-Queen.ttf);
 }
 @font-face {
-  font-family: 'Memories';
-  src: url(../public/font/Memories.ttf);
+  font-family: 'Signatra';
+  src: url(../public/font/Signatra.ttf);
 }
 /* 이핏로고 */
 @font-face {

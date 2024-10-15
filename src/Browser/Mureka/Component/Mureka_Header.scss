@@ -1,20 +1,20 @@
 #MurekaHeader {
-  position: fixed;
-  top: 70px;
+  position: sticky;
+  top: 0px;
   padding: 0 40px;
-  width: calc(100% - 25%); height: 60px;
+  width: 100%; height: 60px;
+  border-bottom: 1px solid #ddd;
   gap: 20px;
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  border-bottom: 1px solid #eee;
 
   .btn-home {
     margin-right: auto;
     font-weight: 600;
   }
 
-  .nav-personal {
+  .myPage {
     cursor: pointer;
   }
 
@@ -30,6 +30,7 @@
       padding: 6px;
       width: 70px;
       color: #808080;
+      background-color: #fff;
       font-size: 14px;
       display: grid;
       place-items: center;

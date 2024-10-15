@@ -1,8 +1,9 @@
 import './Desktop.css';
-import '../Browser/Browser.css';
+import './Browser.css';
 import { Iconset } from './Iconset';
 import { Folder } from './Folder';
 import { Portfolio } from '../Browser/Portfolio';
+import { Stack } from '../Browser/Stack/Stack';
 import { Contact } from '../Browser/Contact';
 import { Addict } from '../Browser/Addict/Addict';
 import { Mureka } from '../Browser/Mureka/Mureka';
@@ -19,11 +20,12 @@ import { useState } from 'react';
 /* 바탕화면 */
 export function Desktop() {
   const [state, setState] = useState({
+    showPortfolio: true,
     showFolder: false,
-    showPortfolio: false,
+    showStack: false,
     showContact: false,
     showAddict: false,
-    showMureka: true,
+    showMureka: false,
     showIfit: false,
     showTodolist: false,
     showGame2048: false,
@@ -46,6 +48,7 @@ export function Desktop() {
       <Iconset
         포트폴리오열기={() => toggleState('showPortfolio', true)}
         폴더열기={() => toggleState('showFolder', true)}
+        스택열기={() => toggleState('showStack', true)}
         컨택트열기={() => toggleState('showContact', true)}>
       </Iconset>
 
@@ -65,6 +68,10 @@ export function Desktop() {
 
       {state.showPortfolio && (
         <Portfolio 창닫기={() => toggleState('showPortfolio', false)} />
+      )}
+
+      {state.showStack && (
+        <Stack 창닫기={() => toggleState('showStack', false)} />
       )}
 
       {state.showContact && (
@@ -99,14 +106,14 @@ export function Desktop() {
         <Gradation 창닫기={() => toggleState('showGradation', false)} />
       )}
 
-      {state.showReference && (
-        <Reference 창닫기={() => toggleState('showReference', false)} />
-      )}
-
       {state.showCounter && (
         <Counter 창닫기={() => toggleState('showCounter', false)} />
       )}
 
+      {state.showReference && (
+        <Reference 창닫기={() => toggleState('showReference', false)} />
+      )}
+      
     </div>
   );
 }

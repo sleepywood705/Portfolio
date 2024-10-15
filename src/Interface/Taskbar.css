@@ -1,9 +1,0 @@
-#Taskbar {
-  z-index: 999;
-  position: relative;
-  padding: 4px;
-  width: 100vw; height: 50px;
-  background-color: var(--Taskbar-background-color);
-  display: flex;
-  display: none;
-}

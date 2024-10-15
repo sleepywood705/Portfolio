@@ -61,19 +61,19 @@ export function Folder({
             </div>
           )}
 
-          {state.showDevelopment && (
+          {/* {state.showDevelopment && (
             <div className="Icon" onClick={이핏열기}>
               <div className="Upper">
                 <div className="Inner">Dev</div>
               </div>
               <div className="Lower">이핏</div>
             </div>
-          )}
+          )} */}
 
           {state.showDevelopment && (
             <div className="Icon" onClick={할일앱열기}>
               <div className="Upper">
-                <div className="Inner">Pratice</div>
+                <div className="Inner">Dev</div>
               </div>
               <div className="Lower">투두리스트</div>
             </div>
@@ -94,6 +94,15 @@ export function Folder({
                 <div className="Inner">Pratice</div>
               </div>
               <div className="Lower">카운터 연습</div>
+            </div>
+          )}
+
+          {state.showPractice && (
+            <div className="Icon" onClick={게임2048열기}>
+              <div className="Upper">
+                <div className="Inner">Pratice</div>
+              </div>
+              <div className="Lower">게임2048</div>
             </div>
           )}
 

@@ -42,6 +42,9 @@
   gap: 10px;
   display: flex;
 }
+#TodoList h2 span {
+  font-size: 32px;
+}
 .date-picker {
   position: absolute;
   left: 50%; top: 0px;

@@ -1,6 +1,9 @@
+import "./Addict_Explain.css"
+
+
 export function AddictExplain({ onClose }) {
   return (
-    <div className="AddictExplain">
+    <div id="AddictExplain">
       <button onClick={onClose} />
       <section className="sect1">
         <h2>기획 의도</h2>

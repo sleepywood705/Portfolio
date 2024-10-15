@@ -1,5 +1,4 @@
-import './Taskbar.css'
-import styled from 'styled-components';
+import './Taskbar.scss'
 import { useState, useEffect } from 'react';
 
 
@@ -7,16 +6,16 @@ import { useState, useEffect } from 'react';
 export function Taskbar() {
   return (
     <div id="Taskbar">
-      <StartButton>
+      <button>
         <div style={{ backgroundColor: "#BB2525" }}></div>
         <div style={{ backgroundColor: "#186F65" }}></div>
         <div style={{ backgroundColor: "#387ADF" }}></div>
         <div style={{ backgroundColor: "#F4CE14" }}></div>
-      </StartButton>
-      <TimeContainer>
+      </button>
+      <div id="TimeContainer">
         <Time />
         <Yeartoday />
-      </TimeContainer>
+      </div>
     </div>
   );
 }
@@ -35,7 +34,7 @@ function Time() {
 
   function tick() {setCurrentTime(new Date());}
 
-  return <div>{formatTime}</div>;
+  return <div className="Time">{formatTime}</div>;
 }
 function Yeartoday() {
   const today = new Date();
@@ -43,44 +42,5 @@ function Yeartoday() {
   const month = String(today.getMonth() + 1).padStart(2, "0");
   const day = String(today.getDate()).padStart(2, "0");
   const formattedDate = `${year}-${month}-${day}`;
-  return <div>{formattedDate}</div>;
+  return <div className="Yeartoday">{formattedDate}</div>;
 }
-/* 스타일 컴포넌트 */
-const StartButton = styled.button`
-  position: absolute;
-  left: 50%; top: 50%;
-  transform: translate(-50%, -50%);
-  padding: 6px;
-  height: calc(100% - 8px); aspect-ratio: 1;
-  // border: 1px solid #000;
-  border-radius: 4px;
-  gap: 2px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  cursor: pointer;
-
-  & > div {
-    width: 100%; aspect-ratio: 1;
-  }
-
-  &:hover {
-    background-color: #fff;
-  }
-`
-const TimeContainer = styled.div`
-  margin-left: auto;
-  padding: 0 10px;
-  width: fit-content; height: 100%;
-  font-size: 13px;
-  border-radius: 4px;
-  display: flex;
-  flex-direction: column;
-  align-items: end;
-  justify-content: center;
-  cursor: pointer;
-
-  &:hover {
-    background-color: #fff;
-  }
-`

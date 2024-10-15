@@ -1,9 +1,10 @@
 import "./Mureka_Header.scss"
+import { MurekaSearch } from "./Mureka_Search";
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 
-export function MurekaHeader({ loginState, setLoginState, userName, setUserName }) {
+export function MurekaHeader({ loginState, setLoginState, userName, setUserName, setShowAside }) {
   const [buttonActivated, setButtonActivated] = useState("");
   const location = useLocation();
 
@@ -14,10 +15,21 @@ export function MurekaHeader({ loginState, setLoginState, userName, setUserName 
   const handleLogout = () => {
     const { Kakao } = window;
     if (Kakao) {
-      Kakao.Auth.logout();
+      if (Kakao.Auth) {
+        Kakao.Auth.logout();
+      } else {
+        console.error("Kakao.Auth가 정의되지 않았습니다.");
+      }
+    } else {
+      console.error("Kakao 객체가 정의되지 않았습니다.");
     }
     setLoginState(0);
     setUserName("");
+
+    // 로컬 스토리지 초기화
+    localStorage.removeItem("loginState");
+    localStorage.removeItem("userName");
+
     alert("로그아웃 되었습니다.");
   };
 
@@ -35,9 +47,9 @@ export function MurekaHeader({ loginState, setLoginState, userName, setUserName 
       >
         MUREKA
       </Link>
-      <button className="nav-personal">
+      <Link className="myPage" onClick={() => setShowAside(true)}>
         {userName || ""}
-      </button>
+      </Link>
       <div className="utility">
         {loginState === 1 ? (
           <button onClick={handleLogout}>로그아웃</button>
@@ -60,6 +72,7 @@ export function MurekaHeader({ loginState, setLoginState, userName, setUserName 
           </>
         )}
       </div>
+      <MurekaSearch />
     </header>
   );
 }

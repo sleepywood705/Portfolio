@@ -139,7 +139,7 @@ export function Gradation({ 창닫기 }) {
   }, []);
 
   return (
-    <Window id="Gradation" tabText="캔버스 활용" 닫기={창닫기}>
+    <Window id="Gradation" tabText="그래픽 연습" 닫기={창닫기}>
       <canvas ref={canvasRef}></canvas>
     </Window>
   );

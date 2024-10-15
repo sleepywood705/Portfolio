@@ -1,18 +1,24 @@
 #Portfolio,
-#Contact,
-#Reference,
+#Stack,
 #Addict,
-#Ifit,
 #Mureka,
+#Ifit,
 #Rotation,
 #Gradtaion,
-#Counter {
+#Counter,
+#Reference {
   position: absolute;
   left: 0; top: 0;
   width: 100vw; height: 100%;
 }
+#Game2048,
 #TodoList {
   position: absolute;
   right: 0; top: 0;
   width: 480px; height: 100%;
+}
+#Contact {
+  position: absolute;
+  left: 50%; top: 10%;
+  transform: translate(-50%, 0);
 }

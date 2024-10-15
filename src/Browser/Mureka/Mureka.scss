@@ -3,39 +3,34 @@
   
   .Container {
     position: relative;
-    width: 100%; height: 100%;
-    background-color: #fff;
-    display: grid;
-    grid-template-columns: 2.5fr 7.5fr;
+    padding: 2px 8px 8px 8px;
+    width: 100%;
+    display: flex;
+    overflow-y: scroll;
 
     main {
-      padding-top: 60px;
-      height: calc(100vh - 30px - 40px);
+      position: sticky;
+      top: 0px;
+      flex: 7.5;
+      height: fit-content;
+      border-radius: 8px;
       background-color: #f8f9fa;
+      box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
       display: flex;
       flex-direction: column;
       overflow: hidden;
-      overflow-y: scroll;
+    }
+
+    .applyPadding {
+      padding: 40px;
+    }
+
+    .showAside {
+      margin-right: 16px;
+      flex: 2.5;
     }
   }
 }
-
-#MurekaHomePage {
-  padding: 40px;
-  height: 100%;
-  border: 1px solid #000;
-}
-
-#MurekaRecommand {
-  gap: 20px;
-  display: flex;
-  flex-direction: column;
-
-  > div {
-    border: 1px solid red;
-  }
-}
-
 
 @keyframes rotating {
   0% {
