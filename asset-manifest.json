@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.351d4f39.css",
-    "main.js": "/Portfolio/static/js/main.b9c41f96.js",
+    "main.css": "/Portfolio/static/css/main.a864bbc9.css",
+    "main.js": "/Portfolio/static/js/main.5e2f73b3.js",
     "static/js/453.1407b060.chunk.js": "/Portfolio/static/js/453.1407b060.chunk.js",
     "static/media/solid.jpg": "/Portfolio/static/media/solid.d70f686dfdf2c913dd01.jpg",
     "static/media/Saint-Andrews-Queen.ttf": "/Portfolio/static/media/Saint-Andrews-Queen.53fe428684ec1a1dd7af.ttf",
     "static/media/solid2.jpg": "/Portfolio/static/media/solid2.d16751e1b7594f3f3465.jpg",
     "static/media/liquid.jpg": "/Portfolio/static/media/liquid.a88aafeb1c7440336282.jpg",
     "static/media/liquid2.jpg": "/Portfolio/static/media/liquid2.7c84d6d8a5f5be49a8f5.jpg",
-    "static/media/Memories.ttf": "/Portfolio/static/media/Memories.8e89d719f8f5fdf01e5e.ttf",
+    "static/media/Signatra.ttf": "/Portfolio/static/media/Signatra.fa93580742d991affbe5.ttf",
     "static/media/DS-DIGI.ttf": "/Portfolio/static/media/DS-DIGI.0ef0e2249326c34137c8.ttf",
     "index.html": "/Portfolio/index.html",
-    "main.351d4f39.css.map": "/Portfolio/static/css/main.351d4f39.css.map",
-    "main.b9c41f96.js.map": "/Portfolio/static/js/main.b9c41f96.js.map",
+    "main.a864bbc9.css.map": "/Portfolio/static/css/main.a864bbc9.css.map",
+    "main.5e2f73b3.js.map": "/Portfolio/static/js/main.5e2f73b3.js.map",
     "453.1407b060.chunk.js.map": "/Portfolio/static/js/453.1407b060.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.351d4f39.css",
-    "static/js/main.b9c41f96.js"
+    "static/css/main.a864bbc9.css",
+    "static/js/main.5e2f73b3.js"
   ]
 }
