@@ -20,11 +20,11 @@ import { useState } from 'react';
 /* 바탕화면 */
 export function Desktop() {
   const [state, setState] = useState({
-    showPortfolio: true,
+    showPortfolio: false,
     showFolder: false,
     showStack: false,
     showContact: false,
-    showAddict: false,
+    showAddict: true,
     showMureka: false,
     showIfit: false,
     showTodolist: false,

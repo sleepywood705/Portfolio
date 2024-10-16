@@ -1,4 +1,4 @@
-import "./Addict_Offline.css";
+import "../../../scss/Addict_Offline.scss";
 
 
 const storeData = [

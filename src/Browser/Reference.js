@@ -1,4 +1,4 @@
-import './Reference.css'
+import '../scss/Reference.scss'
 import { Window } from '../Interface/Window';
 import { useState } from 'react';
 

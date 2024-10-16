@@ -1,4 +1,4 @@
-import "./Mureka.scss";
+import "../../scss/Mureka.scss";
 import { Window } from "../../Interface/Window"
 import { MurekaAside } from "./Component/Mureka_Aside";
 import { MurekaHeader } from "./Component/Mureka_Header";
@@ -45,9 +45,6 @@ export function Mureka({ 창닫기 }) {
   return (
     <Window id="Mureka" tabText="Mureka" 닫기={창닫기}>
       <div className="Container">
-        <div className={showAside ? "showAside" : ""}>
-          {showAside && <MurekaAside />}
-        </div>
         <main>
           <MurekaHeader {...authProps} />
           <Routes>
@@ -59,6 +56,9 @@ export function Mureka({ 창닫기 }) {
               element={<MurekaLoginPage {...authProps} />} />
           </Routes>
         </main>
+        <div className={showAside ? "showAside" : ""}>
+          {showAside && <MurekaAside />}
+        </div>
       </div>
     </Window>
   );

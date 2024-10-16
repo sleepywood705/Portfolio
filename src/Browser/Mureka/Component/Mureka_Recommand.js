@@ -1,4 +1,4 @@
-import "./Mureka_Recommand.scss"
+import "../../../scss/Mureka_Recommand.scss"
 import { useState, useEffect, useRef } from "react"
 
 
@@ -11,12 +11,12 @@ export function MurekaRecommand() {
     { albumName: "Schadenfreude", artistName: "알레프 (ALEPH)", index: 4 },
     { albumName: "Memory", artistName: "Anonymous Artists", index: 0 },
     { albumName: "Try Again", artistName: "JAEHYUN", index: 1 },
-    { albumName: "Inside Out", artistName: "GEMINI", index: 11 },
+    { albumName: "Inside Out", artistName: "GEMINI", index: 12 },
     { albumName: "The 4th Mini Album 'Mr.Mr.'", artistName: "SNSD", index: 3 },
     { albumName: "You Wake Up At Sea Tac", artistName: "Lasse Lindh", index: 1 },
     { albumName: "Antifreeze", artistName: "백예린", index: 0 },
     { albumName: "4 ONLY", artistName: "이하이", index: 1 },
-    { albumName: "Bittersweet", artistName: "랄라스윗 (lalasweet)", index: 1 },
+    { albumName: "Bittersweet", artistName: "랄라스윗 (lalasweet)", index: 6 },
     { albumName: "그댄 행복에 살텐데 (2022)", artistName: "최유리", index: 1 },
   ];
 
@@ -27,9 +27,11 @@ export function MurekaRecommand() {
           reqAlbum.map(async ({ albumName, artistName, index }) => {
             try {
               const res = await fetch(
-                `https://itunes.apple.com/search?term=${encodeURIComponent(
-                  artistName
-                )}+${encodeURIComponent(albumName)}&entity=song&country=KR`
+                `https://itunes.apple.com/search?term=
+                ${encodeURIComponent(artistName)}
+                +${encodeURIComponent(albumName)}
+                &entity=song
+                &country=KR`
               );
               const data = await res.json();
               return data.results.length > index ? data.results[index] : null;
@@ -76,7 +78,7 @@ export function MurekaRecommand() {
       <h2>MUREKA 추천 앨범 수록곡 TOP 10</h2>
       <div>
         {albums.map((track, index) => (
-          <span 
+          <span
             key={index}
             className="RecommandChip"
             onClick={() => handlePlay(index)}

@@ -1,4 +1,4 @@
-import "./Addict.css";
+import "../../scss/Addict.scss";
 import store from '../../store/store';
 import { Window } from '../../Interface/Window'
 import { AddictHeader } from "./Component/Addict_Header";

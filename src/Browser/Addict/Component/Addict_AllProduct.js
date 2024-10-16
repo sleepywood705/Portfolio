@@ -1,4 +1,4 @@
-import "./Addict_AllProduct.css";
+import "../../../scss/Addict_AllProduct.scss";
 import { AddictProduct } from "./Addict_Product";
 import { useState } from "react";
 import { useSelector } from "react-redux";
@@ -24,7 +24,7 @@ export function AddictAllProduct() {
     <section id="AddictAllProduct">
       <div>
         <button
-          // style={{ border: "1px solid #eee" }}
+          // style={{ border: "1px solid #eee" }}x
           onClick={() => handleFiltering("")}
         >
           All

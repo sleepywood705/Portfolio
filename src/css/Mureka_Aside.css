@@ -1,0 +1,16 @@
+#MurekaAside {
+  position: fixed;
+  top: 72px;
+  flex: 2.5;
+  width: 25%;
+  height: calc(100vh - 30px - 40px - 50px - 10px);
+  border-radius: 8px;
+  background-color: #f8f9fa;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+#MurekaAside header {
+  height: 60px;
+  border-bottom: 1px solid #ddd;
+}
+
+/*# sourceMappingURL=Mureka_Aside.css.map */

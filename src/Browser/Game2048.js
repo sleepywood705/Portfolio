@@ -1,4 +1,4 @@
-import './Game2048.css'
+import '../scss/Game2048.scss'
 import { Window } from '../Interface/Window';
 import { useEffect } from 'react';
 
@@ -203,7 +203,7 @@ export function Game2048({ 창닫기 }) {
 
     startGame();
 
-    document.getElementById("newGame").addEventListener("click", startGame);
+    document.querySelector(".newGame").addEventListener("click", startGame);
   }, []);
 
   return (
@@ -215,7 +215,7 @@ export function Game2048({ 창닫기 }) {
           SCORE:&nbsp;
           <span id="score">0</span>
         </div>
-        <button id="newGame">새 게임</button>
+        <button className="newGame">새 게임</button>
       </div>
     </Window>
   );

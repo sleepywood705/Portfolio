@@ -1,11 +1,10 @@
-import "./Mureka_Home.scss"
+import "../../../scss/Mureka_Home.scss"
 import { MurekaRecommand } from "../Component/Mureka_Recommand"
 
 
 export function MurekaHomePage({ className }) {
   return (
     <section id="MurekaHomePage" className={className}>
-      <MurekaRecommand />
       <MurekaRecommand />
       {/* <MurekaCommunity /> */}
     </section>

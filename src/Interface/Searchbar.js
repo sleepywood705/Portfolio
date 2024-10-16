@@ -1,4 +1,4 @@
-import './Searchbar.css'
+import '../scss/Searchbar.scss'
 
 
 export function Searchbar() {
@@ -6,7 +6,7 @@ export function Searchbar() {
     <div id="Searchbar">
       <button className="Left"/>
       <button className="Right"/>
-      <div></div>
+      <div className="URLbar" ></div>
     </div>
   );
 };

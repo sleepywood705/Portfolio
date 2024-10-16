@@ -1,4 +1,4 @@
-import './Addict_Home.css'
+import '../../../scss/Addict_Home.scss'
 import { AddictSlider } from '../Component/Addict_Slider';
 import { AddictShortCut } from '../Component/Addict_ShortCut';
 import { AddictBestProduct } from '../Component/Addict_AllProduct';

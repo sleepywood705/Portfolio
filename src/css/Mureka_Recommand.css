@@ -1,0 +1,37 @@
+#MurekaRecommand {
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+}
+#MurekaRecommand > div {
+  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+#MurekaRecommand > div > .RecommandChip {
+  padding-bottom: 12px;
+  border-radius: 10px;
+  border: 1px solid #eee;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  gap: 4px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  cursor: pointer;
+}
+#MurekaRecommand > div > .RecommandChip > img {
+  margin-bottom: 8px;
+  aspect-ratio: 1;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+}
+#MurekaRecommand > div > .RecommandChip > h4, #MurekaRecommand > div > .RecommandChip h5 {
+  padding: 0 12px 0 12px;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/*# sourceMappingURL=Mureka_Recommand.css.map */

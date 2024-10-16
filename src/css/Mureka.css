@@ -1,0 +1,40 @@
+#Mureka {
+  background-color: #fff;
+}
+#Mureka .Container {
+  position: relative;
+  padding: 2px 8px 8px 8px;
+  width: 100%;
+  display: flex;
+  overflow-y: scroll;
+}
+#Mureka .Container main {
+  position: sticky;
+  top: 0px;
+  flex: 7.5;
+  height: fit-content;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+#Mureka .Container .applyPadding {
+  padding: 40px;
+}
+#Mureka .Container .showAside {
+  margin-left: 8px;
+  flex: 2.5;
+}
+
+@keyframes rotating {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*# sourceMappingURL=Mureka.css.map */

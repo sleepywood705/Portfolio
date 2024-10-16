@@ -1,4 +1,4 @@
-import './Rotation.css'
+import '../scss/Rotation.scss'
 import { Window } from '../Interface/Window';
 import { useEffect, useRef } from 'react';
 

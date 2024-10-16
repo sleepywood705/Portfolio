@@ -1,4 +1,4 @@
-import './Addict_Header.css'
+import '../../../scss/Addict_Header.scss'
 import { Link } from "react-router-dom";
 
 
