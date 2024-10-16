@@ -24,7 +24,7 @@ export function Desktop() {
     showFolder: false,
     showStack: false,
     showContact: false,
-    showAddict: true,
+    showAddict: false,
     showMureka: false,
     showIfit: false,
     showTodolist: false,

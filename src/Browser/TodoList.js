@@ -1,4 +1,4 @@
-import './TodoList.css';
+import '../scss/TodoList.scss';
 import { Window } from '../Interface/Window';
 import { useState, useEffect, useRef, useCallback } from 'react';
 

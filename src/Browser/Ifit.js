@@ -1,4 +1,3 @@
-import './Ifit.css'
 import { Window } from '../Interface/Window';
 
 
