@@ -1,4 +1,4 @@
-#MurekaRecommand {
+#MurekaRecommend {
   gap: 20px;
   display: flex;
   flex-direction: column;
@@ -8,7 +8,7 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr);
 
-    > .RecommandChip {
+    > .RecommendChip {
       padding-bottom: 12px;
       border-radius: 10px;
       border: 1px solid #eee;

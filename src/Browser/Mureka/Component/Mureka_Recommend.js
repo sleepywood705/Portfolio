@@ -1,8 +1,8 @@
-import "../../../scss/Mureka_Recommand.scss"
+import "../../../scss/Mureka_Recommend.scss"
 import { useState, useEffect, useRef } from "react"
 
 
-export function MurekaRecommand() {
+export function MurekaRecommend() {
   const [albums, setAlbums] = useState([]);
   const [currentTrackIndex, setCurrentTrackIndex] = useState(null); // 현재 재생 중인 트랙 인덱스
   const audioRef = useRef(null);
@@ -74,13 +74,13 @@ export function MurekaRecommand() {
   };
 
   return (
-    <section id="MurekaRecommand">
+    <section id="MurekaRecommend">  
       <h2>MUREKA 추천 앨범 수록곡 TOP 10</h2>
       <div>
         {albums.map((track, index) => (
           <span
             key={index}
-            className="RecommandChip"
+            className="RecommendChip"
             onClick={() => handlePlay(index)}
           >
             <img

@@ -1,0 +1,29 @@
+#Addict footer {
+  padding: 0 100px;
+  width: 100%;
+  height: 400px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+#Addict footer > div {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  display: grid;
+  place-items: center;
+}
+#Addict footer > div > div {
+  gap: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+#Addict footer > div > div > h3 {
+  margin-bottom: 15px;
+  text-align: left;
+}
+#Addict footer > div > div > p {
+  text-align: left;
+}
+
+/*# sourceMappingURL=Addict_Footer.css.map */

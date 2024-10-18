@@ -1,6 +1,6 @@
 import '../scss/Portfolio.scss'
 import { Window } from '../Interface/Window';
-import { MurekaRecommand } from './Mureka/Component/Mureka_Recommand';
+import { MurekaRecommand } from './Mureka/Component/Mureka_Recommend';
 
 
 export function Portfolio({ 창닫기 }) {
