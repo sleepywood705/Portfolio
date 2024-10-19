@@ -1,4 +1,4 @@
-import '../scss/Searchbar.scss'
+import './Searchbar.scss'
 
 
 export function Searchbar() {

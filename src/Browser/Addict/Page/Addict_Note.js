@@ -1,4 +1,4 @@
-import "../../../scss/Addict_Note.scss";
+import "./Addict_Note.scss";
 import { useState } from "react";
 import { useSelector } from "react-redux";
 import { AddictProduct } from "../Component/Addict_Product";

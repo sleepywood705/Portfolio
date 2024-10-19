@@ -1,4 +1,4 @@
-import "../../../scss/Mureka_Login.scss"
+import "./Mureka_Login.scss"
 import { useNavigate } from "react-router-dom";
 
 

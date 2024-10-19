@@ -1,4 +1,4 @@
-import '../scss/Counter.scss';
+import './Counter.scss';
 import { Window } from '../Interface/Window';
 import { useState, useEffect } from 'react';
 

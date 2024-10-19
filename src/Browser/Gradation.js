@@ -1,4 +1,4 @@
-import '../scss/Gradation.scss'
+import './Gradation.scss'
 import { Window } from '../Interface/Window';
 import { useEffect, useRef } from 'react';
 

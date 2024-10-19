@@ -1,4 +1,4 @@
-import "../../../scss/Mureka_Header.scss"
+import "./Mureka_Header.scss"
 import { MurekaSearch } from "./Mureka_Search";
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";

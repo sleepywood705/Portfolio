@@ -1,4 +1,4 @@
-import "../../../scss/Addict_ProductTypeFilter.scss"
+import "./Addict_ProductTypeFilter.scss"
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 

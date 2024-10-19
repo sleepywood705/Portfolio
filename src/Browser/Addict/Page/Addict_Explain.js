@@ -1,4 +1,4 @@
-import "../../../scss/Addict_Explain.scss"
+import "./Addict_Explain.scss"
 
 
 export function AddictExplain({ onClose }) {

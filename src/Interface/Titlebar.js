@@ -1,4 +1,4 @@
-import '../scss/Titlebar.scss'
+import './Titlebar.scss'
 
 
 export function Titlebar({ 닫기, tabText }) {

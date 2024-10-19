@@ -1,4 +1,4 @@
-import "../../../scss/Mureka_Recommend.scss"
+import "./Mureka_Recommend.scss"
 import { useState, useEffect, useRef } from "react"
 
 

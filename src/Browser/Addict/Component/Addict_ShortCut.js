@@ -1,4 +1,4 @@
-import'../../../scss/Addict_ShortCut.scss'
+import'./Addict_ShortCut.scss'
 import { Link } from 'react-router-dom';
 
 

@@ -1,4 +1,4 @@
-import "../../../scss/Mureka_Home.scss"
+import "./Mureka_Home.scss"
 import { MurekaRecommend } from "../Component/Mureka_Recommend"
 
 

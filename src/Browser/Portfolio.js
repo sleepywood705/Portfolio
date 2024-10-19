@@ -1,4 +1,4 @@
-import '../scss/Portfolio.scss'
+import './Portfolio.scss'
 import { Window } from '../Interface/Window';
 import { MurekaRecommand } from './Mureka/Component/Mureka_Recommend';
 

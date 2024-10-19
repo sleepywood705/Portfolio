@@ -1,4 +1,4 @@
-import '../scss/Contact.scss'
+import './Contact.scss'
 import { useEffect, useRef } from 'react';
 
 

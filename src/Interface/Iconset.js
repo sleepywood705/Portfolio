@@ -1,4 +1,4 @@
-import '../scss/Iconset.scss'
+import './Iconset.scss'
 
 
 /* 아이콘셋 */

@@ -1,4 +1,4 @@
-import "../../scss/Mureka.scss";
+import "./Mureka.scss";
 import { Window } from "../../Interface/Window"
 import { MurekaAside } from "./Component/Mureka_Aside";
 import { MurekaHeader } from "./Component/Mureka_Header";

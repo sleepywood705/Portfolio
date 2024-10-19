@@ -1,4 +1,4 @@
-import '../scss/Game2048.scss'
+import './Game2048.scss'
 import { Window } from '../Interface/Window';
 import { useEffect } from 'react';
 

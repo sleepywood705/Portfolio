@@ -1,4 +1,4 @@
-import "../../../scss/Mureka_Search.scss"
+import "./Mureka_Search.scss"
 import { useState } from "react";
 import axios from "axios"
 

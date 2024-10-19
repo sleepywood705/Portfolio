@@ -1,4 +1,4 @@
-import "../../../scss/Addict_Product.scss";
+import "./Addict_Product.scss";
 import { useState, useEffect } from "react";
 
 

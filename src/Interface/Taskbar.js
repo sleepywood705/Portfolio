@@ -1,4 +1,4 @@
-import '../scss/Taskbar.scss'
+import './Taskbar.scss'
 import { useState, useEffect } from 'react';
 
 

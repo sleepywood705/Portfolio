@@ -1,4 +1,4 @@
-import "../../../scss/Mureka_Aside.scss";
+import "./Mureka_Aside.scss";
 
 
 export function MurekaAside() {

@@ -1,4 +1,4 @@
-import "../../../scss/Addict_All.scss"
+import "./Addict_All.scss"
 import { 
   AddictAllProduct, 
   AddictBestProduct, 

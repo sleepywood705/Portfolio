@@ -1,4 +1,4 @@
-import '../../../scss/Addict_Footer.scss'
+import './Addict_Footer.scss'
 
 
 export function AddictFooter() {
