@@ -1,0 +1,16 @@
+#MurekaAside {
+  position: fixed;
+  top: 72px;
+  flex: 2.5;
+  width: calc(100% / 4);
+  height: calc(100vh - 30px - 40px - 50px - 10px);
+  border-radius: 8px;
+  background-color: #f8f9fa;
+  box-shadow: var(--box-shadow);
+
+
+  header {
+    height: 60px;
+    border-bottom: 1px solid #ddd;
+  }
+}
