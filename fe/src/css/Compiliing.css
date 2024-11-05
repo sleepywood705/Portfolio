@@ -425,7 +425,6 @@
   width: 100%;
   height: 100%;
   border-radius: 8px;
-  border: 1px solid #999;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   overflow: hidden;
@@ -444,6 +443,7 @@
   top: 0;
   width: 100%;
   height: 100%;
+  background: #fff;
 }
 #Contact .flip-card-front > p {
   z-index: 1;
@@ -478,8 +478,8 @@
 }
 #Contact .flip-card-back > .close-card {
   position: absolute;
-  right: 30px;
-  top: 30px;
+  right: 20px;
+  top: 20px;
   width: 20px;
   aspect-ratio: 1;
   background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-x-circle-fill' viewBox='0 0 16 16'><path d='M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293z'/></svg>") center/contain no-repeat;
@@ -616,7 +616,7 @@
 #Canvas canvas {
   width: 100%;
   height: 100%;
-  background-color: #000;
+  background-color: #fff;
 }
 
 #TodoList .Container {
@@ -1547,7 +1547,7 @@
   height: 100%;
   border-radius: 4px;
 }
-#MurekaSearch .result-container .SearchList .result-info {
+#MurekaSearch .result-container .SearchList .album-info {
   flex: 1;
   gap: 4px;
   display: flex;
@@ -1555,10 +1555,10 @@
   align-items: flex-start;
   justify-content: center;
 }
-#MurekaSearch .result-container .SearchList .result-info h4 {
+#MurekaSearch .result-container .SearchList .album-info h4 {
   color: #777;
 }
-#MurekaSearch .result-container .SearchList .result-info h5 {
+#MurekaSearch .result-container .SearchList .album-info h5 {
   color: #888;
 }
 
@@ -1575,6 +1575,67 @@
 }
 #Stack .Conatainer > h2 {
   text-align: center;
+}
+
+.StackCard {
+  position: relative;
+  padding: 40px;
+  width: calc((100% - 40px) / 3);
+  gap: 30px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+.StackCard > img {
+  margin: 0 auto;
+  width: 150px;
+  aspect-ratio: 1;
+}
+.StackCard > .chips {
+  gap: 10px;
+  display: flex;
+}
+.StackCard > .description {
+  width: 100%;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.StackCard > .description ul {
+  gap: 6px;
+  display: flex;
+  flex-direction: column;
+}
+.StackCard > .description ul li {
+  display: flex;
+}
+
+.ChipFamiliar,
+.ChipLearning,
+.ChipDone,
+.ChipFramework,
+.ChipLibrary,
+.ChipCoWorking,
+.ChipTool,
+.ChipETC {
+  padding: 5px 10px;
+  width: fit-content;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+
+#StackContainer {
+  width: 100%;
+  height: fit-content;
+  gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 #StackFilters {
@@ -1596,66 +1657,6 @@
 #StackFilters button:hover {
   color: #fff;
   background-color: #333;
-}
-
-#StackContainer {
-  width: 100%;
-  height: fit-content;
-  gap: 20px;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.StackChip {
-  position: relative;
-  padding: 40px;
-  width: calc((100% - 40px) / 3);
-  gap: 30px;
-  display: flex;
-  flex-direction: column;
-  border-radius: 8px;
-  border: 1px solid #ddd;
-  background-color: #fff;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
-}
-.StackChip > img {
-  margin: 0 auto;
-  width: 150px;
-  aspect-ratio: 1;
-}
-.StackChip > .chips {
-  gap: 10px;
-  display: flex;
-}
-.StackChip > .description {
-  width: 100%;
-  gap: 20px;
-  display: flex;
-  flex-direction: column;
-}
-.StackChip > .description ul {
-  gap: 6px;
-  display: flex;
-  flex-direction: column;
-}
-.StackChip > .description ul li {
-  display: flex;
-}
-.StackChip .ChipFamiliar,
-.StackChip .ChipLearning,
-.StackChip .ChipDone,
-.StackChip .ChipFramework,
-.StackChip .ChipLibrary,
-.StackChip .ChipCoWorking,
-.StackChip .ChipTool,
-.StackChip .ChipETC {
-  padding: 5px 10px;
-  width: fit-content;
-  font-size: 14px;
-  border-radius: 6px;
-  border: 1px solid #ddd;
-  background-color: #fff;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 }
 
 /*# sourceMappingURL=Compiliing.css.map */
