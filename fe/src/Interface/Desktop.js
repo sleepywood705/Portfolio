@@ -44,7 +44,6 @@ export function Desktop() {
 
   return (
     <div id="Desktop">
-
       <Iconset
         포트폴리오열기={() => toggleState('showPortfolio', true)}
         폴더열기={() => toggleState('showFolder', true)}
