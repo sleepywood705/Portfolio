@@ -43,7 +43,8 @@ export function Addict({ 창닫기 }) {
             <Route path="/Portfolio/addict/" element={<AddictHomePage />} />
             <Route path="/Portfolio/addict/all" element={<AddictAllPage />} />
             <Route path="/Portfolio/addict/note" element={<AddictNotePage />} />
-            <Route path="/Portfolio/addict/mall" element={<AddictOfflinePage />}/>
+            <Route path="/Portfolio/addict/mall" element={<AddictOfflinePage />}
+            />
           </Routes>
           <AddictFooter />
         </div>
