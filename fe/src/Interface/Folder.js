@@ -11,7 +11,6 @@ export function Folder({
   const [state, setState] = useState({
     showDevelopment: true,
     showDocument: false,
-    // showDesign: false,
     showPractice: false,
   });
 

@@ -16,15 +16,12 @@ import { Routes, Route, useNavigate } from "react-router-dom";
 export function Addict({ 창닫기 }) {
   const navigate = useNavigate();
   const [showExplain, setShowExplain] = useState(true);
-  const [isInitialRender, setIsInitialRender] = useState(true);
-
-  useEffect(() => {
-    if (isInitialRender) {
-      navigate('/Portfolio/addict/');
-      setIsInitialRender(false);
-    }
-  }, [navigate, isInitialRender]);
-
+  
+  const handleWindowClose = () => {
+    navigate('/Portfolio/');
+    창닫기();
+  };
+  
   function handleExplainClose() {
     setShowExplain(false);
   }
@@ -33,14 +30,9 @@ export function Addict({ 창닫기 }) {
     setShowExplain(true);
   };
 
-  const handleClose = () => {
-    navigate('/Portfolio/');
-    창닫기();
-  };
-
   return (
     <Provider store={store}>
-      <Window id="Addict" tabText="에이딕트 리디자인" 닫기={handleClose}>
+      <Window id="Addict" tabText="에이딕트 리디자인" 닫기={handleWindowClose}>
         {showExplain && <AddictExplain onClose={handleExplainClose} />}
         <div className="Container">
           <AddictHeader onClick={handleExplainOpen} />
