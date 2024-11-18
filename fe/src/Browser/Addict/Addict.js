@@ -12,6 +12,7 @@ import { Provider } from 'react-redux';
 import { useState, useEffect } from "react";
 import { Routes, Route, useNavigate } from "react-router-dom";
 
+
 export function Addict({ 창닫기 }) {
   const navigate = useNavigate();
   const [showExplain, setShowExplain] = useState(true);
