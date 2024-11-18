@@ -27,9 +27,11 @@ export function Desktop() {
   const location = useLocation();
 
   useEffect(() => {
-    if (location.pathname.includes('/Portfolio/addict')) {
-      setState(prev => ({ ...prev, showAddict: true }));
-    }
+    setState(prev => ({
+      ...prev,
+      showAddict: location.pathname.includes('/Portfolio/addict'),
+      showMureka: location.pathname.includes('/Portfolio/mureka'),
+    }));
   }, [location]);
 
   const toggleState = (key, value = !state[key]) => {
