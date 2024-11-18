@@ -5,17 +5,15 @@ import { Folder } from './Folder';
 import { Stack } from '../Browser/Stack/Stack';
 import { Contact } from '../Browser/Contact';
 import { Addict } from '../Browser/Addict/Addict';
-import { AddictHomePage } from "../Browser/Addict/Page/Addict_Home";
-import { AddictAllPage } from "../Browser/Addict/Page/Addict_All";
-import { AddictNotePage } from "../Browser/Addict/Page/Addict_Note";
-import { AddictOfflinePage } from "../Browser/Addict/Page/Addict_Offline";
 import { Reference } from '../Browser/Reference';
 import { useState, useEffect } from 'react';
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 
 /* 바탕화면 */
 export function Desktop() {
+  const location = useLocation();
+  const navigate = useNavigate();
   const [state, setState] = useState({
     showFolder: false,
     showStack: false,
@@ -23,8 +21,6 @@ export function Desktop() {
     showAddict: false,
     showReference: false,
   });
-
-  const location = useLocation();
 
   useEffect(() => {
     setState(prev => ({
@@ -39,17 +35,12 @@ export function Desktop() {
       ...prevState,
       [key]: value,
     }));
+    
+    if (key === 'showAddict' && value) {navigate('/Portfolio/addict/');}
   };
 
   return (
     <div id="Desktop">
-
-      <Routes>
-        <Route path="/Portfolio/addict/" element={<AddictHomePage />} />
-        <Route path="/Portfolio/addict/all" element={<AddictAllPage />} />
-        <Route path="/Portfolio/addict/note" element={<AddictNotePage />} />
-        <Route path="/Portfolio/addict/mall" element={<AddictOfflinePage />}/>
-      </Routes>
 
       <Iconset
         포트폴리오열기={() => toggleState('showPortfolio', true)}
