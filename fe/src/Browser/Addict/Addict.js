@@ -37,10 +37,10 @@ export function Addict({ 창닫기 }) {
         <div className="Container">
           <AddictHeader onClick={handleExplainOpen} />
           <Routes>
-            <Route path="/Portfolio/addict/" element={<AddictHomePage />} />
-            <Route path="/Portfolio/addict/all" element={<AddictAllPage />} />
-            <Route path="/Portfolio/addict/note" element={<AddictNotePage />} />
-            <Route path="/Portfolio/addict/mall" element={<AddictOfflinePage />}/>
+            <Route path="/" element={<AddictHomePage />} />
+            <Route path="/all" element={<AddictAllPage />} />
+            <Route path="/note" element={<AddictNotePage />} />
+            <Route path="/mall" element={<AddictOfflinePage />} />
           </Routes>
           <AddictFooter />
         </div>

@@ -1,0 +1,69 @@
+#Community {
+    background-color: #fff;
+    /* border: 1px solid red; */
+    
+    .Container {
+      width: 100%; height: 100%;
+      background-color: #f8f9fa;
+      display: flex;
+      flex-direction: column;
+      overflow-y: scroll;
+
+      > header {
+        height: 80px;
+        background-color: #333;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        a {
+          height: 100%; aspect-ratio: 1;
+          color: #fff;
+          display: grid;
+          place-items: center;
+
+          &:nth-child(1) {
+            margin-right: auto;
+          }
+        }
+      }
+
+      > section {
+        padding: 20px;
+        flex-grow: 1;
+        gap: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+
+        form {
+          gap: 20px;
+          display: flex;
+
+          input {
+            border: 1px solid #000;
+          }
+
+          button {
+            border: 1px solid #000;
+          }
+        }
+
+        .Card {
+          padding: 20px;
+          width: 300px; aspect-ratio: 1;
+          background-color: #fff;
+          border-radius: 6px;
+          box-shadow: var(--box-shadow);
+          gap: 20px;
+          display: flex;
+          flex-direction: column;
+
+          > p:nth-child(1) {
+            font-size: 18px;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
