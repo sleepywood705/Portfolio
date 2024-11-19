@@ -6,7 +6,8 @@ import { useState } from 'react';
 export function Folder({ 
   창닫기, 
   레퍼런스열기, 
-  에이딕트열기 }) {
+  에이딕트열기, 
+  게시판열기 }) {
 
   const [state, setState] = useState({
     showDevelopment: true,
@@ -53,6 +54,16 @@ export function Folder({
               <div className="Lower">레퍼런스 사이트</div>
             </div>
           )}
+
+          {state.showPractice && (
+            <div className="Icon" onClick={게시판열기}>
+              <div className="Upper">
+                <div className="Inner">Doc</div>
+              </div>
+              <div className="Lower">게시판 연습</div>
+            </div>
+          )}
+
         </section>
       </div>
     </Window>

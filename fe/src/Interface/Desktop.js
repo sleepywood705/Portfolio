@@ -6,6 +6,7 @@ import { Stack } from '../Browser/Stack/Stack';
 import { Contact } from '../Browser/Contact';
 import { Addict } from '../Browser/Addict/Addict';
 import { Reference } from '../Browser/Reference';
+import { Board } from '../Browser/Board';
 import { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 
@@ -20,6 +21,7 @@ export function Desktop() {
     showContact: false,
     showAddict: false,
     showReference: false,
+    showBoard: false,
   });
 
   useEffect(() => {
@@ -54,6 +56,7 @@ export function Desktop() {
           창닫기={() => toggleState('showFolder', false)}
           에이딕트열기={() => toggleState('showAddict', true)}
           레퍼런스열기={() => toggleState('showReference', true)}
+          게시판열기={() => toggleState('showBoard', true)}
         />
       )}
 
@@ -71,6 +74,10 @@ export function Desktop() {
 
       {state.showReference && (
         <Reference 창닫기={() => toggleState('showReference', false)} />
+      )}
+
+      {state.showBoard && (
+        <Board 창닫기={() => toggleState('showBoard', false)} />
       )}
       
     </div>
