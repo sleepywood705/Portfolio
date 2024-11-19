@@ -53,8 +53,8 @@ export function AddictSlider() {
         </div>
       </div>
       <div className="wrap_button">
-        <button className="btn-left" onClick={handleButtonLeft}></button>
-        <button className="btn-right" onClick={handleButtonRight}></button>
+        <button className="left" onClick={handleButtonLeft}></button>
+        <button className="right" onClick={handleButtonRight}></button>
       </div>
     </section>
   );

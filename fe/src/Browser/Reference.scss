@@ -139,3 +139,21 @@
 #Reference #library > .filter_CSS:nth-child(2) {
   margin-top: 0;
 }
+
+@media screen and (max-width: 1280px) {
+  #Reference {
+    .Container {
+      > article {
+        > div {
+          section {
+            padding: 60px 120px 100px 100px;
+
+            &:nth-child(3) {
+              padding: 0 120px 100px 100px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
