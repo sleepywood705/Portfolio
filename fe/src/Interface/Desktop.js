@@ -6,7 +6,7 @@ import { Stack } from '../Browser/Stack/Stack';
 import { Contact } from '../Browser/Contact';
 import { Addict } from '../Browser/Addict/Addict';
 import { Reference } from '../Browser/Reference';
-import { Community } from '../Browser/Community';
+import { Community } from '../Browser/Community/Community';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Routes, Route } from "react-router-dom";
@@ -41,14 +41,10 @@ export function Desktop() {
       />
 
       <Routes>
-        <Route path="/Portfolio/stack/*" element={
-          <Stack 창닫기={() => handleNavigate('/Portfolio/')} />} />
-        <Route path="/Portfolio/reference/*" element={
-          <Reference 창닫기={() => handleNavigate('/Portfolio/')} />} />
-        <Route path="/Portfolio/addict/*" element={
-          <Addict 창닫기={() => handleNavigate('/Portfolio/')} />} />
-        <Route path="/Portfolio/community/*" element={
-          <Community 창닫기={() => handleNavigate('/Portfolio/')} />} />
+        <Route path="/Portfolio/stack/*" element={<Stack 창닫기={() => handleNavigate('/Portfolio/')} />} />
+        <Route path="/Portfolio/reference/*" element={<Reference 창닫기={() => handleNavigate('/Portfolio/')} />} />
+        <Route path="/Portfolio/addict/*" element={<Addict 창닫기={() => handleNavigate('/Portfolio/')} />} />
+        <Route path="/Portfolio/community/*" element={<Community 창닫기={() => handleNavigate('/Portfolio/')} />} />
       </Routes>
 
       {state.showFolder && (
