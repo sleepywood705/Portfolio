@@ -74,10 +74,10 @@ function NoteCard({ cardData, onClick }) {
 }
 
 function NoteModal({ closeModal, cardData, filteredProducts }) {
-  const fragrance = useSelector((state) => state.fragrance);
+  const fragranceData = useSelector((state) => state.fragranceData);
 
   // filterCode에 해당하는 fragrance 데이터만 추출
-  const filteredFragrance = fragrance[cardData.filterCode] || [];
+  const filteredFragrance = fragranceData[cardData.filterCode] || [];
 
   return (
     <div id="NoteModal">
