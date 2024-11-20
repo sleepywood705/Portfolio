@@ -1,0 +1,20 @@
+#Community {
+  header {
+    margin: 0 auto;
+    padding: 0 100px;
+    width: 1280px; height: 80px;
+    border: 1px solid #000;
+    display: flex;
+
+    a, button {
+        height: 100%; aspect-ratio: 1;
+        font-size: 14px;
+        display: grid;
+        place-items: center;
+
+        &:nth-child(1) {
+            margin-right: auto;
+        }
+    }
+  }
+}
