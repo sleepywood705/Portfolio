@@ -9,6 +9,7 @@
   justify-self: center;
   overflow: hidden;
 }
+
 .Window .Container {
-  background-color: #f8f9fa;
+  background-color: #fff;
 }

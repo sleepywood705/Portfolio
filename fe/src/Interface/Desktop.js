@@ -6,7 +6,7 @@ import { Stack } from '../Browser/Stack/Stack';
 import { Contact } from '../Browser/Contact';
 import { Addict } from '../Browser/Addict/Addict';
 import { Reference } from '../Browser/Reference';
-import { Community } from '../Browser/Community/Community';
+import { Glereka } from '../Browser/Glereka/Glereka';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Routes, Route } from "react-router-dom";
@@ -44,7 +44,7 @@ export function Desktop() {
         <Route path="/Portfolio/stack/*" element={<Stack 창닫기={() => handleNavigate('/Portfolio/')} />} />
         <Route path="/Portfolio/reference/*" element={<Reference 창닫기={() => handleNavigate('/Portfolio/')} />} />
         <Route path="/Portfolio/addict/*" element={<Addict 창닫기={() => handleNavigate('/Portfolio/')} />} />
-        <Route path="/Portfolio/community/*" element={<Community 창닫기={() => handleNavigate('/Portfolio/')} />} />
+        <Route path="/Portfolio/glereka/*" element={<Glereka 창닫기={() => handleNavigate('/Portfolio/')} />} />
       </Routes>
 
       {state.showFolder && (
@@ -52,7 +52,7 @@ export function Desktop() {
           창닫기={() => toggleState('showFolder', false)}
           에이딕트열기={() => handleNavigate('/Portfolio/addict/')}
           레퍼런스열기={() => handleNavigate('/Portfolio/reference/')}
-          게시판열기={() => handleNavigate('/Portfolio/community/')}
+          글레카열기={() => handleNavigate('/Portfolio/glereka/')}
         />
       )}
 
