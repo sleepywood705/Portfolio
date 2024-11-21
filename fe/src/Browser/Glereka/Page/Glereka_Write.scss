@@ -1,0 +1,51 @@
+#GlerekaWritePage {
+	padding: 100px 0;
+	gap: 40px;
+  display: flex;
+  flex-direction: column;
+
+  form {
+    width: 100%; height: fit-content;
+		gap: 30px;
+		display: flex;
+		flex-direction: column;
+
+		> input, textarea {
+			font-size: 24px;
+			font-family: inherit;
+
+			&::placeholder {
+				color: #bbb;
+			}
+
+			&:focus {
+				padding: 20px;
+				border: 1px solid #000;
+			}
+		}
+
+		> textarea {
+			height: 300px;
+			resize: none;
+		}
+
+		.wrap_button {
+			margin-top: 20px;
+			height: 60px;
+			gap: 10px;
+			display: flex;
+			justify-content: flex-end;
+
+			button {
+				width: 100px;
+				height: 100%;
+				font-size: 24px;
+				cursor: pointer;
+
+				&:hover {
+					border: 1px solid #000;
+				}
+			}
+		}
+  }
+}
