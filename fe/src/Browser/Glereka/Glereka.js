@@ -18,7 +18,7 @@ export function Glereka({ 창닫기 }) {
       <div className="Container">
         <GlerekaHeader />
         <Routes>
-          <Route path="/write" element={<GlerekaPostingPage />} />
+          <Route path="/posting" element={<GlerekaPostingPage />} />
         </Routes>
       </div>
     </Window>
