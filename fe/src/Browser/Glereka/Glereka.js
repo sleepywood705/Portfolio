@@ -1,7 +1,7 @@
 import "./Glereka.scss";
 import { Window } from "../../Interface/Window";
 import { GlerekaHeader } from "./Component/Glereka_Header";
-import { GlerekaWritePage } from "./Page/Glereka_Wrtie";
+import { GlerekaPostingPage } from "./Page/Glereka_Posting";
 import { Routes, Route, useNavigate } from "react-router-dom";
 
 
@@ -18,7 +18,7 @@ export function Glereka({ 창닫기 }) {
       <div className="Container">
         <GlerekaHeader />
         <Routes>
-          <Route path="/write" element={<GlerekaWritePage />} />
+          <Route path="/write" element={<GlerekaPostingPage />} />
         </Routes>
       </div>
     </Window>
