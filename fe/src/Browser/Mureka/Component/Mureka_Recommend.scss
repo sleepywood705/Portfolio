@@ -8,7 +8,7 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr);
 
-    > .RecommendChip {
+    .RecommendChip {
       padding-bottom: 12px;
       border-radius: 10px;
       border: 1px solid #eee;

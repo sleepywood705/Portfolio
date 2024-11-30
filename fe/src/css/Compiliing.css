@@ -251,7 +251,7 @@
   gap: 8px;
   align-items: center;
 }
-#Searchbar > .URLbar {
+#Searchbar .URLbar {
   flex-grow: 1;
   height: 30px;
   border-radius: 4px;
@@ -476,7 +476,7 @@
   align-items: flex-end;
   justify-content: flex-end;
 }
-#Contact .flip-card-back > .close-card {
+#Contact .flip-card-back .close-card {
   position: absolute;
   right: 20px;
   top: 20px;
@@ -564,7 +564,7 @@
   display: grid;
   place-items: center;
 }
-#Game2048 .Container > .wrap {
+#Game2048 .Container .wrap {
   color: #fff;
 }
 #Game2048 .Container .newGame {
@@ -818,20 +818,20 @@
   font-size: 30px;
   text-align: center;
 }
-#AddictHomePage > .wrap {
+#AddictHomePage .wrap {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 }
-#AddictHomePage > .wrap > div {
+#AddictHomePage .wrap > div {
   width: 100%;
   /* border: 1px solid #000; */
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 }
-#AddictHomePage > .wrap > div > div {
+#AddictHomePage .wrap > div > div {
   width: 100%;
 }
 #AddictHomePage > div:last-child {
@@ -869,7 +869,7 @@
   filter: invert(1);
 }
 
-#AddictNotePage > .wrap {
+#AddictNotePage .wrap {
   padding-top: 80px;
   gap: 40px;
   display: flex;
@@ -877,12 +877,12 @@
   align-items: center;
   justify-content: center;
 }
-#AddictNotePage > .wrap > p {
+#AddictNotePage .wrap > p {
   text-align: center;
   font-size: 24px;
   line-height: 34px;
 }
-#AddictNotePage > .wrap > img {
+#AddictNotePage .wrap > img {
   margin: 0 auto;
   width: 30%;
 }
@@ -998,23 +998,23 @@
   height: 750px;
   /* border: 1px solid #000; */
 }
-#AddictOfflinePage > .wrap {
+#AddictOfflinePage .wrap {
   padding: 40px 140px;
   border-bottom: 1px solid #eee;
   gap: 40px;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
 }
-#AddictOfflinePage > .wrap > h3 {
+#AddictOfflinePage .wrap > h3 {
   grid-column: 1/7;
 }
-#AddictOfflinePage > .wrap > div {
+#AddictOfflinePage .wrap > div {
   font-size: 14px;
   gap: 8px;
   display: flex;
   flex-direction: column;
 }
-#AddictOfflinePage > .wrap > div span {
+#AddictOfflinePage .wrap > div span {
   font-weight: 600;
 }
 
@@ -1418,14 +1418,14 @@
 #MurekaHeader .myPage {
   cursor: pointer;
 }
-#MurekaHeader > .utility {
+#MurekaHeader .utility {
   width: fit-content;
   border-radius: 6px;
   box-shadow: var(--box-shadow);
   display: flex;
   overflow: hidden;
 }
-#MurekaHeader > .utility > a, #MurekaHeader > .utility button {
+#MurekaHeader .utility > a, #MurekaHeader .utility button {
   flex: 1;
   padding: 6px;
   width: 70px;
@@ -1436,7 +1436,7 @@
   place-items: center;
   cursor: pointer;
 }
-#MurekaHeader > .utility > a.active, #MurekaHeader > .utility > a:hover, #MurekaHeader > .utility button.active, #MurekaHeader > .utility button:hover {
+#MurekaHeader .utility > a.active, #MurekaHeader .utility > a:hover, #MurekaHeader .utility button.active, #MurekaHeader .utility button:hover {
   color: #fff;
   background-color: #333;
 }
@@ -1451,7 +1451,7 @@
   display: grid;
   grid-template-columns: repeat(5, 1fr);
 }
-#MurekaRecommend > div > .RecommendChip {
+#MurekaRecommend > div .RecommendChip {
   padding-bottom: 12px;
   border-radius: 10px;
   border: 1px solid #eee;
@@ -1463,13 +1463,13 @@
   overflow: hidden;
   cursor: pointer;
 }
-#MurekaRecommend > div > .RecommendChip > img {
+#MurekaRecommend > div .RecommendChip > img {
   margin-bottom: 8px;
   aspect-ratio: 1;
   width: 100%;
   border-radius: 8px 8px 0 0;
 }
-#MurekaRecommend > div > .RecommendChip > h4, #MurekaRecommend > div > .RecommendChip h5 {
+#MurekaRecommend > div .RecommendChip > h4, #MurekaRecommend > div .RecommendChip h5 {
   padding: 0 12px 0 12px;
   width: 100%;
   overflow: hidden;
@@ -1659,4 +1659,67 @@
   background-color: #333;
 }
 
+<<<<<<< HEAD
+=======
+#StackContainer {
+  width: 100%;
+  height: fit-content;
+  gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.StackChip {
+  position: relative;
+  padding: 40px;
+  width: calc((100% - 40px) / 3);
+  gap: 30px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+.StackChip > img {
+  margin: 0 auto;
+  width: 150px;
+  aspect-ratio: 1;
+}
+.StackChip .chips {
+  gap: 10px;
+  display: flex;
+}
+.StackChip .description {
+  width: 100%;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.StackChip .description ul {
+  gap: 6px;
+  display: flex;
+  flex-direction: column;
+}
+.StackChip .description ul li {
+  display: flex;
+}
+.StackChip .ChipFamiliar,
+.StackChip .ChipLearning,
+.StackChip .ChipDone,
+.StackChip .ChipFramework,
+.StackChip .ChipLibrary,
+.StackChip .ChipCoWorking,
+.StackChip .ChipTool,
+.StackChip .ChipETC {
+  padding: 5px 10px;
+  width: fit-content;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+
+>>>>>>> 24cd4ca86abd7011f9e8e0b344264e7e636f7b09
 /*# sourceMappingURL=Compiliing.css.map */
