@@ -44,7 +44,7 @@ export function AddictNotePage() {
   const closeModal = () => {setOpenModal(false);};
 
   return (
-    <section id="AddictNotePage">
+    <article id="AddictNotePage">
       <div className="wrap">
         <p>에이딕트 향수는 패키지에 주원료를 표기하여<br />직관적으로 향을 이해할 수 있습니다.</p>
         <img src="https://media.11corporation.com/cdn/addict/shopby/fragrance/list/20240717/fragrance-mo.jpg" alt="img"/>
@@ -57,7 +57,7 @@ export function AddictNotePage() {
         ))}
         {openModalOpen && <NoteModal closeModal={closeModal} cardData={selectedCardData} filteredProducts={filteredProducts} />}
       </div>
-    </section>
+    </article>
   );
 }
 
@@ -74,10 +74,10 @@ function NoteCard({ cardData, onClick }) {
 }
 
 function NoteModal({ closeModal, cardData, filteredProducts }) {
-  const fragrance = useSelector((state) => state.fragrance);
+  const fragranceData = useSelector((state) => state.fragranceData);
 
   // filterCode에 해당하는 fragrance 데이터만 추출
-  const filteredFragrance = fragrance[cardData.filterCode] || [];
+  const filteredFragrance = fragranceData[cardData.filterCode] || [];
 
   return (
     <div id="NoteModal">
