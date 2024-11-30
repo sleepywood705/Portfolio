@@ -1,5 +1,5 @@
 #Stack {
-  .Conatainer {
+  .Container {
     padding: 40px 320px;
     width: 100%; height: 100%;
     background-color: #f8f9fa;
@@ -12,5 +12,10 @@
     > h2 {
       text-align: center;
     }
+  }
+}
+@media screen and (max-width: 1280px) {
+  #Stack .Container {
+    padding: 40px 100px;
   }
 }

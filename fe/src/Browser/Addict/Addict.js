@@ -12,6 +12,7 @@ import { Provider } from 'react-redux';
 import { useState, useEffect } from "react";
 import { Routes, Route, useNavigate } from "react-router-dom";
 
+
 export function Addict({ 창닫기 }) {
   const navigate = useNavigate();
   const [showExplain, setShowExplain] = useState(true);
@@ -42,9 +43,7 @@ export function Addict({ 창닫기 }) {
             <Route path="/Portfolio/addict/" element={<AddictHomePage />} />
             <Route path="/Portfolio/addict/all" element={<AddictAllPage />} />
             <Route path="/Portfolio/addict/note" element={<AddictNotePage />} />
-            <Route
-              path="/Portfolio/addict/mall"
-              element={<AddictOfflinePage />}
+            <Route path="/Portfolio/addict/mall" element={<AddictOfflinePage />}
             />
           </Routes>
           <AddictFooter />

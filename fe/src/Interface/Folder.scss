@@ -15,7 +15,7 @@
 #Folder aside {
   padding-top: 10px;
   border-right: 1px solid #f2f2f2;
-
+  
   /* 즐겨찾기 리스트 */
   .Favorites {
     padding: 10px 20px;
@@ -29,8 +29,10 @@
   padding: 16px;
   background-color: #fff;
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
   align-items: start;
+  align-content: flex-start;
 
   /* 아이콘 전체 영역 */
   .Icon {
@@ -76,5 +78,10 @@
     &:hover {
       border: 1px solid #000;
     }
+  }
+}
+@media screen and (max-width: 1280px) {
+  #Folder .Container {
+    width: 90vw;
   }
 }
