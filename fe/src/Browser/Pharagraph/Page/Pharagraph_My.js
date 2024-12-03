@@ -8,7 +8,7 @@ export function PharagraphMyPage() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get('http://localhost:8080/Pharagraph/my', { withCredentials: true })
+    axios.get('http://localhost:8080/Pharagraph/mypage', { withCredentials: true })
       .then(response => {
         setUsername(response.data.username);
       })

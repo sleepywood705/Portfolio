@@ -127,7 +127,7 @@ passport.deserializeUser(async (user, done) => {
   })
 })
 
-app.get('/Pharagraph/my', (요청, 응답) => {
+app.get('/Pharagraph/mypage', (요청, 응답) => {
   if (요청.user) {
     응답.status(200).json({ username: 요청.user.username });
   } else {
@@ -135,7 +135,7 @@ app.get('/Pharagraph/my', (요청, 응답) => {
   }
 });
 
-app.get('/Pharagraph/check-auth', (요청, 응답) => {
+app.get('/Pharagraph/verify', (요청, 응답) => {
   if (요청.isAuthenticated()) {
     응답.status(200).json({ 
       isAuthenticated: true,

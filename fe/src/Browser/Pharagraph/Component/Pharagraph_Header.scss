@@ -2,19 +2,20 @@
   header {
     margin: 0 auto;
     width: 1280px; height: 100px;
+    gap: 40px;
     display: flex;
 
     > a, button {
-        height: 100%; aspect-ratio: 1;
+        height: 100%;
         display: grid;
         place-items: center;
         cursor: pointer;
+    }
 
-        &:nth-child(1) {
-            margin-right: auto;
-            font-size: 60px;
-            font-weight: 900;
-        }
+    > a:nth-child(1) {
+      margin-right: auto;
+      font-size: 60px;
+      font-weight: 900;
     }
   }
 }
