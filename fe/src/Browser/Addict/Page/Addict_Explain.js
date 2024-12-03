@@ -3,7 +3,7 @@ import "./Addict_Explain.scss"
 
 export function AddictExplain({ onClose }) {
   return (
-    <article id="AddictExplain">
+    <section id="AddictExplain">
       <button onClick={onClose} />
       <section className="sect1">
         <h2>기획 의도</h2>
@@ -79,6 +79,6 @@ export function AddictExplain({ onClose }) {
         <h2>참고사이트</h2>
         <a href="https://addct.kr/" target="_blank">https://addct.kr/</a>
       </section>
-    </article>
+    </section>
   )
 }

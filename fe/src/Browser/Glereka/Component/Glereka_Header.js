@@ -7,9 +7,10 @@ export function GlerekaHeader() {
     <header>
       <Link to="/Portfolio/glereka/">Pharagraph</Link>
       <Link to="/Portfolio/glereka/posting">작성</Link>
+      <Link to="/Portfolio/glereka/list">리스트</Link>
       <Link to="/Portfolio/glereka/login">로그인</Link>
       <Link to="/Portfolio/glereka/signup">회원가입</Link>
-      <Link to="/Portfolio/glereka/profile">프로필</Link>
+      <Link to="/Portfolio/glereka/my">마이페이지</Link>
       <button>메뉴</button>
     </header>
   );

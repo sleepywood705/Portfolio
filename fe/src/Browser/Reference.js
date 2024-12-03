@@ -1,24 +1,17 @@
 import './Reference.scss'
 import { Window } from '../Interface/Window';
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-
+import { useWindowClose } from '../Hook/Hook';
 
 export function Reference({ 창닫기 }) {
+  const windowClose = useWindowClose(창닫기);
 
-  const navigate = useNavigate();
-
-  const handleClose = () => {
-    navigate('/Portfolio/');
-    창닫기();
-  };
-  
   const [submenu, setSubmenu] = useState(false);
   const showSubmenu = () => {setSubmenu(prevShow => !prevShow);}
   const hideSubmenu = () => {setSubmenu(false);}
 
   return (
-    <Window id="Reference" tabText="레퍼런스 사이트 모음" 닫기={handleClose}>
+    <Window id="Reference" tabText="레퍼런스 사이트 모음" 닫기={windowClose}>
       <div className="Container">
         <aside>
           <a onClick={hideSubmenu} href="#document">문서</a>

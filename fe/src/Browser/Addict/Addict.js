@@ -1,5 +1,5 @@
 import "./Addict.scss";
-import store from '../../store/store';
+import store from '../../Store/store';
 import { Window } from '../../Interface/Window'
 import { AddictHeader } from "./Component/Addict_Header";
 import { AddictFooter } from "./Component/Addict_Footer";
@@ -9,33 +9,19 @@ import { AddictAllPage } from "./Page/Addict_All";
 import { AddictNotePage } from "./Page/Addict_Note";
 import { AddictOfflinePage } from "./Page/Addict_Offline";
 import { Provider } from 'react-redux';
-import { useState } from "react";
-import { Routes, Route, useNavigate } from "react-router-dom";
-
+import { Routes, Route } from "react-router-dom";
+import { useWindowClose, useStateChange } from "../../Hook/Hook";
 
 export function Addict({ 창닫기 }) {
-  const navigate = useNavigate();
-  const [showExplain, setShowExplain] = useState(true);
-  
-  const handleClose = () => {
-    navigate('/Portfolio/');
-    창닫기();
-  };
-  
-  function handleExplainClose() {
-    setShowExplain(false);
-  }
-
-  const handleExplainOpen = () => {
-    setShowExplain(true);
-  };
+  const windowClose = useWindowClose(창닫기);
+  const { state, OPEN, CLOSE } = useStateChange();
 
   return (
     <Provider store={store}>
-      <Window id="Addict" tabText="에이딕트 리디자인" 닫기={handleClose}>
-        {showExplain && <AddictExplain onClose={handleExplainClose} />}
+      <Window id="Addict" tabText="에이딕트 리디자인" 닫기={windowClose}>
+        {state && <AddictExplain onClose={CLOSE} />}
         <div className="Container">
-          <AddictHeader onClick={handleExplainOpen} />
+          <AddictHeader onClick={OPEN} />
           <Routes>
             <Route path="/" element={<AddictHomePage />} />
             <Route path="/all" element={<AddictAllPage />} />

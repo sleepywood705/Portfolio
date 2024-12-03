@@ -1,0 +1,32 @@
+#GlerekaLoginPage {
+  display: flex;
+  height: 100%;
+
+  form {
+    margin: 300px auto;
+    width: fit-content;
+    gap: 8px;
+    display: flex;
+    flex-direction: column;
+    
+    > input, button {
+      padding-left: 10px;
+      width: 280px; height: 40px;
+      border-radius: 4px;
+      box-shadow: var(--box-shadow);
+    }
+
+    > input {
+      display: flex;
+      align-items: center;
+      border: 1px solid #ddd;
+    }
+
+    > button {
+      color: #fff;
+      background-color: #000;
+    }
+
+  }
+
+}
