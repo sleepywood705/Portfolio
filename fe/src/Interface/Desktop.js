@@ -6,7 +6,7 @@ import { Stack } from '../Browser/Stack/Stack';
 import { Contact } from '../Browser/Contact';
 import { Addict } from '../Browser/Addict/Addict';
 import { Reference } from '../Browser/Reference';
-import { Glereka } from '../Browser/Glereka/Glereka';
+import { Pharagraph } from '../Browser/Pharagraph/Pharagraph';
 import { useStateChange, useHeadTo } from '../Hook/Hook';
 import { Routes, Route } from "react-router-dom";
 
@@ -30,7 +30,7 @@ export function Desktop() {
         <Route path="/Portfolio/stack/*" element={<Stack 창닫기={() => headTo('/Portfolio/')} />} />
         <Route path="/Portfolio/reference/*" element={<Reference 창닫기={() => headTo('/Portfolio/')} />} />
         <Route path="/Portfolio/addict/*" element={<Addict 창닫기={() => headTo('/Portfolio/')} />} />
-        <Route path="/Portfolio/glereka/*" element={<Glereka 창닫기={() => headTo('/Portfolio/')} />} />
+        <Route path="/Portfolio/Pharagraph/*" element={<Pharagraph 창닫기={() => headTo('/Portfolio/')} />} />
       </Routes>
 
       {folder.state && (
@@ -38,7 +38,7 @@ export function Desktop() {
           창닫기={folder.CLOSE}
           에이딕트열기={() => headTo('/Portfolio/addict/')}
           레퍼런스열기={() => headTo('/Portfolio/reference/')}
-          글레카열기={() => headTo('/Portfolio/glereka/')}
+          글레카열기={() => headTo('/Portfolio/Pharagraph/')}
         />
       )}
 

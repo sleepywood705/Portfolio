@@ -1,16 +1,18 @@
-import "./Glereka_Login.scss";
+import "./Pharagraph_Login.scss";
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../ContextApi/AuthContext';
 
-export function GlerekaLoginPage() {
+export function PharagraphLoginPage() {
   const [formData, setFormData] = useState({ username: "", password: "" });
   const navigate = useNavigate();
+  const { setIsLoggedIn } = useAuth();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
-      const response = await fetch('http://localhost:8080/glereka/login', {
+      const response = await fetch('http://localhost:8080/Pharagraph/login', {
         method: 'POST',
         headers: { 
           'Content-Type': 'application/json'
@@ -21,7 +23,8 @@ export function GlerekaLoginPage() {
 
       if (response.ok) {
         alert('로그인에 성공했습니다.');
-        navigate('/Portfolio/glereka');
+        setIsLoggedIn(true);
+        navigate('/Portfolio/Pharagraph', { replace: true });
       } else {
         const errorData = await response.text();
         alert(errorData || '로그인에 실패했습니다.');
@@ -40,7 +43,7 @@ export function GlerekaLoginPage() {
   };
 
   return (
-    <div id="GlerekaLoginPage">
+    <div id="PharagraphLoginPage">
       <form onSubmit={handleSubmit}>
         <input 
           type="text"

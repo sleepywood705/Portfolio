@@ -1,15 +1,15 @@
-import "./Glereka_Posting.scss";
+import "./Pharagraph_Posting.scss";
 import { useState } from 'react';
 
 
-export function GlerekaPostingPage() {
+export function PharagraphPostingPage() {
   const [formData, setFormData] = useState({ book: "", content: "", page: "", music: "" });
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
-      const response = await fetch('http://localhost:8080/glereka/posting', {
+      const response = await fetch('http://localhost:8080/Pharagraph/posting', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', },
         body: JSON.stringify(formData)
@@ -33,7 +33,7 @@ export function GlerekaPostingPage() {
   };
 
   return (
-    <section id="GlerekaPostingPage">
+    <section id="PharagraphPostingPage">
       <h1 className="title">오늘 어떤 글귀를 발견하셨나요?</h1>
       <form onSubmit={handleSubmit}>
         <input

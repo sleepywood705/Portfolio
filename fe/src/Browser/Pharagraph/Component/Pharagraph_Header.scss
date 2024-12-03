@@ -1,13 +1,14 @@
-#Glereka {
+#Pharagraph {
   header {
     margin: 0 auto;
     width: 1280px; height: 100px;
     display: flex;
 
-    a, button {
+    > a, button {
         height: 100%; aspect-ratio: 1;
         display: grid;
         place-items: center;
+        cursor: pointer;
 
         &:nth-child(1) {
             margin-right: auto;

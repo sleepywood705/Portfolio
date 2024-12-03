@@ -48,7 +48,7 @@ new MongoClient(url)
     console.log(err);
   });
 
-app.post('/glereka/posting', async (요청, 응답) => {
+app.post('/Pharagraph/posting', async (요청, 응답) => {
   try {
     if (!db) {
       throw new Error("데이터베이스 연결이 없습니다.");
@@ -84,7 +84,7 @@ passport.use(new LocalStrategy(async (입력아이디, 입력비번, cb) => {
   }
 }))
 
-app.post('/glereka/login', (요청, 응답, next) => {
+app.post('/Pharagraph/login', (요청, 응답, next) => {
   passport.authenticate('local', (error, user, info) => {
     if (error) {
       console.error('인증 에러:', error);
@@ -127,10 +127,35 @@ passport.deserializeUser(async (user, done) => {
   })
 })
 
-app.get('/glereka/user', (요청, 응답) => {
+app.get('/Pharagraph/my', (요청, 응답) => {
   if (요청.user) {
     응답.status(200).json({ username: 요청.user.username });
   } else {
     응답.status(401).json({ message: '로그인이 필요합니다.' });
   }
+});
+
+app.get('/Pharagraph/check-auth', (요청, 응답) => {
+  if (요청.isAuthenticated()) {
+    응답.status(200).json({ 
+      isAuthenticated: true,
+      user: {
+        username: 요청.user.username
+      }
+    });
+  } else {
+    응답.status(401).json({ 
+      isAuthenticated: false,
+      message: '인증되지 않은 사용자입니다.' 
+    });
+  }
+});
+
+app.post('/Pharagraph/logout', (요청, 응답) => {
+  요청.logout((err) => {
+    if (err) {
+      return 응답.status(500).json({ message: '로그아웃 처리 중 오류가 발생했습니다.' });
+    }
+    응답.status(200).json({ message: '로그아웃되었습니다.' });
+  });
 });

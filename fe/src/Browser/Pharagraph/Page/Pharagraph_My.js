@@ -1,31 +1,31 @@
-import "./Glereka_My.scss";
+import "./Pharagraph_My.scss";
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from "axios"
 
-export function GlerekaMyPage() {
+export function PharagraphMyPage() {
   const [username, setUsername] = useState('');
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get('http://localhost:8080/glereka/user', { withCredentials: true })
+    axios.get('http://localhost:8080/Pharagraph/my', { withCredentials: true })
       .then(response => {
         setUsername(response.data.username);
       })
       .catch(error => {
         console.error('Error:', error);
-        alert('사용자 정보를 가져오는 데 실패했습니다.');
-        navigate('/Portfolio/glereka');
+        alert('로그인이 필요한 서비스입니다. 로그인하시겠습니까?');
+        navigate('/Portfolio/Pharagraph/login');
       });
   }, []);
 
   return (
-    <div id="GlerekaMyPage">
+    <div id="PharagraphMyPage">
       <h1>마이 페이지</h1>
       {username ? (
         <p>안녕하세요, {username}님!</p>
       ) : (
-        <p>로그인이 필요합니다.</p>
+        <p>로그인이 필요한 서비스입니다.</p>
       )}
     </div>
   );
