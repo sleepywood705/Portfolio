@@ -45,13 +45,11 @@ export function PharagraphHeader() {
   return (
     <header>
       <Link to="/Portfolio/Pharagraph/">Pharagraph</Link>
-      <Link to="/Portfolio/Pharagraph/posting">작성</Link>
-      <Link to="/Portfolio/Pharagraph/list">리스트</Link>
-      {!isLoggedIn && <Link to="/Portfolio/Pharagraph/login">로그인</Link>}
-      {isLoggedIn && <button onClick={handleLogout}>로그아웃</button>}
-      {!isLoggedIn && <Link to="/Portfolio/Pharagraph/signup">회원가입</Link>}
-      {isLoggedIn && <Link to="/Portfolio/Pharagraph/my">마이페이지</Link>}
-      <button>메뉴</button>
+      {!isLoggedIn && <Link to="/Portfolio/Pharagraph/login">Login</Link>}
+      {isLoggedIn && <button onClick={handleLogout}>Logout</button>}
+      {!isLoggedIn && <Link to="/Portfolio/Pharagraph/signup">Join</Link>}
+      {isLoggedIn && <Link to="/Portfolio/Pharagraph/my">My Page</Link>}
+      <button>Menu</button>
     </header>
   );
 }

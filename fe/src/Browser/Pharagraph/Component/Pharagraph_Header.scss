@@ -1,21 +1,33 @@
 #Pharagraph {
-  header {
-    margin: 0 auto;
-    width: 1280px; height: 100px;
+  header, nav {
+    padding: 0 100px;
+    width: 100vw; height: 100px;
     gap: 40px;
     display: flex;
 
     > a, button {
         height: 100%;
+        color: #fff;
         display: grid;
         place-items: center;
         cursor: pointer;
     }
+  }
 
+  header {
     > a:nth-child(1) {
       margin-right: auto;
       font-size: 60px;
       font-weight: 900;
     }
+  }
+
+  nav {
+    position: fixed;
+    left: 50%; top: 70px;
+    transform: translate(-50%);
+    width: fit-content;
+    gap: 40px;
+    justify-content: center;
   }
 }

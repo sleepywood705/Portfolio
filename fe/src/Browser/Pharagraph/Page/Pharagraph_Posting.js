@@ -36,7 +36,7 @@ export function PharagraphPostingPage() {
         <input
           type="text"
           name="book"
-          placeholder="책의 제목을 알려주세요."
+          placeholder="책의 제목을 알려주세요."ㅠ
           value={formData.book}
           onChange={handleChange}
           required

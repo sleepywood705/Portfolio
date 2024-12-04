@@ -51,7 +51,7 @@ export function Folder({
               <div className="Upper">
                 <div className="Inner">Doc</div>
               </div>
-              <div className="Lower">레퍼런스 사이트</div>
+              <div className="Lower">레퍼런스</div>
             </div>
           )}
 
@@ -60,7 +60,7 @@ export function Folder({
               <div className="Upper">
                 <div className="Inner">Doc</div>
               </div>
-              <div className="Lower">글레카</div>
+              <div className="Lower">파라그래프</div>
             </div>
           )}
 
