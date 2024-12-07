@@ -58,7 +58,7 @@ export function Folder({
           {state.showPractice && (
             <div className="Icon" onClick={글레카열기}>
               <div className="Upper">
-                <div className="Inner">Doc</div>
+                <div className="Inner">Prac</div>
               </div>
               <div className="Lower">글레카</div>
             </div>
