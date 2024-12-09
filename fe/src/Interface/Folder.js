@@ -7,7 +7,7 @@ export function Folder({
   창닫기, 
   레퍼런스열기, 
   에이딕트열기, 
-  글레카열기 }) {
+  파라그래프열기 }) {
 
   const [state, setState] = useState({
     showDevelopment: true,
@@ -51,27 +51,12 @@ export function Folder({
               <div className="Upper">
                 <div className="Inner">Doc</div>
               </div>
-<<<<<<< HEAD
-              <div className="Lower">레퍼런스 사이트</div>
-            </div>
-          )}
-
-          {state.showPractice && (
-            <div className="Icon" onClick={글레카열기}>
-              <div className="Upper">
-                <div className="Inner">Prac</div>
-              </div>
-              <div className="Lower">글레카</div>
-            </div>
-          )}
-
-=======
               <div className="Lower">레퍼런스</div>
             </div>
           )}
 
           {state.showPractice && (
-            <div className="Icon" onClick={글레카열기}>
+            <div className="Icon" onClick={파라그래프열기}>
               <div className="Upper">
                 <div className="Inner">Doc</div>
               </div>
@@ -79,7 +64,6 @@ export function Folder({
             </div>
           )}
 
->>>>>>> b870790e953376d7f80c0b92c2590ff338a715cd
         </section>
       </div>
     </Window>
