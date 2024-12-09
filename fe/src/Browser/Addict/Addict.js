@@ -1,5 +1,5 @@
 import "./Addict.scss";
-import store from '../../store/store';
+import store from '../../Store/store';
 import { Window } from '../../Interface/Window'
 import { AddictHeader } from "./Component/Addict_Header";
 import { AddictFooter } from "./Component/Addict_Footer";
