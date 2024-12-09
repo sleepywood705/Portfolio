@@ -43,9 +43,13 @@ export function AddictSlider() {
     <section id="AddictSlider">
       <div className="slider" ref={sliderRef}>
         <div className="slide">
+<<<<<<< HEAD
           <video autoPlay loop muted>
             <source src={`${process.env.PUBLIC_URL}/video/addict.mp4`} type="video/mp4"/>
           </video>  
+=======
+          <img src="https://shopby-images.cdn-nhncommerce.com/20241112/135934.663783000/%EC%97%90%EC%9D%B4%EB%94%95%ED%8A%B8_%EC%9E%90%EC%82%AC%EB%AA%B0_%EB%A9%94%EC%9D%B8%ED%8E%98%EC%9D%B4%EC%A7%80_%EB%A1%A4%EB%A7%81%EB%B0%B0%EB%84%88_PC.png" alt="img" />
+>>>>>>> be3593ad60895c5ca8d94bd1134d674442c4386e
         </div>
         <div className="slide">
           <img src="https://shopby-images.cdn-nhncommerce.com/20240731/135257.372439000/%EC%97%90%EC%9D%B4%EB%94%95%ED%8A%B8_%EC%9E%90%EC%82%AC%EB%AA%B0_%EB%A9%94%EC%9D%B8%ED%8E%98%EC%9D%B4%EC%A7%80_%EB%A1%A4%EB%A7%81%EB%B0%B0%EB%84%88_PC%2003.jpg" alt="img" />
@@ -55,8 +59,13 @@ export function AddictSlider() {
         </div>
       </div>
       <div className="wrap_button">
+<<<<<<< HEAD
         <button className="btn-left" onClick={handleButtonLeft}></button>
         <button className="btn-right" onClick={handleButtonRight}></button>
+=======
+        <button className="Left" onClick={handleButtonLeft}></button>
+        <button className="Right" onClick={handleButtonRight}></button>
+>>>>>>> be3593ad60895c5ca8d94bd1134d674442c4386e
       </div>
     </section>
   );

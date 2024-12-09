@@ -40,6 +40,7 @@ a {
   text-decoration: none !important;
 }
 ul{
+<<<<<<< HEAD
     /* list-style: none; */
 }
 label,
@@ -47,6 +48,17 @@ input,
 button {
     font-size: 16px;
     border: none; outline: none; 
+=======
+    list-style: none;
+}
+label,
+input,
+button,
+textarea {
+    font-size: 16px;
+    font-size: inherit;
+    border: none; outline: none;
+>>>>>>> be3593ad60895c5ca8d94bd1134d674442c4386e
     background-color: inherit;
 }
 .show{

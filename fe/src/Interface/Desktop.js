@@ -2,6 +2,7 @@ import './Desktop.css';
 import './Browser.css';
 import { Iconset } from './Iconset';
 import { Folder } from './Folder';
+<<<<<<< HEAD
 import { Portfolio } from '../Browser/Portfolio';
 import { Stack } from '../Browser/Stack/Stack';
 import { Contact } from '../Browser/Contact';
@@ -15,10 +16,21 @@ import { Rotation } from '../Browser/Rotation';
 import { Canvas } from '../Browser/Canvas';
 import { Reference } from '../Browser/Reference';
 import { useState } from 'react';
+=======
+import { Stack } from '../Browser/Stack/Stack';
+import { Contact } from '../Browser/Contact';
+import { Addict } from '../Browser/Addict/Addict';
+import { Reference } from '../Browser/Reference';
+import { Glereka } from '../Browser/Glereka/Glereka';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { Routes, Route } from "react-router-dom";
+>>>>>>> be3593ad60895c5ca8d94bd1134d674442c4386e
 
 
 /* 바탕화면 */
 export function Desktop() {
+<<<<<<< HEAD
   const [state, setState] = useState({
     showPortfolio: false,
     showFolder: false,
@@ -38,22 +50,54 @@ export function Desktop() {
   const toggleState = (key, value = !state[key]) => {
     setState((prevState) => ({
       ...prevState,
+=======
+  const navigate = useNavigate();
+  const [state, setState] = useState({
+    showFolder: false,
+    showContact: false,
+  });
+
+  const toggleState = (key, value = !state[key]) => {
+    setState(prev => ({
+      ...prev,
+>>>>>>> be3593ad60895c5ca8d94bd1134d674442c4386e
       [key]: value,
     }));
   };
 
+<<<<<<< HEAD
+=======
+  const handleNavigate = (path) => {
+    navigate(path);
+  };
+
+>>>>>>> be3593ad60895c5ca8d94bd1134d674442c4386e
   return (
     <div id="Desktop">
       <Iconset
         포트폴리오열기={() => toggleState('showPortfolio', true)}
         폴더열기={() => toggleState('showFolder', true)}
+<<<<<<< HEAD
         스택열기={() => toggleState('showStack', true)}
         컨택트열기={() => toggleState('showContact', true)}>
       </Iconset>
+=======
+        스택열기={() => handleNavigate('/Portfolio/stack/')}
+        컨택트열기={() => toggleState('showContact', true)}
+      />
+
+      <Routes>
+        <Route path="/Portfolio/stack/*" element={<Stack 창닫기={() => handleNavigate('/Portfolio/')} />} />
+        <Route path="/Portfolio/reference/*" element={<Reference 창닫기={() => handleNavigate('/Portfolio/')} />} />
+        <Route path="/Portfolio/addict/*" element={<Addict 창닫기={() => handleNavigate('/Portfolio/')} />} />
+        <Route path="/Portfolio/glereka/*" element={<Glereka 창닫기={() => handleNavigate('/Portfolio/')} />} />
+      </Routes>
+>>>>>>> be3593ad60895c5ca8d94bd1134d674442c4386e
 
       {state.showFolder && (
         <Folder
           창닫기={() => toggleState('showFolder', false)}
+<<<<<<< HEAD
           에이딕트열기={() => toggleState('showAddict', true)}
           이핏열기={() => toggleState('showIfit', true)}
           뮤레카열기={() => toggleState('showMureka', true)}
@@ -117,3 +161,17 @@ export function Desktop() {
     </div>
   );
 }
+=======
+          에이딕트열기={() => handleNavigate('/Portfolio/addict/')}
+          레퍼런스열기={() => handleNavigate('/Portfolio/reference/')}
+          글레카열기={() => handleNavigate('/Portfolio/glereka/')}
+        />
+      )}
+
+      {state.showContact && (
+        <Contact 창닫기={() => toggleState('showContact', false)} />
+      )}
+    </div>
+  );
+}
+>>>>>>> be3593ad60895c5ca8d94bd1134d674442c4386e

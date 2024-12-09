@@ -1,3 +1,112 @@
+<<<<<<< HEAD
+=======
+export function ModalSearchBook({ onClose }) {
+  return (
+    <div id="ModalSearchBook">
+      <button onClick={onClose}></button>
+      <form>
+        <select>
+          <option>책제목</option>
+          <option>작가명</option>
+        </select>
+        <input type="text" placeholder="책 제목이나 작가명을 입력해 주세요."/>
+        <button type="submit">검색</button>
+      </form>
+      <ul className="result">
+        <li></li>
+      </ul>
+    </div>
+  );
+}
+
+export function ModalSearchMusic({ onClose }) {
+  return (
+    <div id="ModalSearchMusic">
+      <button onClick={onClose}></button>
+      <form>
+        <select>
+          <option>곡명</option>
+          <option>가수명</option>
+        </select>
+        <input type="text" placeholder="곡명이나 가수명을 입력해 주세요."/>
+        <button type="submit">검색</button>
+      </form>
+      <ul className="result">
+        <li></li>
+      </ul>
+    </div>
+  );
+}
+
+#ModalSearchBook,
+#ModalSearchMusic {
+	position: absolute;
+	left: 0; top: 70px;
+	padding-top: 200px;
+	width: 100%; height: calc(100% - 30px - 40px);
+	background-color: #ffffff00;
+	backdrop-filter: blur(10px);
+	gap: 40px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	> button {
+    position: absolute;
+    right: 40px; top: 40px;
+    width: 24px; aspect-ratio: 1;
+    background: url('data:image/svg+xml,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'16\' height=\'16\' fill=\'currentColor\' class=\'bi bi-x-lg\' viewBox=\'0 0 16 16\'><path d=\'M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z\'/></svg>') center / contain no-repeat;
+		cursor: pointer;
+  }
+
+	> ul, form {
+		width: 50vw;
+		display: flex;
+	}
+
+	> ul > li {
+		display: flex;
+		flex-direction: column;
+	}
+
+	> form {
+		height: 80px;
+
+		input, select, button  {
+			font-size: 24px;
+		}
+
+		> input {
+			flex: 7;
+			padding-left: 20px;
+			border-top: 1px solid #111;
+			border-bottom: 1px solid #111;
+		}
+
+		> select {
+			flex: 1.5;
+			padding-left: 20px;
+			color: #777;
+			background-color: transparent;
+			-webkit-appearance: none;  // Chrome, Safari
+			-moz-appearance: none;     // Firefox
+			appearance: none;          // 표준
+			
+			&::-ms-expand {           // IE, Edge Legacy
+				display: none;
+			}
+		}
+
+		> button {
+			flex: 1.5;
+			color: #fff;
+			background-color: #111;
+			cursor: pointer;
+		}
+	}
+}
+
+>>>>>>> be3593ad60895c5ca8d94bd1134d674442c4386e
 import "./PlayList.scss";
 import { Window } from '../Interface/Window'
 import { useState, useEffect, useRef } from "react";

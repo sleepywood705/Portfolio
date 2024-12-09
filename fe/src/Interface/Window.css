@@ -8,4 +8,11 @@
   grid-template-rows: 30px 40px 1fr;
   justify-self: center;
   overflow: hidden;
+<<<<<<< HEAD
+=======
+}
+
+.Window .Container {
+  background-color: #fff;
+>>>>>>> be3593ad60895c5ca8d94bd1134d674442c4386e
 }

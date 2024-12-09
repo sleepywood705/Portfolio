@@ -1,0 +1,52 @@
+#GlerekaPostingPage {
+	padding: 100px 0;
+  display: flex;
+  flex-direction: column;
+
+  > form {
+    width: 100%; height: fit-content;
+		display: flex;
+		flex-direction: column;
+
+		> input, textarea {
+			font-size: 24px;
+			font-family: inherit;
+
+			&::placeholder {
+				color: #bbb;
+			}
+
+			&:focus {
+				padding-left: 20px;
+				border: 1px solid #000;
+			}
+		}
+
+		> input {
+			height: 80px;
+		}
+
+		> textarea {
+			padding-top: 20px;
+			height: 300px;
+			resize: none;
+		}
+
+		.wrap_button {
+			margin-top: 20px;
+			height: 60px;
+			display: flex;
+			justify-content: flex-end;
+
+			button {
+				width: 100px; height: 100%;
+				font-size: 24px;
+				cursor: pointer;
+
+				&:hover {
+					border: 1px solid #000;
+				}
+			}
+		}
+  }
+}

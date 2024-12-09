@@ -251,7 +251,11 @@
   gap: 8px;
   align-items: center;
 }
+<<<<<<< HEAD
 #Searchbar > .URLbar {
+=======
+#Searchbar .URLbar {
+>>>>>>> be3593ad60895c5ca8d94bd1134d674442c4386e
   flex-grow: 1;
   height: 30px;
   border-radius: 4px;
@@ -425,7 +429,10 @@
   width: 100%;
   height: 100%;
   border-radius: 8px;
+<<<<<<< HEAD
   border: 1px solid #999;
+=======
+>>>>>>> be3593ad60895c5ca8d94bd1134d674442c4386e
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   overflow: hidden;
@@ -444,6 +451,10 @@
   top: 0;
   width: 100%;
   height: 100%;
+<<<<<<< HEAD
+=======
+  background: #fff;
+>>>>>>> be3593ad60895c5ca8d94bd1134d674442c4386e
 }
 #Contact .flip-card-front > p {
   z-index: 1;
@@ -476,10 +487,17 @@
   align-items: flex-end;
   justify-content: flex-end;
 }
+<<<<<<< HEAD
 #Contact .flip-card-back > .close-card {
   position: absolute;
   right: 30px;
   top: 30px;
+=======
+#Contact .flip-card-back .close-card {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+>>>>>>> be3593ad60895c5ca8d94bd1134d674442c4386e
   width: 20px;
   aspect-ratio: 1;
   background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-x-circle-fill' viewBox='0 0 16 16'><path d='M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293z'/></svg>") center/contain no-repeat;
@@ -564,7 +582,11 @@
   display: grid;
   place-items: center;
 }
+<<<<<<< HEAD
 #Game2048 .Container > .wrap {
+=======
+#Game2048 .Container .wrap {
+>>>>>>> be3593ad60895c5ca8d94bd1134d674442c4386e
   color: #fff;
 }
 #Game2048 .Container .newGame {
@@ -616,7 +638,11 @@
 #Canvas canvas {
   width: 100%;
   height: 100%;
+<<<<<<< HEAD
   background-color: #000;
+=======
+  background-color: #fff;
+>>>>>>> be3593ad60895c5ca8d94bd1134d674442c4386e
 }
 
 #TodoList .Container {
@@ -818,20 +844,32 @@
   font-size: 30px;
   text-align: center;
 }
+<<<<<<< HEAD
 #AddictHomePage > .wrap {
+=======
+#AddictHomePage .wrap {
+>>>>>>> be3593ad60895c5ca8d94bd1134d674442c4386e
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 }
+<<<<<<< HEAD
 #AddictHomePage > .wrap > div {
+=======
+#AddictHomePage .wrap > div {
+>>>>>>> be3593ad60895c5ca8d94bd1134d674442c4386e
   width: 100%;
   /* border: 1px solid #000; */
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 }
+<<<<<<< HEAD
 #AddictHomePage > .wrap > div > div {
+=======
+#AddictHomePage .wrap > div > div {
+>>>>>>> be3593ad60895c5ca8d94bd1134d674442c4386e
   width: 100%;
 }
 #AddictHomePage > div:last-child {
@@ -869,7 +907,11 @@
   filter: invert(1);
 }
 
+<<<<<<< HEAD
 #AddictNotePage > .wrap {
+=======
+#AddictNotePage .wrap {
+>>>>>>> be3593ad60895c5ca8d94bd1134d674442c4386e
   padding-top: 80px;
   gap: 40px;
   display: flex;
@@ -877,12 +919,20 @@
   align-items: center;
   justify-content: center;
 }
+<<<<<<< HEAD
 #AddictNotePage > .wrap > p {
+=======
+#AddictNotePage .wrap > p {
+>>>>>>> be3593ad60895c5ca8d94bd1134d674442c4386e
   text-align: center;
   font-size: 24px;
   line-height: 34px;
 }
+<<<<<<< HEAD
 #AddictNotePage > .wrap > img {
+=======
+#AddictNotePage .wrap > img {
+>>>>>>> be3593ad60895c5ca8d94bd1134d674442c4386e
   margin: 0 auto;
   width: 30%;
 }
@@ -998,23 +1048,38 @@
   height: 750px;
   /* border: 1px solid #000; */
 }
+<<<<<<< HEAD
 #AddictOfflinePage > .wrap {
+=======
+#AddictOfflinePage .wrap {
+>>>>>>> be3593ad60895c5ca8d94bd1134d674442c4386e
   padding: 40px 140px;
   border-bottom: 1px solid #eee;
   gap: 40px;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
 }
+<<<<<<< HEAD
 #AddictOfflinePage > .wrap > h3 {
   grid-column: 1/7;
 }
 #AddictOfflinePage > .wrap > div {
+=======
+#AddictOfflinePage .wrap > h3 {
+  grid-column: 1/7;
+}
+#AddictOfflinePage .wrap > div {
+>>>>>>> be3593ad60895c5ca8d94bd1134d674442c4386e
   font-size: 14px;
   gap: 8px;
   display: flex;
   flex-direction: column;
 }
+<<<<<<< HEAD
 #AddictOfflinePage > .wrap > div span {
+=======
+#AddictOfflinePage .wrap > div span {
+>>>>>>> be3593ad60895c5ca8d94bd1134d674442c4386e
   font-weight: 600;
 }
 
@@ -1418,14 +1483,22 @@
 #MurekaHeader .myPage {
   cursor: pointer;
 }
+<<<<<<< HEAD
 #MurekaHeader > .utility {
+=======
+#MurekaHeader .utility {
+>>>>>>> be3593ad60895c5ca8d94bd1134d674442c4386e
   width: fit-content;
   border-radius: 6px;
   box-shadow: var(--box-shadow);
   display: flex;
   overflow: hidden;
 }
+<<<<<<< HEAD
 #MurekaHeader > .utility > a, #MurekaHeader > .utility button {
+=======
+#MurekaHeader .utility > a, #MurekaHeader .utility button {
+>>>>>>> be3593ad60895c5ca8d94bd1134d674442c4386e
   flex: 1;
   padding: 6px;
   width: 70px;
@@ -1436,7 +1509,11 @@
   place-items: center;
   cursor: pointer;
 }
+<<<<<<< HEAD
 #MurekaHeader > .utility > a.active, #MurekaHeader > .utility > a:hover, #MurekaHeader > .utility button.active, #MurekaHeader > .utility button:hover {
+=======
+#MurekaHeader .utility > a.active, #MurekaHeader .utility > a:hover, #MurekaHeader .utility button.active, #MurekaHeader .utility button:hover {
+>>>>>>> be3593ad60895c5ca8d94bd1134d674442c4386e
   color: #fff;
   background-color: #333;
 }
@@ -1451,7 +1528,11 @@
   display: grid;
   grid-template-columns: repeat(5, 1fr);
 }
+<<<<<<< HEAD
 #MurekaRecommend > div > .RecommendChip {
+=======
+#MurekaRecommend > div .RecommendChip {
+>>>>>>> be3593ad60895c5ca8d94bd1134d674442c4386e
   padding-bottom: 12px;
   border-radius: 10px;
   border: 1px solid #eee;
@@ -1463,13 +1544,21 @@
   overflow: hidden;
   cursor: pointer;
 }
+<<<<<<< HEAD
 #MurekaRecommend > div > .RecommendChip > img {
+=======
+#MurekaRecommend > div .RecommendChip > img {
+>>>>>>> be3593ad60895c5ca8d94bd1134d674442c4386e
   margin-bottom: 8px;
   aspect-ratio: 1;
   width: 100%;
   border-radius: 8px 8px 0 0;
 }
+<<<<<<< HEAD
 #MurekaRecommend > div > .RecommendChip > h4, #MurekaRecommend > div > .RecommendChip h5 {
+=======
+#MurekaRecommend > div .RecommendChip > h4, #MurekaRecommend > div .RecommendChip h5 {
+>>>>>>> be3593ad60895c5ca8d94bd1134d674442c4386e
   padding: 0 12px 0 12px;
   width: 100%;
   overflow: hidden;
@@ -1547,7 +1636,11 @@
   height: 100%;
   border-radius: 4px;
 }
+<<<<<<< HEAD
 #MurekaSearch .result-container .SearchList .result-info {
+=======
+#MurekaSearch .result-container .SearchList .album-info {
+>>>>>>> be3593ad60895c5ca8d94bd1134d674442c4386e
   flex: 1;
   gap: 4px;
   display: flex;
@@ -1555,10 +1648,17 @@
   align-items: flex-start;
   justify-content: center;
 }
+<<<<<<< HEAD
 #MurekaSearch .result-container .SearchList .result-info h4 {
   color: #777;
 }
 #MurekaSearch .result-container .SearchList .result-info h5 {
+=======
+#MurekaSearch .result-container .SearchList .album-info h4 {
+  color: #777;
+}
+#MurekaSearch .result-container .SearchList .album-info h5 {
+>>>>>>> be3593ad60895c5ca8d94bd1134d674442c4386e
   color: #888;
 }
 
@@ -1577,6 +1677,70 @@
   text-align: center;
 }
 
+<<<<<<< HEAD
+=======
+.StackCard {
+  position: relative;
+  padding: 40px;
+  width: calc((100% - 40px) / 3);
+  gap: 30px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+.StackCard > img {
+  margin: 0 auto;
+  width: 150px;
+  aspect-ratio: 1;
+}
+.StackCard > .chips {
+  gap: 10px;
+  display: flex;
+}
+.StackCard > .description {
+  width: 100%;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.StackCard > .description ul {
+  gap: 6px;
+  display: flex;
+  flex-direction: column;
+}
+.StackCard > .description ul li {
+  display: flex;
+}
+
+.ChipFamiliar,
+.ChipLearning,
+.ChipDone,
+.ChipFramework,
+.ChipLibrary,
+.ChipCoWorking,
+.ChipTool,
+.ChipETC {
+  padding: 5px 10px;
+  width: fit-content;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+
+#StackContainer {
+  width: 100%;
+  height: fit-content;
+  gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+>>>>>>> be3593ad60895c5ca8d94bd1134d674442c4386e
 #StackFilters {
   width: 100%;
   gap: 10px;
@@ -1598,6 +1762,11 @@
   background-color: #333;
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> be3593ad60895c5ca8d94bd1134d674442c4386e
 #StackContainer {
   width: 100%;
   height: fit-content;
@@ -1623,22 +1792,38 @@
   width: 150px;
   aspect-ratio: 1;
 }
+<<<<<<< HEAD
 .StackChip > .chips {
   gap: 10px;
   display: flex;
 }
 .StackChip > .description {
+=======
+.StackChip .chips {
+  gap: 10px;
+  display: flex;
+}
+.StackChip .description {
+>>>>>>> be3593ad60895c5ca8d94bd1134d674442c4386e
   width: 100%;
   gap: 20px;
   display: flex;
   flex-direction: column;
 }
+<<<<<<< HEAD
 .StackChip > .description ul {
+=======
+.StackChip .description ul {
+>>>>>>> be3593ad60895c5ca8d94bd1134d674442c4386e
   gap: 6px;
   display: flex;
   flex-direction: column;
 }
+<<<<<<< HEAD
 .StackChip > .description ul li {
+=======
+.StackChip .description ul li {
+>>>>>>> be3593ad60895c5ca8d94bd1134d674442c4386e
   display: flex;
 }
 .StackChip .ChipFamiliar,
@@ -1658,4 +1843,8 @@
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 }
 
+<<<<<<< HEAD
+=======
+>>>>>>> 24cd4ca86abd7011f9e8e0b344264e7e636f7b09
+>>>>>>> be3593ad60895c5ca8d94bd1134d674442c4386e
 /*# sourceMappingURL=Compiliing.css.map */

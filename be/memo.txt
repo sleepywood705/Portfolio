@@ -1,0 +1,38 @@
+데이터베이스 유저 ID랑 PW를 등록해야 함
+let db
+const url = 'mongodb+srv://sleepywood705:alduf1288@cluster0.qtq8i.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
+new MongoClient(url).connect().then((client)=>{
+  console.log('데이터베이스가 MongoDB에 연결되었습니다.')
+  db = client.db('test')
+  app.listen(8080, () => {
+    console.log('서버가 http://localhost:8080에 연결되었습니다.')
+  })
+}).catch((err)=>{
+  console.log(err)
+})
+
+
+/news 경로로 이동하면 컬렉션에 데이터 삽입
+app.get('/news', (요청, 응답) => {
+  db.collection('post').insertOne({ title: 'first data' })
+})
+
+
+이렇게 작성할 수도 있지만 요즘 몽고DB는 async, await 사용하는 것을 권고
+app.get('/list', async (요청, 응답) => {
+  db.collection('post').find().toArray().then(() => {
+    console.log(result)
+    응답.send('DB에 있던 게시물')
+  })
+})
+
+
+app.get('/list', async (요청, 응답) => {
+  컬렉션에서 데이터를 전부 뽑는 방법
+  let result = await db.collection('post').find().toArray()
+
+  오브젝트 자료에서 데이터를 뽑는 방법
+  console.log(result[0].title)
+
+  응답.send(result[0].title)
+})

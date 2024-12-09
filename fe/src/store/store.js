@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { configureStore, createSlice } from '@reduxjs/toolkit';
 
 let productData = createSlice({
@@ -471,11 +472,21 @@ let cardData = createSlice({
   }
 })
 
+=======
+import { configureStore } from '@reduxjs/toolkit';
+import { productData } from './Addict_ProductData';
+import { fragranceData } from './Addict_FragranceData';
+import { cardData } from './Addict_CardData';
+>>>>>>> be3593ad60895c5ca8d94bd1134d674442c4386e
 
 export default configureStore({
   reducer: {
     productData: productData.reducer,
     cardData: cardData.reducer,
+<<<<<<< HEAD
     fragrance: fragrance.reducer,
+=======
+    fragranceData: fragranceData.reducer,
+>>>>>>> be3593ad60895c5ca8d94bd1134d674442c4386e
   }
 });
