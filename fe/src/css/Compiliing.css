@@ -565,10 +565,14 @@
   place-items: center;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 #Game2048 .Container > .wrap {
 =======
 #Game2048 .Container .wrap {
 >>>>>>> be3593ad60895c5ca8d94bd1134d674442c4386e
+=======
+#Game2048 .Container .wrap {
+>>>>>>> b870790e953376d7f80c0b92c2590ff338a715cd
   color: #fff;
 }
 #Game2048 .Container .newGame {
@@ -827,10 +831,14 @@
   text-align: center;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 #AddictHomePage > .wrap {
 =======
 #AddictHomePage .wrap {
 >>>>>>> be3593ad60895c5ca8d94bd1134d674442c4386e
+=======
+#AddictHomePage .wrap {
+>>>>>>> b870790e953376d7f80c0b92c2590ff338a715cd
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -838,20 +846,28 @@
   justify-content: center;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 #AddictHomePage > .wrap > div {
 =======
 #AddictHomePage .wrap > div {
 >>>>>>> be3593ad60895c5ca8d94bd1134d674442c4386e
+=======
+#AddictHomePage .wrap > div {
+>>>>>>> b870790e953376d7f80c0b92c2590ff338a715cd
   width: 100%;
   /* border: 1px solid #000; */
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 #AddictHomePage > .wrap > div > div {
 =======
 #AddictHomePage .wrap > div > div {
 >>>>>>> be3593ad60895c5ca8d94bd1134d674442c4386e
+=======
+#AddictHomePage .wrap > div > div {
+>>>>>>> b870790e953376d7f80c0b92c2590ff338a715cd
   width: 100%;
 }
 #AddictHomePage > div:last-child {
@@ -890,10 +906,14 @@
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #AddictNotePage > .wrap {
 =======
 #AddictNotePage .wrap {
 >>>>>>> be3593ad60895c5ca8d94bd1134d674442c4386e
+=======
+#AddictNotePage .wrap {
+>>>>>>> b870790e953376d7f80c0b92c2590ff338a715cd
   padding-top: 80px;
   gap: 40px;
   display: flex;
@@ -902,19 +922,27 @@
   justify-content: center;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 #AddictNotePage > .wrap > p {
 =======
 #AddictNotePage .wrap > p {
 >>>>>>> be3593ad60895c5ca8d94bd1134d674442c4386e
+=======
+#AddictNotePage .wrap > p {
+>>>>>>> b870790e953376d7f80c0b92c2590ff338a715cd
   text-align: center;
   font-size: 24px;
   line-height: 34px;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 #AddictNotePage > .wrap > img {
 =======
 #AddictNotePage .wrap > img {
 >>>>>>> be3593ad60895c5ca8d94bd1134d674442c4386e
+=======
+#AddictNotePage .wrap > img {
+>>>>>>> b870790e953376d7f80c0b92c2590ff338a715cd
   margin: 0 auto;
   width: 30%;
 }
@@ -1031,16 +1059,21 @@
   /* border: 1px solid #000; */
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 #AddictOfflinePage > .wrap {
 =======
 #AddictOfflinePage .wrap {
 >>>>>>> be3593ad60895c5ca8d94bd1134d674442c4386e
+=======
+#AddictOfflinePage .wrap {
+>>>>>>> b870790e953376d7f80c0b92c2590ff338a715cd
   padding: 40px 140px;
   border-bottom: 1px solid #eee;
   gap: 40px;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 #AddictOfflinePage > .wrap > h3 {
   grid-column: 1/7;
@@ -1052,16 +1085,26 @@
 }
 #AddictOfflinePage .wrap > div {
 >>>>>>> be3593ad60895c5ca8d94bd1134d674442c4386e
+=======
+#AddictOfflinePage .wrap > h3 {
+  grid-column: 1/7;
+}
+#AddictOfflinePage .wrap > div {
+>>>>>>> b870790e953376d7f80c0b92c2590ff338a715cd
   font-size: 14px;
   gap: 8px;
   display: flex;
   flex-direction: column;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 #AddictOfflinePage > .wrap > div span {
 =======
 #AddictOfflinePage .wrap > div span {
 >>>>>>> be3593ad60895c5ca8d94bd1134d674442c4386e
+=======
+#AddictOfflinePage .wrap > div span {
+>>>>>>> b870790e953376d7f80c0b92c2590ff338a715cd
   font-weight: 600;
 }
 
@@ -1466,10 +1509,14 @@
   cursor: pointer;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 #MurekaHeader > .utility {
 =======
 #MurekaHeader .utility {
 >>>>>>> be3593ad60895c5ca8d94bd1134d674442c4386e
+=======
+#MurekaHeader .utility {
+>>>>>>> b870790e953376d7f80c0b92c2590ff338a715cd
   width: fit-content;
   border-radius: 6px;
   box-shadow: var(--box-shadow);
@@ -1477,10 +1524,14 @@
   overflow: hidden;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 #MurekaHeader > .utility > a, #MurekaHeader > .utility button {
 =======
 #MurekaHeader .utility > a, #MurekaHeader .utility button {
 >>>>>>> be3593ad60895c5ca8d94bd1134d674442c4386e
+=======
+#MurekaHeader .utility > a, #MurekaHeader .utility button {
+>>>>>>> b870790e953376d7f80c0b92c2590ff338a715cd
   flex: 1;
   padding: 6px;
   width: 70px;
@@ -1492,10 +1543,14 @@
   cursor: pointer;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 #MurekaHeader > .utility > a.active, #MurekaHeader > .utility > a:hover, #MurekaHeader > .utility button.active, #MurekaHeader > .utility button:hover {
 =======
 #MurekaHeader .utility > a.active, #MurekaHeader .utility > a:hover, #MurekaHeader .utility button.active, #MurekaHeader .utility button:hover {
 >>>>>>> be3593ad60895c5ca8d94bd1134d674442c4386e
+=======
+#MurekaHeader .utility > a.active, #MurekaHeader .utility > a:hover, #MurekaHeader .utility button.active, #MurekaHeader .utility button:hover {
+>>>>>>> b870790e953376d7f80c0b92c2590ff338a715cd
   color: #fff;
   background-color: #333;
 }
@@ -1511,10 +1566,14 @@
   grid-template-columns: repeat(5, 1fr);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 #MurekaRecommend > div > .RecommendChip {
 =======
 #MurekaRecommend > div .RecommendChip {
 >>>>>>> be3593ad60895c5ca8d94bd1134d674442c4386e
+=======
+#MurekaRecommend > div .RecommendChip {
+>>>>>>> b870790e953376d7f80c0b92c2590ff338a715cd
   padding-bottom: 12px;
   border-radius: 10px;
   border: 1px solid #eee;
@@ -1527,20 +1586,28 @@
   cursor: pointer;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 #MurekaRecommend > div > .RecommendChip > img {
 =======
 #MurekaRecommend > div .RecommendChip > img {
 >>>>>>> be3593ad60895c5ca8d94bd1134d674442c4386e
+=======
+#MurekaRecommend > div .RecommendChip > img {
+>>>>>>> b870790e953376d7f80c0b92c2590ff338a715cd
   margin-bottom: 8px;
   aspect-ratio: 1;
   width: 100%;
   border-radius: 8px 8px 0 0;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 #MurekaRecommend > div > .RecommendChip > h4, #MurekaRecommend > div > .RecommendChip h5 {
 =======
 #MurekaRecommend > div .RecommendChip > h4, #MurekaRecommend > div .RecommendChip h5 {
 >>>>>>> be3593ad60895c5ca8d94bd1134d674442c4386e
+=======
+#MurekaRecommend > div .RecommendChip > h4, #MurekaRecommend > div .RecommendChip h5 {
+>>>>>>> b870790e953376d7f80c0b92c2590ff338a715cd
   padding: 0 12px 0 12px;
   width: 100%;
   overflow: hidden;
@@ -1775,6 +1842,7 @@
   aspect-ratio: 1;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 .StackChip > .chips {
   gap: 10px;
   display: flex;
@@ -1787,25 +1855,40 @@
 }
 .StackChip .description {
 >>>>>>> be3593ad60895c5ca8d94bd1134d674442c4386e
+=======
+.StackChip .chips {
+  gap: 10px;
+  display: flex;
+}
+.StackChip .description {
+>>>>>>> b870790e953376d7f80c0b92c2590ff338a715cd
   width: 100%;
   gap: 20px;
   display: flex;
   flex-direction: column;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 .StackChip > .description ul {
 =======
 .StackChip .description ul {
 >>>>>>> be3593ad60895c5ca8d94bd1134d674442c4386e
+=======
+.StackChip .description ul {
+>>>>>>> b870790e953376d7f80c0b92c2590ff338a715cd
   gap: 6px;
   display: flex;
   flex-direction: column;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 .StackChip > .description ul li {
 =======
 .StackChip .description ul li {
 >>>>>>> be3593ad60895c5ca8d94bd1134d674442c4386e
+=======
+.StackChip .description ul li {
+>>>>>>> b870790e953376d7f80c0b92c2590ff338a715cd
   display: flex;
 }
 .StackChip .ChipFamiliar,

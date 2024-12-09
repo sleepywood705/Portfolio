@@ -51,6 +51,7 @@ export function Folder({
               <div className="Upper">
                 <div className="Inner">Doc</div>
               </div>
+<<<<<<< HEAD
               <div className="Lower">레퍼런스 사이트</div>
             </div>
           )}
@@ -64,6 +65,21 @@ export function Folder({
             </div>
           )}
 
+=======
+              <div className="Lower">레퍼런스</div>
+            </div>
+          )}
+
+          {state.showPractice && (
+            <div className="Icon" onClick={글레카열기}>
+              <div className="Upper">
+                <div className="Inner">Doc</div>
+              </div>
+              <div className="Lower">파라그래프</div>
+            </div>
+          )}
+
+>>>>>>> b870790e953376d7f80c0b92c2590ff338a715cd
         </section>
       </div>
     </Window>

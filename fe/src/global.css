@@ -84,6 +84,12 @@ textarea {
     display: grid;
     place-items: center;
 }
+.margl {
+    margin-left: auto;
+}
+.margr {
+    margin-right: auto;
+}
 .pore{
     position: relative;
 }
