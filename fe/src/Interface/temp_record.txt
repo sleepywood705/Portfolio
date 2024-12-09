@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 export function ModalSearchBook({ onClose }) {
   return (
     <div id="ModalSearchBook">
@@ -106,7 +104,6 @@ export function ModalSearchMusic({ onClose }) {
 	}
 }
 
->>>>>>> be3593ad60895c5ca8d94bd1134d674442c4386e
 import "./PlayList.scss";
 import { Window } from '../Interface/Window'
 import { useState, useEffect, useRef } from "react";

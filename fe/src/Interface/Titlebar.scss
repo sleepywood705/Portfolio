@@ -66,29 +66,18 @@
     width: 16px; aspect-ratio: 1;
     border-radius: 50%;
     background-color: #eee;
-<<<<<<< HEAD
-    background: url(../../public/img/icon/close_blk_b.png) center/50% no-repeat;
-=======
     background: url('data:image/svg+xml,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'16\' height=\'16\' fill=\'currentColor\' class=\'bi bi-x-lg\' viewBox=\'0 0 16 16\'><path d=\'M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z\'/></svg>') center / 70% no-repeat;
->>>>>>> be3593ad60895c5ca8d94bd1134d674442c4386e
     visibility: hidden;
     opacity: 0;
 
     &:hover {
-<<<<<<< HEAD
-      background-color: #ddd; 
-=======
       background-color: #ddd;
->>>>>>> be3593ad60895c5ca8d94bd1134d674442c4386e
     }
   }
 
   &:hover button {
     visibility: visible;
     opacity: 1;
-<<<<<<< HEAD
-=======
     transition: all 0s;
->>>>>>> be3593ad60895c5ca8d94bd1134d674442c4386e
   }
 }

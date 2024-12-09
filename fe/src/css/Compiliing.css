@@ -251,11 +251,7 @@
   gap: 8px;
   align-items: center;
 }
-<<<<<<< HEAD
-#Searchbar > .URLbar {
-=======
 #Searchbar .URLbar {
->>>>>>> be3593ad60895c5ca8d94bd1134d674442c4386e
   flex-grow: 1;
   height: 30px;
   border-radius: 4px;
@@ -429,10 +425,6 @@
   width: 100%;
   height: 100%;
   border-radius: 8px;
-<<<<<<< HEAD
-  border: 1px solid #999;
-=======
->>>>>>> be3593ad60895c5ca8d94bd1134d674442c4386e
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   overflow: hidden;
@@ -451,10 +443,7 @@
   top: 0;
   width: 100%;
   height: 100%;
-<<<<<<< HEAD
-=======
   background: #fff;
->>>>>>> be3593ad60895c5ca8d94bd1134d674442c4386e
 }
 #Contact .flip-card-front > p {
   z-index: 1;
@@ -487,17 +476,10 @@
   align-items: flex-end;
   justify-content: flex-end;
 }
-<<<<<<< HEAD
-#Contact .flip-card-back > .close-card {
-  position: absolute;
-  right: 30px;
-  top: 30px;
-=======
 #Contact .flip-card-back .close-card {
   position: absolute;
   right: 20px;
   top: 20px;
->>>>>>> be3593ad60895c5ca8d94bd1134d674442c4386e
   width: 20px;
   aspect-ratio: 1;
   background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-x-circle-fill' viewBox='0 0 16 16'><path d='M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293z'/></svg>") center/contain no-repeat;

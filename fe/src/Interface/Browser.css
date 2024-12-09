@@ -1,36 +1,19 @@
 #Portfolio,
 #Stack,
 #Addict,
-<<<<<<< HEAD
-#Mureka,
-#Ifit,
-#Rotation,
-#Gradtaion,
-#Counter,
-#Reference {
-=======
 #Reference,
 #Glereka {
   z-index: 999;
->>>>>>> be3593ad60895c5ca8d94bd1134d674442c4386e
   position: absolute;
   left: 0; top: 0;
   width: 100vw; height: 100%;
 }
-<<<<<<< HEAD
-#Game2048,
-=======
 /* #Game2048,
->>>>>>> be3593ad60895c5ca8d94bd1134d674442c4386e
 #TodoList {
   position: absolute;
   right: 0; top: 0;
   width: 480px; height: 100%;
-<<<<<<< HEAD
-}
-=======
 } */
->>>>>>> be3593ad60895c5ca8d94bd1134d674442c4386e
 #Contact {
   position: absolute;
   left: 50%; top: 10%;

@@ -28,27 +28,12 @@
 
     > h2 {
       position: relative;
-<<<<<<< HEAD
-
-      &::before {
-        position: absolute;
-        left: -12px; top: 50%;
-        transform: translate(0, -50%);
-        content: '';
-        width: 3px; height: 80%;
-        background-color: #fff;
-      }
-    }
-
-    > p {
-=======
       padding-left: 8px;
       border-left: 4px solid #fff;
     }
 
     > p {
       padding-left: 8px;
->>>>>>> be3593ad60895c5ca8d94bd1134d674442c4386e
       line-height: 30px;
     }
 

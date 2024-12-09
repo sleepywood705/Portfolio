@@ -14,21 +14,13 @@ export function AddictAllPage() {
   const buttonActiveProps = { buttonActive, setButtonActive }
 
   return (
-<<<<<<< HEAD
-    <section id="AddictAllPage">
-=======
     <article id="AddictAllPage">
->>>>>>> be3593ad60895c5ca8d94bd1134d674442c4386e
       <AddictProductTypeFilters {...buttonActiveProps} />
       {buttonActive === 0 && <AddictAllProduct/>}
       {buttonActive === 1 && <AddictBestProduct/>}
       {buttonActive === 2 && <AddictLiquidProduct/>}
       {buttonActive === 3 && <AddictSolidProduct/>}
       {buttonActive === 4 && <AddictGiftProduct/>}
-<<<<<<< HEAD
-    </section>
-=======
     </article>
->>>>>>> be3593ad60895c5ca8d94bd1134d674442c4386e
   );
 }

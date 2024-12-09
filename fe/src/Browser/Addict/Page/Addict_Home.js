@@ -6,11 +6,7 @@ import { AddictBestProduct } from '../Component/Addict_AllProduct';
 
 export function AddictHomePage() {
   return (
-<<<<<<< HEAD
-    <section id="AddictHomePage">
-=======
     <article id="AddictHomePage">
->>>>>>> be3593ad60895c5ca8d94bd1134d674442c4386e
       <AddictSlider />
       <h2>BEST</h2>
       <div className="wrap">
@@ -22,10 +18,6 @@ export function AddictHomePage() {
         <img src={`${process.env.PUBLIC_URL}/img/browser/Addict/kakao.jpg`} alt="img" />
         <a href="https://gift.kakao.com/search/result?query=%EC%97%90%EC%9D%B4%EB%94%95%ED%8A%B8&searchType=typing_keyword">SHOP</a>
       </div>
-<<<<<<< HEAD
-    </section>
-=======
     </article>
->>>>>>> be3593ad60895c5ca8d94bd1134d674442c4386e
   );
 }
