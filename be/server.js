@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-const express = require('express')
-const app = express()
-
-app.listen(8080, () => {
-  console.log('http://localhost:8080에서 서버 실행중')
-})
-
-app.get('/', (요청, 응답) => {
-  응답.send('반갑소')
-})
-
-app.get('/news', (요청, 응답) => {
-  응답.send('오늘 비 옴')
-})
-=======
 require('dotenv').config();
 const express = require("express");
 const cors = require("cors");
@@ -46,4 +30,3 @@ app.post('/glereka/posting', async (요청, 응답) => {
   await db.collection('Post').insertOne(요청.body)
   console.log(요청.body)
 });
->>>>>>> be3593ad60895c5ca8d94bd1134d674442c4386e

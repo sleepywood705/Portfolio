@@ -1,10 +1,6 @@
 {
-<<<<<<< HEAD
-  "name": "aaa",
-=======
   "name": "portfolio",
   "homepage": "https://sleepywood705.github.io/Portfolio/",
->>>>>>> be3593ad60895c5ca8d94bd1134d674442c4386e
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -15,12 +11,6 @@
     "react-dom": "^18.3.1",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
-<<<<<<< HEAD
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-=======
   },  
   "scripts": {
     "start": "react-scripts start",
@@ -28,7 +18,6 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "sass": "sass src/scss/Compiliing.scss src/css/Compiliing.css",
->>>>>>> be3593ad60895c5ca8d94bd1134d674442c4386e
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -49,10 +38,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-<<<<<<< HEAD
-  }
-=======
   },
   "proxy": "http://localhost:8080"
->>>>>>> be3593ad60895c5ca8d94bd1134d674442c4386e
 }
