@@ -2,11 +2,9 @@ import "./Addict_Product.scss";
 import { useState, useEffect } from "react";
 
 
-export function AddictProduct({ productData, hoverEffect = true }) { // hoverEffect를 기본값 true로 설정
-  
-  const [currentUrl, setCurrentUrl] = useState(productData.url);
-
+export function AddictProduct({ productData, hoverEffect = true }) {
   useEffect(() => {setCurrentUrl(productData.url);}, [productData]);
+  const [currentUrl, setCurrentUrl] = useState(productData.url);
 
   return (
     <div id="AddictProduct">

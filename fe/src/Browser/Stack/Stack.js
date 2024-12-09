@@ -3,7 +3,7 @@ import { Window } from "../../Interface/Window";
 import { StackFilters } from "./Component/Stack_Filters";
 import { StackContainer } from "./Component/Stack_Container";
 import { useState } from "react";
-import { Routes, Route, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 
 export function Stack({ 창닫기 }) {

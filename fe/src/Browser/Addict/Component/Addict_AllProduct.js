@@ -1,24 +1,22 @@
 import "./Addict_AllProduct.scss";
-import { AddictProduct } from "./Addict_Product";
 import { useState } from "react";
 import { useSelector } from "react-redux";
+import { AddictProduct } from "./Addict_Product";
 
 
 export function AddictAllProduct() {
-  
+  const productData = useSelector((state) => state.productData);
   const [selectedFilter, setSelectedFilter] = useState("");
   
-  const productData = useSelector((state) => state.productData);
-
   const filteredProducts = Object.values(productData)
-  .flat()
-  .filter((item) => {
-    if (item.name === "" && item.url.includes("noStock")) return false; // "제품없음" 객체 제외
-    if (selectedFilter === "") return true; // 필터가 선택되지 않은 경우 모든 제품을 표시
-    return item.filterCode === selectedFilter;
+    .flat()
+    .filter((item) => {
+      if (item.name === "" && item.url.includes("noStock")) return false; // "제품없음" 객체 제외
+      if (selectedFilter === "") return true; // 필터가 선택되지 않은 경우 모든 제품을 표시
+      return item.filterCode === selectedFilter;
     });
-    
-  const handleFiltering = (filterCode) => {setSelectedFilter(filterCode);};
+
+  const handleFiltering = (filterCode) => { setSelectedFilter(filterCode); };
 
   return (
     <section id="AddictAllProduct">
@@ -92,7 +90,7 @@ export function AddictAllProduct() {
       <div>
         {filteredProducts.length > 0 ? (
           filteredProducts.map((item, index) => (
-            <AddictProduct key={index} productData={item}/>
+            <AddictProduct key={index} productData={item} />
           ))
         ) : (
           <AddictProduct
@@ -109,10 +107,7 @@ export function AddictAllProduct() {
 }
 
 export function AddictBestProduct() {
-
   const productData = useSelector((state) => state.productData);
-
-  // bestCode가 true인 제품 필터링
   const filteredProducts = Object.values(productData)
     .flat()
     .filter((item) => item.bestCode);
@@ -120,16 +115,14 @@ export function AddictBestProduct() {
   return (
     <div id="AddictBestProduct">
       {filteredProducts.map((product, index) => (
-        <AddictProduct key={index} productData={product}/>
+        <AddictProduct key={index} productData={product} />
       ))}
     </div>
   );
 }
 
 export function AddictLiquidProduct() {
-
   const productData = useSelector((state) => state.productData);
-
   const filteredProducts = Object.values(productData)
     .flat()
     .filter((item) => item.liquid);
@@ -137,16 +130,14 @@ export function AddictLiquidProduct() {
   return (
     <div id="AddictLiquidProduct">
       {filteredProducts.map((product, index) => (
-        <AddictProduct key={index} productData={product}/>
+        <AddictProduct key={index} productData={product} />
       ))}
     </div>
   );
 }
 
 export function AddictSolidProduct() {
-
   const productData = useSelector((state) => state.productData);
-
   const filteredProducts = Object.values(productData)
     .flat()
     .filter((item) => item.solid);
@@ -154,16 +145,14 @@ export function AddictSolidProduct() {
   return (
     <div id="AddictSolidProduct">
       {filteredProducts.map((product, index) => (
-        <AddictProduct key={index} productData={product}/>
+        <AddictProduct key={index} productData={product} />
       ))}
     </div>
   );
 }
 
 export function AddictGiftProduct() {
-
   const productData = useSelector((state) => state.productData);
-
   const filteredProducts = Object.values(productData)
     .flat()
     .filter((item) => item.gift);
@@ -171,7 +160,7 @@ export function AddictGiftProduct() {
   return (
     <div id="AddictGiftProduct">
       {filteredProducts.map((product, index) => (
-        <AddictProduct key={index} productData={product}/>
+        <AddictProduct key={index} productData={product} />
       ))}
     </div>
   );

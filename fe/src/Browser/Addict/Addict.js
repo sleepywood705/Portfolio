@@ -1,5 +1,8 @@
 import "./Addict.scss";
 import store from '../../store/store';
+import { Provider } from 'react-redux';
+import { Routes, Route } from "react-router-dom";
+import { useWindowClose, useStateChange } from "../../Hook/Hook";
 import { Window } from '../../Interface/Window'
 import { AddictHeader } from "./Component/Addict_Header";
 import { AddictFooter } from "./Component/Addict_Footer";
@@ -8,9 +11,6 @@ import { AddictExplain } from "./Page/Addict_Explain";
 import { AddictAllPage } from "./Page/Addict_All";
 import { AddictNotePage } from "./Page/Addict_Note";
 import { AddictOfflinePage } from "./Page/Addict_Offline";
-import { Provider } from 'react-redux';
-import { Routes, Route } from "react-router-dom";
-import { useWindowClose, useStateChange } from "../../Hook/Hook";
 
 export function Addict({ 창닫기 }) {
   const windowClose = useWindowClose(창닫기);

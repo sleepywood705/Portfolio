@@ -1,6 +1,6 @@
 import "./Pharagraph_Posting.scss";
-import { useStateChange, useFormChange } from '../../../Hook/Hook';
 import axios from 'axios';
+import { useStateChange, useFormChange } from '../../../Hook/Hook';
 
 export function PharagraphPostingPage() {
   const initialState = { book: "", content: "", page: "", music: "" };
@@ -31,7 +31,6 @@ export function PharagraphPostingPage() {
   return (
     <section id="PharagraphPostingPage">
       <h1 className="title">오늘 어떤 글귀를 발견하셨나요?</h1>
-      <PharagraphBookSearch />
       <form onSubmit={handleSubmit}>
         <input
           type="text"
@@ -68,24 +67,29 @@ export function PharagraphPostingPage() {
           <button type="submit">작성하기</button>
         </span>
       </form>
+      <PharagraphBookSearch />
     </section>
   );
 }
 
 export function PharagraphBookSearch() {
+
   return (
-    <dialog id="PharagraphBookSearch">
+    <div id="PharagraphBookSearch">
       <ul className="result">
         <li></li>
       </ul>
       <form>
-        <select>
-          <option>책제목</option>
-          <option>작가명</option>
-        </select>
-        <input type="text" placeholder="책 제목이나 작가명을 입력해 주세요."/>
+        <div>
+          <input type="text" placeholder="책 제목이나 작가명을 입력해 주세요."/>
+          <select>
+            <option>선택</option>
+            <option>책제목</option>
+            <option>작가명</option>
+          </select>
+        </div>
         <button type="submit">검색</button>
       </form>
-    </dialog>
+    </div>
   );
 }

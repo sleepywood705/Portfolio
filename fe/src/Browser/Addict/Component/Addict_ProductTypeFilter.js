@@ -8,13 +8,7 @@ export function AddictProductTypeFilters({ buttonActive, setButtonActive }) {
   const queryParams = new URLSearchParams(location.search);
   const tab = queryParams.get("tab");
 
-  const buttons = [
-    "전체 상품",
-    "베스트셀러",
-    "오 드 퍼퓸",
-    "솔리드 퍼퓸",
-    "기프트",
-  ];
+  const buttons = ["전체 상품", "베스트셀러", "오 드 퍼퓸", "솔리드 퍼퓸", "기프트"];
 
   useEffect(() => {
     switch (tab) {

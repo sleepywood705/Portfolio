@@ -8,6 +8,7 @@
     > a, button {
         height: 100%;
         color: #fff;
+        color: #000;
         display: grid;
         place-items: center;
         cursor: pointer;
@@ -29,5 +30,14 @@
     width: fit-content;
     gap: 40px;
     justify-content: center;
+  }
+}
+
+
+@media screen and (max-width: 1280px) {
+  #Pharagraph {
+    header {
+      padding: 0 40px;
+    }
   }
 }
