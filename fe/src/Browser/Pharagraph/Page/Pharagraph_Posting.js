@@ -31,12 +31,12 @@ export function PharagraphPostingPage() {
   return (
     <section id="PharagraphPostingPage">
       <h1 className="title">오늘 어떤 글귀를 발견하셨나요?</h1>
-      {state && <PharagraphBookSearch onClose={CLOSE} />}
+      <PharagraphBookSearch />
       <form onSubmit={handleSubmit}>
         <input
           type="text"
           name="book"
-          placeholder="책의 제목을 알려주세요."ㅠ
+          placeholder="책의 제목을 알려주세요."
           value={formData.book}
           onChange={handleChange}
           required
